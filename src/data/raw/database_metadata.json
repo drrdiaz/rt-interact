@@ -1,0 +1,66 @@
+{
+  "database_name": "RT Interact Phase 1 clinical data",
+  "version": "1.0.0",
+  "last_reviewed_date": "2026-06-12",
+  "review_cadence": "Quarterly, and ad hoc for major practice change",
+  "primary_source": "Database Feed.xlsx (High_Risk_Master_217_FIXED sheet)",
+  "secondary_source": "Draft 2 Prototype Claude.docx (authoritative product specification)",
+  "tertiary_source": "Draft1 Prototype.docx (reference where Draft 2 is silent)",
+  "agent_count": 222,
+  "class_entry_count": 13,
+  "rt_site_count": 30,
+  "toxicity_domain_count": 20,
+  "fractionation_category_count": 10,
+  "timing_definition_count": 6,
+  "interaction_rule_count": 16,
+  "evidence_record_count": 69,
+  "alert_categories": [
+    "No specific alert",
+    "Caution",
+    "Moderate toxicity alert",
+    "High toxicity alert",
+    "Uncertain / evidence limited"
+  ],
+  "evidence_levels": [
+    "High",
+    "Moderate",
+    "Low",
+    "Very low",
+    "Insufficient evidence"
+  ],
+  "uncertainty_levels": [
+    "Low",
+    "Low-moderate",
+    "Moderate",
+    "Moderate-high",
+    "High",
+    "Very high"
+  ],
+  "phase": 1,
+  "phase2_excluded_fields": [
+    "treatment_recommendations",
+    "hold_proceed_instructions (required_action)",
+    "medical_oncology_discussion_prompts",
+    "senior_ro_review_prompts",
+    "documentation_note_generation (app_warning_documentation_text)",
+    "clinician_oar_editing",
+    "prototype_action (hold/proceed)"
+  ],
+  "incomplete_fields_excluded": [
+    "artg_status",
+    "pbs_status",
+    "eviq_protocol_status",
+    "artg_id_entry",
+    "pbs_item_restriction",
+    "primary_au_source_url (landing page only)",
+    "secondary_source_url (landing page only)",
+    "eviq_source_url (landing page only)",
+    "verification_status"
+  ],
+  "notes": [
+    "222 agents include 217 original rows plus 5 confirmed Australian-market additions (sotorasib, datopotamab deruxtecan, tarlatamab, zolbetuximab, trifluridine/tipiracil).",
+    "73 agents reclassified from placeholder 'ALL CLEAR / low concern' to Uncertain / evidence limited per Change_Log entries CHG-0001 to CHG-0002 pattern.",
+    "ARTG, PBS and eviQ fields are unverified first-pass inventory; excluded from app-facing JSON pending live ARTG/PBS/eviQ audit.",
+    "EVID-0017 is absent from Evidence_Library (gap between EVID-0016 and EVID-0018); noted as source data gap."
+  ]
+}

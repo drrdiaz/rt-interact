@@ -1,0 +1,6 @@
+node_modules/
+dist/
+*.timestamp-*.mjs
+.vercel/
+.env
+.env.local

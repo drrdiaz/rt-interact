@@ -1,0 +1,915 @@
+[
+  {
+    "site_id": "RTS001",
+    "rt_site": "Prostate",
+    "rt_subsite": "Prostate only",
+    "default_inferred_oars": [
+      "Rectum",
+      "bladder",
+      "urethra",
+      "penile bulb",
+      "femoral heads"
+    ],
+    "optional_context_oars": [
+      "Small bowel",
+      "sigmoid/large bowel",
+      "skin",
+      "pelvic marrow"
+    ],
+    "default_toxicity_domains": [
+      "GI",
+      "GU",
+      "sexual",
+      "skeletal"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Add bowel, skin or marrow when fields/dose make them relevant.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS002",
+    "rt_site": "Prostate",
+    "rt_subsite": "Prostate + pelvic nodes",
+    "default_inferred_oars": [
+      "Rectum",
+      "bladder",
+      "urethra",
+      "penile bulb",
+      "femoral heads",
+      "small bowel",
+      "sigmoid/large bowel",
+      "pelvic marrow",
+      "lymphatic structures"
+    ],
+    "optional_context_oars": [
+      "Skin",
+      "genital structures"
+    ],
+    "default_toxicity_domains": [
+      "GI",
+      "GU",
+      "marrow",
+      "sexual",
+      "lymphoedema",
+      "skin"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Nodal coverage increases bowel, marrow and lymphoedema relevance.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS003",
+    "rt_site": "Oesophagus",
+    "rt_subsite": "Cervical/upper",
+    "default_inferred_oars": [
+      "Oesophagus",
+      "pharynx/larynx",
+      "lungs",
+      "spinal cord",
+      "proximal bronchial tree"
+    ],
+    "optional_context_oars": [
+      "Thyroid",
+      "brachial plexus",
+      "skin"
+    ],
+    "default_toxicity_domains": [
+      "Mucosal",
+      "pulmonary",
+      "neurologic",
+      "swallowing/nutrition",
+      "skin"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Upper oesophageal targets may overlap larynx/pharynx and brachial plexus.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS004",
+    "rt_site": "Oesophagus",
+    "rt_subsite": "Mid-thoracic",
+    "default_inferred_oars": [
+      "Oesophagus",
+      "lungs",
+      "heart",
+      "spinal cord",
+      "proximal bronchial tree"
+    ],
+    "optional_context_oars": [
+      "Great vessels",
+      "skin"
+    ],
+    "default_toxicity_domains": [
+      "Mucosal",
+      "pulmonary",
+      "cardiac",
+      "neurologic"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Consider great vessels for central/high-dose treatments.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS005",
+    "rt_site": "Oesophagus",
+    "rt_subsite": "Lower/GOJ",
+    "default_inferred_oars": [
+      "Oesophagus",
+      "stomach",
+      "heart",
+      "lungs",
+      "spinal cord",
+      "liver"
+    ],
+    "optional_context_oars": [
+      "Duodenum",
+      "bowel",
+      "pancreas"
+    ],
+    "default_toxicity_domains": [
+      "Mucosal",
+      "GI",
+      "pulmonary",
+      "cardiac",
+      "hepatic"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Lower oesophagus/GOJ increases stomach and liver relevance.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS006",
+    "rt_site": "Lung",
+    "rt_subsite": "Peripheral",
+    "default_inferred_oars": [
+      "Ipsilateral lung",
+      "total lungs",
+      "chest wall/ribs",
+      "oesophagus",
+      "heart",
+      "spinal cord"
+    ],
+    "optional_context_oars": [
+      "Skin",
+      "brachial plexus if apical"
+    ],
+    "default_toxicity_domains": [
+      "Pulmonary",
+      "chest wall",
+      "GI",
+      "cardiac",
+      "neurologic"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Chest wall/ribs become more important for peripheral SABR.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS007",
+    "rt_site": "Lung",
+    "rt_subsite": "Central",
+    "default_inferred_oars": [
+      "Lungs",
+      "proximal bronchial tree",
+      "oesophagus",
+      "heart",
+      "great vessels",
+      "spinal cord"
+    ],
+    "optional_context_oars": [
+      "Chest wall/ribs",
+      "skin"
+    ],
+    "default_toxicity_domains": [
+      "Pulmonary",
+      "airway",
+      "GI",
+      "cardiac",
+      "vascular",
+      "neurologic"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Central location increases airway, oesophageal and vascular concern.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS008",
+    "rt_site": "Lung",
+    "rt_subsite": "Ultracentral",
+    "default_inferred_oars": [
+      "Lungs",
+      "proximal bronchial tree",
+      "trachea/main bronchi",
+      "oesophagus",
+      "heart",
+      "great vessels",
+      "spinal cord"
+    ],
+    "optional_context_oars": [
+      "Chest wall/ribs",
+      "skin"
+    ],
+    "default_toxicity_domains": [
+      "Airway",
+      "pulmonary",
+      "GI",
+      "cardiac",
+      "vascular",
+      "neurologic"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Flag for senior RO review with high-dose hypofractionation/SABR.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS009",
+    "rt_site": "Lung",
+    "rt_subsite": "Apical/Pancoast",
+    "default_inferred_oars": [
+      "Lungs",
+      "brachial plexus",
+      "chest wall/ribs",
+      "spinal cord",
+      "oesophagus",
+      "heart"
+    ],
+    "optional_context_oars": [
+      "Great vessels",
+      "skin"
+    ],
+    "default_toxicity_domains": [
+      "Pulmonary",
+      "neuropathy",
+      "chest wall",
+      "GI",
+      "cardiac"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Brachial plexus is a default OAR.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS010",
+    "rt_site": "Breast",
+    "rt_subsite": "Whole breast",
+    "default_inferred_oars": [
+      "Heart",
+      "ipsilateral lung",
+      "contralateral breast",
+      "skin",
+      "ribs/chest wall"
+    ],
+    "optional_context_oars": [
+      "Implant/reconstruction",
+      "brachial plexus"
+    ],
+    "default_toxicity_domains": [
+      "Cardiac",
+      "pulmonary",
+      "skin",
+      "chest wall",
+      "secondary malignancy"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Heart emphasis depends on laterality.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS011",
+    "rt_site": "Breast",
+    "rt_subsite": "Chest wall",
+    "default_inferred_oars": [
+      "Heart",
+      "ipsilateral lung",
+      "skin",
+      "ribs/chest wall"
+    ],
+    "optional_context_oars": [
+      "Implant/reconstruction",
+      "contralateral breast"
+    ],
+    "default_toxicity_domains": [
+      "Cardiac",
+      "pulmonary",
+      "skin",
+      "chest wall",
+      "wound healing"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Reconstruction/implant should be user-selectable.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS012",
+    "rt_site": "Breast",
+    "rt_subsite": "Breast/chest wall + regional nodes",
+    "default_inferred_oars": [
+      "Heart",
+      "ipsilateral lung",
+      "contralateral breast",
+      "brachial plexus",
+      "skin",
+      "ribs/chest wall",
+      "lymphatic structures"
+    ],
+    "optional_context_oars": [
+      "Implant/reconstruction",
+      "oesophagus"
+    ],
+    "default_toxicity_domains": [
+      "Cardiac",
+      "pulmonary",
+      "neuropathy",
+      "skin",
+      "lymphoedema",
+      "chest wall"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Regional nodes increase lung, plexus and lymphoedema relevance.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS013",
+    "rt_site": "Head and neck",
+    "rt_subsite": "Oral cavity/oropharynx",
+    "default_inferred_oars": [
+      "Oral cavity",
+      "pharyngeal mucosa",
+      "salivary glands",
+      "mandible",
+      "spinal cord",
+      "skin",
+      "swallowing structures"
+    ],
+    "optional_context_oars": [
+      "Larynx",
+      "carotids",
+      "brachial plexus"
+    ],
+    "default_toxicity_domains": [
+      "Mucositis",
+      "xerostomia",
+      "osteoradionecrosis",
+      "swallowing/nutrition",
+      "neurologic",
+      "skin"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Nutrition and swallowing toxicity should always be inferred.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS014",
+    "rt_site": "Head and neck",
+    "rt_subsite": "Larynx/hypopharynx",
+    "default_inferred_oars": [
+      "Laryngeal/pharyngeal mucosa",
+      "swallowing structures",
+      "spinal cord",
+      "carotids",
+      "skin"
+    ],
+    "optional_context_oars": [
+      "Salivary glands",
+      "mandible",
+      "brachial plexus"
+    ],
+    "default_toxicity_domains": [
+      "Mucositis",
+      "dysphagia",
+      "aspiration",
+      "laryngeal oedema",
+      "neurologic",
+      "vascular",
+      "skin"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Airway and aspiration risk may be clinically important.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS015",
+    "rt_site": "Head and neck",
+    "rt_subsite": "Nasopharynx/skull base",
+    "default_inferred_oars": [
+      "Brainstem",
+      "optic apparatus",
+      "cochleae",
+      "temporal lobes",
+      "salivary glands",
+      "spinal cord"
+    ],
+    "optional_context_oars": [
+      "Pituitary",
+      "carotids",
+      "oral cavity"
+    ],
+    "default_toxicity_domains": [
+      "Neurologic",
+      "visual",
+      "auditory",
+      "xerostomia",
+      "endocrine"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Add pituitary/endocrine domain where relevant.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS016",
+    "rt_site": "Pelvis",
+    "rt_subsite": "Rectal",
+    "default_inferred_oars": [
+      "Small bowel",
+      "rectum",
+      "bladder",
+      "pelvic marrow",
+      "femoral heads",
+      "genital/perineal skin"
+    ],
+    "optional_context_oars": [
+      "Urethra",
+      "sexual organs",
+      "lymphatic structures"
+    ],
+    "default_toxicity_domains": [
+      "GI",
+      "GU",
+      "marrow",
+      "skin",
+      "sexual",
+      "skeletal",
+      "lymphoedema"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Pelvic marrow should be default when chemotherapy is relevant.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS017",
+    "rt_site": "Pelvis",
+    "rt_subsite": "Anal",
+    "default_inferred_oars": [
+      "Small bowel",
+      "rectum",
+      "bladder",
+      "pelvic marrow",
+      "femoral heads",
+      "genital/perineal skin",
+      "external genitalia"
+    ],
+    "optional_context_oars": [
+      "Urethra",
+      "lymphatic structures"
+    ],
+    "default_toxicity_domains": [
+      "GI",
+      "GU",
+      "marrow",
+      "severe skin",
+      "sexual",
+      "lymphoedema"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Perineal/genital skin is a major toxicity domain.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS018",
+    "rt_site": "Pelvis",
+    "rt_subsite": "Gynaecological",
+    "default_inferred_oars": [
+      "Small bowel",
+      "rectum",
+      "bladder",
+      "urethra",
+      "pelvic marrow",
+      "femoral heads",
+      "vagina/vulva",
+      "lymphatic structures"
+    ],
+    "optional_context_oars": [
+      "Ovaries/uterus if fertility relevant",
+      "kidneys if para-aortic"
+    ],
+    "default_toxicity_domains": [
+      "GI",
+      "GU",
+      "marrow",
+      "sexual",
+      "fertility",
+      "skin",
+      "lymphoedema"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Add para-aortic OARs when extended fields are used.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS019",
+    "rt_site": "Pelvis",
+    "rt_subsite": "Pelvic/para-aortic nodes",
+    "default_inferred_oars": [
+      "Small bowel",
+      "colon",
+      "rectum",
+      "bladder",
+      "pelvic marrow",
+      "kidneys",
+      "spinal cord/cauda equina",
+      "lymphatic structures"
+    ],
+    "optional_context_oars": [
+      "Liver",
+      "stomach",
+      "duodenum"
+    ],
+    "default_toxicity_domains": [
+      "GI",
+      "GU",
+      "marrow",
+      "renal",
+      "neurologic",
+      "lymphoedema"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Extended fields increase renal and upper-GI relevance.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS020",
+    "rt_site": "Brain",
+    "rt_subsite": "Whole brain",
+    "default_inferred_oars": [
+      "Brain",
+      "scalp/skin",
+      "lenses",
+      "optic apparatus",
+      "cochleae"
+    ],
+    "optional_context_oars": [
+      "Hippocampi",
+      "brainstem"
+    ],
+    "default_toxicity_domains": [
+      "Neurocognitive",
+      "oedema",
+      "radionecrosis",
+      "visual",
+      "auditory",
+      "skin"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Hippocampi relevant where avoidance is planned.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS021",
+    "rt_site": "Brain",
+    "rt_subsite": "SRS/focal",
+    "default_inferred_oars": [
+      "Brain",
+      "radionecrosis/oedema region",
+      "optic apparatus",
+      "brainstem"
+    ],
+    "optional_context_oars": [
+      "Cochlea",
+      "hippocampus",
+      "scalp/skin"
+    ],
+    "default_toxicity_domains": [
+      "Radionecrosis",
+      "oedema",
+      "neurologic",
+      "visual",
+      "auditory"
+    ],
+    "site_drivers": [
+      "Site-driven",
+      "fractionation-driven"
+    ],
+    "notes": "High-dose focal treatment requires lesion-specific critical structures.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS022",
+    "rt_site": "Spine",
+    "rt_subsite": "Cervical",
+    "default_inferred_oars": [
+      "Spinal cord",
+      "vertebral body",
+      "oesophagus",
+      "brachial plexus",
+      "skin",
+      "marrow"
+    ],
+    "optional_context_oars": [
+      "Pharynx/larynx"
+    ],
+    "default_toxicity_domains": [
+      "Neurologic",
+      "skeletal",
+      "GI",
+      "neuropathy",
+      "skin",
+      "marrow"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Add pharynx/larynx for upper cervical fields.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS023",
+    "rt_site": "Spine",
+    "rt_subsite": "Thoracic",
+    "default_inferred_oars": [
+      "Spinal cord",
+      "vertebral body",
+      "lungs",
+      "oesophagus",
+      "skin",
+      "marrow"
+    ],
+    "optional_context_oars": [
+      "Heart",
+      "kidneys depending level"
+    ],
+    "default_toxicity_domains": [
+      "Neurologic",
+      "skeletal",
+      "pulmonary",
+      "GI",
+      "skin",
+      "marrow"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Level-dependent thoracic OARs should be selectable.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS024",
+    "rt_site": "Spine",
+    "rt_subsite": "Lumbar/sacral",
+    "default_inferred_oars": [
+      "Cord/cauda equina",
+      "vertebral body",
+      "bowel",
+      "kidneys",
+      "skin",
+      "marrow"
+    ],
+    "optional_context_oars": [
+      "Rectum",
+      "bladder",
+      "sacral plexus"
+    ],
+    "default_toxicity_domains": [
+      "Neurologic",
+      "skeletal",
+      "GI",
+      "renal",
+      "skin",
+      "marrow"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Cauda equina and bowel are commonly relevant.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS025",
+    "rt_site": "Upper abdomen",
+    "rt_subsite": "Liver",
+    "default_inferred_oars": [
+      "Liver",
+      "stomach",
+      "duodenum",
+      "bowel",
+      "kidneys"
+    ],
+    "optional_context_oars": [
+      "Bile ducts",
+      "heart",
+      "lungs"
+    ],
+    "default_toxicity_domains": [
+      "Hepatic",
+      "GI",
+      "renal",
+      "biliary"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Segment/location determines stomach, duodenum and bowel emphasis.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS026",
+    "rt_site": "Upper abdomen",
+    "rt_subsite": "Pancreas",
+    "default_inferred_oars": [
+      "Pancreas",
+      "stomach",
+      "duodenum",
+      "bowel",
+      "liver",
+      "kidneys"
+    ],
+    "optional_context_oars": [
+      "Bile duct",
+      "spinal cord"
+    ],
+    "default_toxicity_domains": [
+      "GI",
+      "hepatic",
+      "renal",
+      "biliary",
+      "neurologic"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Duodenum and stomach are usually major limiting OARs.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS027",
+    "rt_site": "Upper abdomen",
+    "rt_subsite": "Adrenal",
+    "default_inferred_oars": [
+      "Kidneys",
+      "bowel",
+      "stomach",
+      "liver",
+      "spinal cord"
+    ],
+    "optional_context_oars": [
+      "Pancreas",
+      "spleen",
+      "lungs"
+    ],
+    "default_toxicity_domains": [
+      "Renal",
+      "GI",
+      "hepatic",
+      "neurologic",
+      "pulmonary"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Laterality and target size determine adjacent OARs.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS028",
+    "rt_site": "Skin/superficial",
+    "rt_subsite": "Skin lesion",
+    "default_inferred_oars": [
+      "Skin",
+      "subcutaneous tissue",
+      "wound bed"
+    ],
+    "optional_context_oars": [
+      "Cartilage",
+      "bone",
+      "mucosa"
+    ],
+    "default_toxicity_domains": [
+      "Dermatitis",
+      "wound healing",
+      "necrosis",
+      "pain"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Add cartilage, bone or mucosa where anatomically relevant.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS029",
+    "rt_site": "Bone",
+    "rt_subsite": "Non-spine bone metastasis",
+    "default_inferred_oars": [
+      "Bone",
+      "marrow",
+      "skin"
+    ],
+    "optional_context_oars": [
+      "Joint",
+      "bowel",
+      "bladder",
+      "lung",
+      "neurovascular structures"
+    ],
+    "default_toxicity_domains": [
+      "Pain flare",
+      "fracture",
+      "marrow",
+      "skin",
+      "site-specific organ toxicity"
+    ],
+    "site_drivers": [
+      "Site-driven"
+    ],
+    "notes": "Automatically add adjacent organs according to location.",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "site_id": "RTS030",
+    "rt_site": "Other",
+    "rt_subsite": "Custom",
+    "default_inferred_oars": [
+      "Clinician-selected"
+    ],
+    "optional_context_oars": [
+      "Clinician-selected"
+    ],
+    "default_toxicity_domains": [
+      "Clinician-selected"
+    ],
+    "site_drivers": [
+      "Clinician-defined"
+    ],
+    "notes": "Requires explicit manual OAR and toxicity selection.",
+    "version": "1.0",
+    "status": "active"
+  }
+]

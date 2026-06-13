@@ -1,0 +1,142 @@
+[
+  {
+    "domain_id": "DOM-01",
+    "label": "GI toxicity",
+    "description": "Gastrointestinal toxicity including nausea, vomiting, diarrhoea, colitis and bowel injury",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "domain_id": "DOM-02",
+    "label": "GU toxicity",
+    "description": "Genitourinary toxicity including cystitis, urethritis and urinary dysfunction",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "domain_id": "DOM-03",
+    "label": "Mucositis / oesophagitis",
+    "description": "Mucosal inflammation of the oral cavity, pharynx, larynx and oesophagus",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "domain_id": "DOM-04",
+    "label": "Dermatitis / skin toxicity",
+    "description": "Radiation dermatitis, rash and skin breakdown including radiation recall phenomena",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "domain_id": "DOM-05",
+    "label": "Pneumonitis",
+    "description": "Radiation pneumonitis and drug-related interstitial lung disease/pneumonitis",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "domain_id": "DOM-06",
+    "label": "Marrow suppression / cytopenias",
+    "description": "Haematologic toxicity including neutropenia, thrombocytopenia and anaemia",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "domain_id": "DOM-07",
+    "label": "Bleeding",
+    "description": "Haemorrhage or bleeding complications including vascular injury",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "domain_id": "DOM-08",
+    "label": "Fistula / perforation",
+    "description": "Abnormal connections or perforations involving hollow viscera",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "domain_id": "DOM-09",
+    "label": "Wound-healing complication",
+    "description": "Impaired wound healing, tissue breakdown and postoperative complications",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "domain_id": "DOM-10",
+    "label": "CNS oedema / radionecrosis",
+    "description": "Cerebral oedema, radionecrosis, leukoencephalopathy and neurocognitive injury",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "domain_id": "DOM-11",
+    "label": "Cardiac toxicity",
+    "description": "Cardiotoxicity including cardiomyopathy, coronary artery disease and arrhythmia",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "domain_id": "DOM-12",
+    "label": "Renal toxicity",
+    "description": "Nephrotoxicity and renal dysfunction",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "domain_id": "DOM-13",
+    "label": "Hepatic toxicity",
+    "description": "Hepatotoxicity and radiation-induced liver disease",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "domain_id": "DOM-14",
+    "label": "Neuropathy / plexopathy",
+    "description": "Peripheral neuropathy, brachial plexopathy and cauda equina injury",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "domain_id": "DOM-15",
+    "label": "Lymphoedema",
+    "description": "Lymphatic obstruction and chronic limb or regional swelling",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "domain_id": "DOM-16",
+    "label": "Osteonecrosis / ORN / bone-healing",
+    "description": "Osteoradionecrosis, medication-related osteonecrosis of the jaw and bone repair impairment",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "domain_id": "DOM-17",
+    "label": "Swallowing / nutritional toxicity",
+    "description": "Dysphagia, aspiration and nutrition-related complications",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "domain_id": "DOM-18",
+    "label": "Sexual / fertility toxicity",
+    "description": "Sexual dysfunction, gonadal failure and fertility impairment",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "domain_id": "DOM-19",
+    "label": "Radiation recall",
+    "description": "Radiation recall reaction in a previously irradiated field triggered by systemic therapy",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "domain_id": "DOM-20",
+    "label": "Other relevant site-specific toxicity",
+    "description": "Site-specific toxicity domains not captured by the above categories",
+    "version": "1.0",
+    "status": "active"
+  }
+]

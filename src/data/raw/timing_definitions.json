@@ -1,0 +1,62 @@
+[
+  {
+    "timing_id": "TM001",
+    "timing_category": "Concurrent",
+    "operational_definition": "Systemic therapy administered during the RT course or on an RT treatment day",
+    "required_user_input": "Last dose date; next dose date; schedule",
+    "default_app_interpretation": "Highest likelihood of overlapping acute toxicity or radiosensitisation",
+    "escalation_logic": "Apply agent-specific concurrent warning and combination rules",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "timing_id": "TM002",
+    "timing_category": "Recent before RT",
+    "operational_definition": "Systemic therapy stopped before RT but residual pharmacologic/biologic effect may remain",
+    "required_user_input": "Last dose date",
+    "default_app_interpretation": "Use agent-specific washout when available; otherwise classify by half-life/biologic persistence",
+    "escalation_logic": "Escalate if within known hold interval, unresolved toxicity or long biologic effect",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "timing_id": "TM003",
+    "timing_category": "Recent after RT",
+    "operational_definition": "Systemic therapy planned soon after RT while acute tissue injury is evolving",
+    "required_user_input": "Planned restart date",
+    "default_app_interpretation": "Assess wound healing, marrow recovery, mucosal recovery and radiation recall potential",
+    "escalation_logic": "Escalate if restart precedes expected recovery or agent has recall/wound-healing concern",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "timing_id": "TM004",
+    "timing_category": "Sequential",
+    "operational_definition": "Systemic therapy and RT separated beyond immediate overlap interval",
+    "required_user_input": "Last/next dose dates",
+    "default_app_interpretation": "Usually lower concern, but late recall and persistent organ toxicity remain possible",
+    "escalation_logic": "Apply residual-risk warning where agent has long half-life or delayed toxicity",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "timing_id": "TM005",
+    "timing_category": "Planned after RT",
+    "operational_definition": "Systemic therapy not yet started but intended after RT",
+    "required_user_input": "Planned start date",
+    "default_app_interpretation": "Generate restart/start guidance and required monitoring",
+    "escalation_logic": "Escalate for anti-VEGF, strong myelosuppression, immune toxicity or wound-healing concern",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "timing_id": "TM006",
+    "timing_category": "Unknown/uncertain",
+    "operational_definition": "Timing information incomplete",
+    "required_user_input": "Prompt for dates and schedule",
+    "default_app_interpretation": "Do not downgrade risk; show uncertainty warning",
+    "escalation_logic": "Require clinician confirmation before final output",
+    "version": "1.0",
+    "status": "active"
+  }
+]

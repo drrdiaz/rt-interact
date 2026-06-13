@@ -1,0 +1,182 @@
+[
+  {
+    "alias_id": "ALI-001",
+    "alias_text": "Kisqali",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-087",
+    "resolves_to_type": "agent",
+    "canonical_name": "ribociclib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-002",
+    "alias_text": "Ibrance",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-086",
+    "resolves_to_type": "agent",
+    "canonical_name": "palbociclib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-003",
+    "alias_text": "Verzenio",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-085",
+    "resolves_to_type": "agent",
+    "canonical_name": "abemaciclib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-004",
+    "alias_text": "Xeloda",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-044",
+    "resolves_to_type": "agent",
+    "canonical_name": "capecitabine",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-005",
+    "alias_text": "Keytruda",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-123",
+    "resolves_to_type": "agent",
+    "canonical_name": "pembrolizumab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-006",
+    "alias_text": "Opdivo",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-122",
+    "resolves_to_type": "agent",
+    "canonical_name": "nivolumab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-007",
+    "alias_text": "Avastin",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-140",
+    "resolves_to_type": "agent",
+    "canonical_name": "bevacizumab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-008",
+    "alias_text": "Enhertu",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-041",
+    "resolves_to_type": "agent",
+    "canonical_name": "trastuzumab deruxtecan",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-009",
+    "alias_text": "T-DXd",
+    "alias_type": "abbreviation",
+    "resolves_to_id": "AGT-041",
+    "resolves_to_type": "agent",
+    "canonical_name": "trastuzumab deruxtecan",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-010",
+    "alias_text": "anti-VEGF",
+    "alias_type": "class_abbreviation",
+    "resolves_to_id": "CLS-003",
+    "resolves_to_type": "class",
+    "canonical_name": "Anti-VEGF/VEGFR agent",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-011",
+    "alias_text": "CDK4/6",
+    "alias_type": "class_abbreviation",
+    "resolves_to_id": "CLS-002",
+    "resolves_to_type": "class",
+    "canonical_name": "CDK4/6 inhibitor class",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-012",
+    "alias_text": "Lumakras",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-218",
+    "resolves_to_type": "agent",
+    "canonical_name": "sotorasib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-013",
+    "alias_text": "Datroway",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-219",
+    "resolves_to_type": "agent",
+    "canonical_name": "datopotamab deruxtecan",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-014",
+    "alias_text": "Imdelltra",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-220",
+    "resolves_to_type": "agent",
+    "canonical_name": "tarlatamab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-015",
+    "alias_text": "Vyloy",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-221",
+    "resolves_to_type": "agent",
+    "canonical_name": "zolbetuximab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-016",
+    "alias_text": "Lonsurf",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-222",
+    "resolves_to_type": "agent",
+    "canonical_name": "trifluridine/tipiracil",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-017",
+    "alias_text": "T-DM1",
+    "alias_type": "abbreviation",
+    "resolves_to_id": "AGT-042",
+    "resolves_to_type": "agent",
+    "canonical_name": "trastuzumab emtansine",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-018",
+    "alias_text": "5-FU",
+    "alias_type": "abbreviation",
+    "resolves_to_id": "AGT-049",
+    "resolves_to_type": "agent",
+    "canonical_name": "fluorouracil",
+    "version": "1.0",
+    "status": "active"
+  }
+]

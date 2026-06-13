@@ -1,0 +1,135 @@
+[
+  {
+    "fractionation_id": "FX001",
+    "category": "Conventional fractionation",
+    "rule_definition": "Dose per fraction generally 1.8-2.2 Gy",
+    "dose_per_fraction_gy": "1.8-2.2",
+    "typical_fraction_count": "15-40",
+    "key_interaction_implications": "Cumulative mucosal, marrow and organ toxicity; prolonged overlap with systemic therapy",
+    "default_risk_driver": [
+      "Fractionation-driven"
+    ],
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "fractionation_id": "FX002",
+    "category": "Moderate hypofractionation",
+    "rule_definition": "Dose per fraction >2.2 to <5 Gy",
+    "dose_per_fraction_gy": ">2.2 to <5",
+    "typical_fraction_count": "5-20",
+    "key_interaction_implications": "Greater per-fraction normal-tissue effect; consider radiosensitising agents and late effects",
+    "default_risk_driver": [
+      "Fractionation-driven"
+    ],
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "fractionation_id": "FX003",
+    "category": "Ultra-hypofractionation",
+    "rule_definition": "Dose per fraction 5-8 Gy",
+    "dose_per_fraction_gy": "5-8",
+    "typical_fraction_count": "3-7",
+    "key_interaction_implications": "Higher per-fraction risk to serial organs; limited concurrent systemic evidence",
+    "default_risk_driver": [
+      "Fractionation-driven"
+    ],
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "fractionation_id": "FX004",
+    "category": "SABR/SBRT",
+    "rule_definition": "Ablative extracranial treatment, usually >=6 Gy/fraction",
+    "dose_per_fraction_gy": ">=6",
+    "typical_fraction_count": "1-8",
+    "key_interaction_implications": "High-dose focal injury, vascular/airway/GI/chest-wall risk; avoid assumptions from conventional RT",
+    "default_risk_driver": [
+      "Fractionation-driven",
+      "combination-driven"
+    ],
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "fractionation_id": "FX005",
+    "category": "SRS",
+    "rule_definition": "Ablative intracranial treatment, usually single or few fractions",
+    "dose_per_fraction_gy": ">=5",
+    "typical_fraction_count": "1-5",
+    "key_interaction_implications": "Radionecrosis/oedema risk; caution with agents linked to vascular injury, immune activation or impaired healing",
+    "default_risk_driver": [
+      "Fractionation-driven",
+      "combination-driven"
+    ],
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "fractionation_id": "FX006",
+    "category": "Palliative single fraction",
+    "rule_definition": "Single-fraction palliative RT",
+    "dose_per_fraction_gy": "Typically 8",
+    "typical_fraction_count": "1",
+    "key_interaction_implications": "Short overlap but high single-fraction effect; site-specific toxicity usually dominates",
+    "default_risk_driver": [
+      "Fractionation-driven"
+    ],
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "fractionation_id": "FX007",
+    "category": "Palliative multifraction",
+    "rule_definition": "Short-course palliative RT",
+    "dose_per_fraction_gy": "2.5-5",
+    "typical_fraction_count": "2-10",
+    "key_interaction_implications": "Marrow/GI/skin overlap depends on field; often feasible with selective holds",
+    "default_risk_driver": [
+      "Combination-driven"
+    ],
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "fractionation_id": "FX008",
+    "category": "Large-field marrow-exposing RT",
+    "rule_definition": "Pelvis, spine, craniospinal, extended nodes or other marrow-rich fields",
+    "dose_per_fraction_gy": "Variable",
+    "typical_fraction_count": "Variable",
+    "key_interaction_implications": "Additive cytopenia risk with myelosuppressive agents; blood count monitoring and treatment coordination",
+    "default_risk_driver": [
+      "Site-driven",
+      "combination-driven"
+    ],
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "fractionation_id": "FX009",
+    "category": "Re-irradiation",
+    "rule_definition": "Any fractionation in previously irradiated tissue",
+    "dose_per_fraction_gy": "Variable",
+    "typical_fraction_count": "Variable",
+    "key_interaction_implications": "Outside core app scope for dose summation; interaction warnings still apply but cumulative dose requires specialist assessment",
+    "default_risk_driver": [
+      "Combination-driven"
+    ],
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "fractionation_id": "FX010",
+    "category": "Custom",
+    "rule_definition": "Clinician-entered dose/fractionation",
+    "dose_per_fraction_gy": "Custom",
+    "typical_fraction_count": "Custom",
+    "key_interaction_implications": "App calculates category from dose/fraction where possible; clinician confirms",
+    "default_risk_driver": [
+      "Clinician-defined"
+    ],
+    "version": "1.0",
+    "status": "active"
+  }
+]

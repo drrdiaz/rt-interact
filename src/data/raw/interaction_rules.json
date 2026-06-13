@@ -1,0 +1,777 @@
+[
+  {
+    "rule_id": "IR001",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-001"
+      ],
+      "rt_site_ids": [
+        "RTS016",
+        "RTS017",
+        "RTS018",
+        "RTS019",
+        "RTS022",
+        "RTS023",
+        "RTS024",
+        "RTS020"
+      ],
+      "fractionation_ids": [
+        "FX008"
+      ],
+      "timing_ids": [
+        "TM001",
+        "TM002",
+        "TM003"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-06"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [],
+    "rationale_text": "Potential additive marrow suppression from systemic therapy and marrow-exposing RT.",
+    "evidence_link_ids": [
+      "EVID-0069",
+      "EVID-0070"
+    ],
+    "supporting_evidence_ids": [
+      "EVID-0041",
+      "EVID-0046",
+      "EVID-0047"
+    ],
+    "evidence_level": "Low",
+    "uncertainty": "Moderate",
+    "evidence_basis_type": "Class evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-12",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR002",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-002"
+      ],
+      "rt_site_ids": [
+        "RTS016",
+        "RTS017",
+        "RTS018",
+        "RTS019",
+        "RTS025",
+        "RTS026",
+        "RTS027",
+        "RTS022",
+        "RTS023",
+        "RTS024"
+      ],
+      "fractionation_ids": [
+        "FX001",
+        "FX002",
+        "FX003"
+      ],
+      "timing_ids": [
+        "TM001"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-01",
+      "DOM-06"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [],
+    "rationale_text": "Concurrent CDK4/6 inhibition may increase marrow and gastrointestinal toxicity, particularly with pelvic or abdominal RT.",
+    "evidence_link_ids": [
+      "EVID-0001",
+      "EVID-0015",
+      "EVID-0016"
+    ],
+    "supporting_evidence_ids": [
+      "EVID-0045"
+    ],
+    "evidence_level": "Low",
+    "uncertainty": "Moderate",
+    "evidence_basis_type": "Retrospective evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-12",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR003",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-003"
+      ],
+      "rt_site_ids": [
+        "RTS016",
+        "RTS017",
+        "RTS025",
+        "RTS026",
+        "RTS003",
+        "RTS004",
+        "RTS005",
+        "RTS007",
+        "RTS008",
+        "RTS028",
+        "RTS029",
+        "RTS006",
+        "RTS009"
+      ],
+      "fractionation_ids": [
+        "FX004",
+        "FX003"
+      ],
+      "timing_ids": [
+        "TM001",
+        "TM002",
+        "TM003"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "High toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-07",
+      "DOM-08",
+      "DOM-09"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [],
+    "rationale_text": "Anti-VEGF pathway inhibition may increase bleeding, perforation, fistula, vascular injury and impaired healing with high-dose RT near hollow viscera or major vessels.",
+    "evidence_link_ids": [
+      "EVID-0034",
+      "EVID-0035"
+    ],
+    "supporting_evidence_ids": [
+      "EVID-0069"
+    ],
+    "evidence_level": "Moderate",
+    "uncertainty": "Moderate",
+    "evidence_basis_type": "Clinical evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-12",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR004",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-004"
+      ],
+      "rt_site_ids": [
+        "RTS006",
+        "RTS007",
+        "RTS008",
+        "RTS009"
+      ],
+      "fractionation_ids": [
+        "FX001",
+        "FX004"
+      ],
+      "timing_ids": [
+        "TM001",
+        "TM002",
+        "TM003"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Caution",
+    "output_toxicity_domains": [
+      "DOM-05"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [],
+    "rationale_text": "Potential overlapping immune-mediated and radiation pneumonitis risk.",
+    "evidence_link_ids": [
+      "EVID-0002",
+      "EVID-0031"
+    ],
+    "supporting_evidence_ids": [
+      "EVID-0025",
+      "EVID-0026",
+      "EVID-0027",
+      "EVID-0053"
+    ],
+    "evidence_level": "Moderate",
+    "uncertainty": "Moderate",
+    "evidence_basis_type": "Clinical evidence",
+    "expert_consensus_basis": false,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-12",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR005",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-004"
+      ],
+      "rt_site_ids": [
+        "RTS020",
+        "RTS021"
+      ],
+      "fractionation_ids": [
+        "FX005"
+      ],
+      "timing_ids": [
+        "TM001",
+        "TM002",
+        "TM003"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Caution",
+    "output_toxicity_domains": [
+      "DOM-10"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [],
+    "rationale_text": "SRS with immune checkpoint therapy may increase inflammatory imaging changes, oedema or radionecrosis in selected settings.",
+    "evidence_link_ids": [
+      "EVID-0002",
+      "EVID-0024"
+    ],
+    "supporting_evidence_ids": [
+      "EVID-0005",
+      "EVID-0033"
+    ],
+    "evidence_level": "Low",
+    "uncertainty": "Moderate",
+    "evidence_basis_type": "Retrospective evidence",
+    "expert_consensus_basis": false,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-12",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR006",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-005"
+      ],
+      "rt_site_ids": [
+        "RTS006",
+        "RTS007",
+        "RTS008",
+        "RTS009"
+      ],
+      "fractionation_ids": [
+        "FX002",
+        "FX003",
+        "FX004"
+      ],
+      "timing_ids": [
+        "TM001",
+        "TM002",
+        "TM003"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-05"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [],
+    "rationale_text": "Potential additive interstitial lung disease/pneumonitis risk with thoracic RT.",
+    "evidence_link_ids": [
+      "EVID-0007",
+      "EVID-0008",
+      "EVID-0009"
+    ],
+    "supporting_evidence_ids": [
+      "EVID-0004",
+      "EVID-0005"
+    ],
+    "evidence_level": "Moderate",
+    "uncertainty": "Moderate",
+    "evidence_basis_type": "Clinical evidence/class extrapolation",
+    "expert_consensus_basis": false,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-12",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR007",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-006"
+      ],
+      "rt_site_ids": [
+        "RTS006",
+        "RTS007",
+        "RTS008",
+        "RTS009"
+      ],
+      "fractionation_ids": [
+        "FX004"
+      ],
+      "timing_ids": [
+        "TM001"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-05",
+      "DOM-04",
+      "DOM-03"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [],
+    "rationale_text": "Concurrent thoracic RT with targeted kinase inhibition may increase pulmonary toxicity.",
+    "evidence_link_ids": [
+      "EVID-0003"
+    ],
+    "supporting_evidence_ids": [
+      "EVID-0048",
+      "EVID-0049"
+    ],
+    "evidence_level": "Low",
+    "uncertainty": "Moderate",
+    "evidence_basis_type": "Consensus/class evidence",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-12",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR008",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-007"
+      ],
+      "rt_site_ids": [
+        "RTS025",
+        "RTS026",
+        "RTS027",
+        "RTS020",
+        "RTS021",
+        "RTS028",
+        "RTS013"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-04",
+      "DOM-19"
+    ],
+    "primary_risk_driver": "Agent-driven",
+    "secondary_risk_drivers": [
+      "combination-driven"
+    ],
+    "rationale_text": "BRAF inhibition may enhance radiation dermatitis and, rarely, visceral toxicity or radiation recall.",
+    "evidence_link_ids": [
+      "EVID-0003"
+    ],
+    "supporting_evidence_ids": [
+      "EVID-0069"
+    ],
+    "evidence_level": "Moderate",
+    "uncertainty": "Moderate",
+    "evidence_basis_type": "Clinical evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-12",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR009",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-008"
+      ],
+      "rt_site_ids": [
+        "RTS016",
+        "RTS017",
+        "RTS018",
+        "RTS019",
+        "RTS025",
+        "RTS026",
+        "RTS027",
+        "RTS003",
+        "RTS004",
+        "RTS005",
+        "RTS013",
+        "RTS014",
+        "RTS015"
+      ],
+      "fractionation_ids": [
+        "FX001"
+      ],
+      "timing_ids": [
+        "TM001"
+      ],
+      "intent": "Curative"
+    },
+    "output_alert_level": "Caution",
+    "output_toxicity_domains": [
+      "DOM-03",
+      "DOM-01",
+      "DOM-06"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [],
+    "rationale_text": "This is a recognised concurrent chemoradiation combination; toxicity risk is expected and should be managed according to the relevant protocol.",
+    "evidence_link_ids": [
+      "EVID-0041",
+      "EVID-0043",
+      "EVID-0044"
+    ],
+    "supporting_evidence_ids": [
+      "EVID-0042"
+    ],
+    "evidence_level": "Moderate",
+    "uncertainty": "Low-moderate",
+    "evidence_basis_type": "Protocol evidence",
+    "expert_consensus_basis": false,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-12",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR010",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-009"
+      ],
+      "rt_site_ids": [
+        "RTS016",
+        "RTS017",
+        "RTS025",
+        "RTS026",
+        "RTS003",
+        "RTS004",
+        "RTS005",
+        "RTS013",
+        "RTS014",
+        "RTS015"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-03",
+      "DOM-01"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [],
+    "rationale_text": "Concurrent systemic therapy may intensify mucosal toxicity in the irradiated field.",
+    "evidence_link_ids": [
+      "EVID-0003",
+      "EVID-0041"
+    ],
+    "supporting_evidence_ids": [
+      "EVID-0042",
+      "EVID-0043"
+    ],
+    "evidence_level": "Low",
+    "uncertainty": "Moderate",
+    "evidence_basis_type": "Class evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-12",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR011",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-010"
+      ],
+      "rt_site_ids": [
+        "RTS006",
+        "RTS007",
+        "RTS008",
+        "RTS009"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001",
+        "TM002",
+        "TM003"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-05"
+    ],
+    "primary_risk_driver": "Agent-driven",
+    "secondary_risk_drivers": [
+      "site-driven"
+    ],
+    "rationale_text": "The selected systemic therapy and thoracic RT have overlapping pneumonitis/ILD risk.",
+    "evidence_link_ids": [
+      "EVID-0020",
+      "EVID-0025"
+    ],
+    "supporting_evidence_ids": [
+      "EVID-0021",
+      "EVID-0026",
+      "EVID-0027",
+      "EVID-0053"
+    ],
+    "evidence_level": "Moderate",
+    "uncertainty": "Moderate",
+    "evidence_basis_type": "Regulatory/clinical evidence",
+    "expert_consensus_basis": false,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-12",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR012",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-011"
+      ],
+      "rt_site_ids": [
+        "RTS016",
+        "RTS017",
+        "RTS018",
+        "RTS019",
+        "RTS025",
+        "RTS026",
+        "RTS027"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-01"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [],
+    "rationale_text": "Potential additive gastrointestinal toxicity from systemic therapy and bowel irradiation.",
+    "evidence_link_ids": [
+      "EVID-0001",
+      "EVID-0002"
+    ],
+    "supporting_evidence_ids": [
+      "EVID-0069"
+    ],
+    "evidence_level": "Low",
+    "uncertainty": "Moderate",
+    "evidence_basis_type": "Regulatory/class evidence",
+    "expert_consensus_basis": false,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-12",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR013",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-012"
+      ],
+      "rt_site_ids": [
+        "RTS006",
+        "RTS007",
+        "RTS008",
+        "RTS009",
+        "RTS020",
+        "RTS021",
+        "RTS013",
+        "RTS014",
+        "RTS015"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "High toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-10",
+      "DOM-06"
+    ],
+    "primary_risk_driver": "Timing-driven",
+    "secondary_risk_drivers": [
+      "agent-driven"
+    ],
+    "rationale_text": "Avoid elective RT during active cytokine-release syndrome, ICANS or unstable immune toxicity.",
+    "evidence_link_ids": [
+      "EVID-0066",
+      "EVID-0067"
+    ],
+    "supporting_evidence_ids": [
+      "EVID-0061",
+      "EVID-0062",
+      "EVID-0063"
+    ],
+    "evidence_level": "Low",
+    "uncertainty": "Moderate",
+    "evidence_basis_type": "Mechanistic/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-12",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR014",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-013"
+      ],
+      "rt_site_ids": [
+        "RTS016",
+        "RTS017",
+        "RTS025",
+        "RTS026",
+        "RTS028",
+        "RTS013",
+        "RTS029"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001",
+        "TM002",
+        "TM003"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "High toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-09",
+      "DOM-07",
+      "DOM-08"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [],
+    "rationale_text": "Systemic therapy may impair wound healing and increase tissue breakdown in the irradiated region.",
+    "evidence_link_ids": [
+      "EVID-0034"
+    ],
+    "supporting_evidence_ids": [
+      "EVID-0069"
+    ],
+    "evidence_level": "Moderate",
+    "uncertainty": "Moderate",
+    "evidence_basis_type": "Regulatory/clinical evidence",
+    "expert_consensus_basis": false,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-12",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR015",
+    "conditions": {
+      "agent_class_ids": [],
+      "rt_site_ids": null,
+      "fractionation_ids": [
+        "FX004",
+        "FX005",
+        "FX008"
+      ],
+      "timing_ids": [
+        "TM001"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Uncertain / evidence limited",
+    "output_toxicity_domains": [],
+    "primary_risk_driver": "Uncertainty-driven",
+    "secondary_risk_drivers": [
+      "combination-driven"
+    ],
+    "rationale_text": "Direct evidence for this drug–RT combination is insufficient. Specialist review and documented multidisciplinary reasoning are recommended.",
+    "evidence_link_ids": [
+      "EVID-0069",
+      "EVID-0070"
+    ],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Low",
+    "uncertainty": "High",
+    "evidence_basis_type": "Evidence gap/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": true,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-12",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR016",
+    "conditions": {
+      "agent_class_ids": [],
+      "rt_site_ids": null,
+      "fractionation_ids": [
+        "FX001",
+        "FX006",
+        "FX007"
+      ],
+      "timing_ids": [
+        "TM004",
+        "TM005"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "No specific alert",
+    "output_toxicity_domains": [],
+    "primary_risk_driver": "Agent-driven",
+    "secondary_risk_drivers": [],
+    "rationale_text": "No major interaction signal identified; proceed with standard clinical checks and clinician override.",
+    "evidence_link_ids": [
+      "EVID-0069",
+      "EVID-0070"
+    ],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Low",
+    "uncertainty": "Moderate",
+    "evidence_basis_type": "Low-level evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": true,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-12",
+    "status": "active"
+  }
+]
