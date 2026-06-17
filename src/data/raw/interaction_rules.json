@@ -3,7 +3,10 @@
     "rule_id": "IR001",
     "conditions": {
       "agent_class_ids": [
-        "CLS-001"
+        "CLS-009",
+        "CLS-008",
+        "CLS-005",
+        "CLS-002"
       ],
       "rt_site_ids": [
         "RTS016",
@@ -20,8 +23,7 @@
       ],
       "timing_ids": [
         "TM001",
-        "TM002",
-        "TM003"
+        "TM002"
       ],
       "intent": null
     },
@@ -30,29 +32,25 @@
       "DOM-06"
     ],
     "primary_risk_driver": "Combination-driven",
-    "secondary_risk_drivers": [],
-    "rationale_text": "Potential additive marrow suppression from systemic therapy and marrow-exposing RT.",
-    "evidence_link_ids": [
-      "EVID-0069",
-      "EVID-0070"
+    "secondary_risk_drivers": [
+      "Site-driven",
+      "Fractionation-driven"
     ],
-    "supporting_evidence_ids": [
-      "EVID-0041",
-      "EVID-0046",
-      "EVID-0047"
-    ],
-    "evidence_level": "Low",
-    "uncertainty": "Moderate",
-    "evidence_basis_type": "Class evidence/consensus",
+    "rationale_text": "Large-field RT involving pelvic marrow, spine or craniospinal fields carries additive cytopenia risk with myelosuppressive systemic therapy. Check FBC, assess marrow burden of RT field, and coordinate scheduling to minimise overlap nadir.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "High",
+    "uncertainty": "Low",
+    "evidence_basis_type": "Clinical evidence/consensus",
     "expert_consensus_basis": true,
     "applies_to_any_low_concern": false,
     "applies_to_no_direct_evidence": false,
     "version": "1.0",
-    "last_reviewed_date": "2026-06-12",
+    "last_reviewed_date": "2026-06-17",
     "status": "active"
   },
   {
-    "rule_id": "IR002",
+    "rule_id": "IR002a",
     "conditions": {
       "agent_class_ids": [
         "CLS-002"
@@ -67,42 +65,134 @@
         "RTS027",
         "RTS022",
         "RTS023",
-        "RTS024"
+        "RTS024",
+        "RTS010",
+        "RTS011",
+        "RTS012",
+        "RTS029"
       ],
       "fractionation_ids": [
         "FX001",
         "FX002",
-        "FX003"
+        "FX003",
+        "FX006",
+        "FX007",
+        "FX008"
       ],
       "timing_ids": [
-        "TM001"
+        "TM001",
+        "TM002"
       ],
       "intent": null
     },
     "output_alert_level": "Moderate toxicity alert",
     "output_toxicity_domains": [
-      "DOM-01",
-      "DOM-06"
+      "DOM-06",
+      "DOM-01"
     ],
     "primary_risk_driver": "Combination-driven",
-    "secondary_risk_drivers": [],
-    "rationale_text": "Concurrent CDK4/6 inhibition may increase marrow and gastrointestinal toxicity, particularly with pelvic or abdominal RT.",
-    "evidence_link_ids": [
-      "EVID-0001",
-      "EVID-0015",
-      "EVID-0016"
+    "secondary_risk_drivers": [
+      "Agent-driven"
     ],
-    "supporting_evidence_ids": [
-      "EVID-0045"
-    ],
-    "evidence_level": "Low",
+    "rationale_text": "Concurrent CDK4/6 inhibition (abemaciclib, palbociclib, ribociclib) with pelvic, abdominal, spine, breast or bone RT increases myelosuppression and GI toxicity risk. Neutropenia is a class effect. Breast RT with CDK4/6 inhibitors may increase skin toxicity. Consider temporary hold discussion and FBC monitoring.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Moderate",
     "uncertainty": "Moderate",
     "evidence_basis_type": "Retrospective evidence/consensus",
     "expert_consensus_basis": true,
     "applies_to_any_low_concern": false,
     "applies_to_no_direct_evidence": false,
     "version": "1.0",
-    "last_reviewed_date": "2026-06-12",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR002b",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-002"
+      ],
+      "rt_site_ids": [
+        "RTS003",
+        "RTS004",
+        "RTS005",
+        "RTS013",
+        "RTS014",
+        "RTS015",
+        "RTS021",
+        "RTS020"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001",
+        "TM002"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-06",
+      "DOM-03",
+      "DOM-01"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [
+      "Agent-driven",
+      "Site-driven"
+    ],
+    "rationale_text": "CDK4/6 inhibitors combined with oesophageal, head and neck, or brain RT (WBRT or SRS) may produce additive mucositis, oesophagitis and GI toxicity (particularly abemaciclib). For brain RT, limited direct data but class-level ILD and marrow suppression risk warrants caution. Monitor closely and discuss brief hold with MDT.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Moderate",
+    "uncertainty": "Moderate-high",
+    "evidence_basis_type": "Class evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR002c",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-002"
+      ],
+      "rt_site_ids": [
+        "RTS006",
+        "RTS007",
+        "RTS008",
+        "RTS009"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001",
+        "TM002"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-05",
+      "DOM-06"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [
+      "Agent-driven"
+    ],
+    "rationale_text": "CDK4/6 inhibitors carry class-level ILD/pneumonitis risk. Concurrent thoracic RT may produce additive pulmonary toxicity. Monitor for respiratory symptoms; imaging if symptomatic.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Low",
+    "uncertainty": "Moderate-high",
+    "evidence_basis_type": "Class evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
     "status": "active"
   },
   {
@@ -112,23 +202,27 @@
         "CLS-003"
       ],
       "rt_site_ids": [
+        "RTS003",
+        "RTS004",
+        "RTS005",
         "RTS016",
         "RTS017",
         "RTS025",
         "RTS026",
-        "RTS003",
-        "RTS004",
-        "RTS005",
+        "RTS027",
         "RTS007",
         "RTS008",
         "RTS028",
-        "RTS029",
         "RTS006",
         "RTS009"
       ],
       "fractionation_ids": [
+        "FX003",
         "FX004",
-        "FX003"
+        "FX001",
+        "FX002",
+        "FX006",
+        "FX007"
       ],
       "timing_ids": [
         "TM001",
@@ -141,18 +235,57 @@
     "output_toxicity_domains": [
       "DOM-07",
       "DOM-08",
-      "DOM-09"
+      "DOM-09",
+      "DOM-05"
     ],
     "primary_risk_driver": "Combination-driven",
-    "secondary_risk_drivers": [],
-    "rationale_text": "Anti-VEGF pathway inhibition may increase bleeding, perforation, fistula, vascular injury and impaired healing with high-dose RT near hollow viscera or major vessels.",
-    "evidence_link_ids": [
-      "EVID-0034",
-      "EVID-0035"
+    "secondary_risk_drivers": [
+      "Fractionation-driven",
+      "Timing-driven"
     ],
-    "supporting_evidence_ids": [
-      "EVID-0069"
+    "rationale_text": "Anti-VEGF/VEGFR therapy (bevacizumab, ramucirumab, sunitinib, sorafenib etc.) with ablative/SABR RT near hollow viscera, major vessels or mucosal surfaces carries significant risk of haemorrhage, fistula, perforation and impaired wound healing. Avoid concurrent use unless formally justified. Minimum hold intervals should reflect agent half-life and site-specific risk; the Sanford framework suggests 1-2 weeks minimum.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "High",
+    "uncertainty": "Low",
+    "evidence_basis_type": "Clinical evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR003b",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-003"
+      ],
+      "rt_site_ids": [
+        "RTS020",
+        "RTS021"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001",
+        "TM002",
+        "TM003"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "High toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-10",
+      "DOM-07"
     ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [
+      "Agent-driven"
+    ],
+    "rationale_text": "Bevacizumab and other anti-VEGF agents with brain RT (WBRT or SRS) carry risk of radionecrosis and intracranial haemorrhage. While bevacizumab is sometimes used to treat radionecrosis, concurrent use during RT is not standard and requires specialist review.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
     "evidence_level": "Moderate",
     "uncertainty": "Moderate",
     "evidence_basis_type": "Clinical evidence/consensus",
@@ -160,7 +293,93 @@
     "applies_to_any_low_concern": false,
     "applies_to_no_direct_evidence": false,
     "version": "1.0",
-    "last_reviewed_date": "2026-06-12",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR003c",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-003"
+      ],
+      "rt_site_ids": [
+        "RTS029",
+        "RTS022",
+        "RTS023",
+        "RTS024",
+        "RTS010",
+        "RTS011",
+        "RTS012"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001",
+        "TM002",
+        "TM003"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-09",
+      "DOM-07"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [],
+    "rationale_text": "Anti-VEGF agents with breast, palliative bone or spine RT may impair wound healing and increase vascular injury risk. Bevacizumab with breast RT increases risk of wound breakdown and radiation dermatitis. Review hold requirements based on agent and site; bevacizumab should generally be held around surgery/wound-healing phases.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Low",
+    "uncertainty": "High",
+    "evidence_basis_type": "Class evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR003e",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-003"
+      ],
+      "rt_site_ids": [
+        "RTS013",
+        "RTS014",
+        "RTS015"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001",
+        "TM002",
+        "TM003"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "High toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-08",
+      "DOM-09",
+      "DOM-03"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [
+      "Site-driven",
+      "Agent-driven"
+    ],
+    "rationale_text": "Anti-VEGF therapy (bevacizumab) combined with head and neck RT carries a clinically significant risk of carotid rupture, oro-cutaneous fistula, and impaired mucosal healing. HN RT compromises mucosal vascularity; anti-VEGF agents further impair wound repair and angiogenesis. This combination is generally not recommended concurrently. If required, specialist MDT review is essential. Published case series report fistula rates substantially higher than RT alone.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Moderate",
+    "uncertainty": "Low-moderate",
+    "evidence_basis_type": "Clinical evidence/case series",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
     "status": "active"
   },
   {
@@ -177,7 +396,11 @@
       ],
       "fractionation_ids": [
         "FX001",
-        "FX004"
+        "FX002",
+        "FX003",
+        "FX004",
+        "FX006",
+        "FX007"
       ],
       "timing_ids": [
         "TM001",
@@ -186,35 +409,70 @@
       ],
       "intent": null
     },
-    "output_alert_level": "Caution",
+    "output_alert_level": "Moderate toxicity alert",
     "output_toxicity_domains": [
       "DOM-05"
     ],
     "primary_risk_driver": "Combination-driven",
-    "secondary_risk_drivers": [],
-    "rationale_text": "Potential overlapping immune-mediated and radiation pneumonitis risk.",
-    "evidence_link_ids": [
-      "EVID-0002",
-      "EVID-0031"
+    "secondary_risk_drivers": [
+      "Agent-driven",
+      "Site-driven"
     ],
-    "supporting_evidence_ids": [
-      "EVID-0025",
-      "EVID-0026",
-      "EVID-0027",
-      "EVID-0053"
-    ],
-    "evidence_level": "Moderate",
-    "uncertainty": "Moderate",
-    "evidence_basis_type": "Clinical evidence",
-    "expert_consensus_basis": false,
+    "rationale_text": "Immune checkpoint inhibitors (pembrolizumab, nivolumab, atezolizumab, durvalumab etc.) with thoracic RT carry additive immune pneumonitis risk regardless of sequencing. ICI started after recent thoracic RT also increases pneumonitis incidence. Monitor respiratory symptoms and chest imaging. Palliative thoracic RT with recent ICI is commonly encountered and requires careful monitoring.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "High",
+    "uncertainty": "Low",
+    "evidence_basis_type": "Clinical evidence/consensus",
+    "expert_consensus_basis": true,
     "applies_to_any_low_concern": false,
     "applies_to_no_direct_evidence": false,
     "version": "1.0",
-    "last_reviewed_date": "2026-06-12",
+    "last_reviewed_date": "2026-06-17",
     "status": "active"
   },
   {
-    "rule_id": "IR005",
+    "rule_id": "IR004b",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-004"
+      ],
+      "rt_site_ids": [
+        "RTS021"
+      ],
+      "fractionation_ids": [
+        "FX005"
+      ],
+      "timing_ids": [
+        "TM001",
+        "TM002"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Caution",
+    "output_toxicity_domains": [
+      "DOM-10",
+      "DOM-04"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [
+      "Agent-driven"
+    ],
+    "rationale_text": "ICI combined with SRS appears generally safe but increases risk of local inflammation, pseudo-progression and radionecrosis. The combination may enhance anti-tumour immune response but also inflammatory CNS toxicity. Discuss timing and monitoring with neuro-oncology.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Moderate",
+    "uncertainty": "Moderate",
+    "evidence_basis_type": "Clinical evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR004c",
     "conditions": {
       "agent_class_ids": [
         "CLS-004"
@@ -224,8 +482,131 @@
         "RTS021"
       ],
       "fractionation_ids": [
-        "FX005"
+        "FX005",
+        "FX007",
+        "FX002",
+        "FX001"
       ],
+      "timing_ids": [
+        "TM001",
+        "TM002"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-10",
+      "DOM-06"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [
+      "Site-driven"
+    ],
+    "rationale_text": "Concurrent ICI with brain RT (WBRT or SRS) may increase neurocognitive toxicity, CNS inflammation and immune-related adverse events including cerebral oedema. The combination may enhance anti-tumour immune response but also inflammatory CNS toxicity. Limited prospective data; use requires specialist discussion. For ICI + SRS at ablative fracs see IR004b.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Low",
+    "uncertainty": "High",
+    "evidence_basis_type": "Class evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR004d",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-004"
+      ],
+      "rt_site_ids": [
+        "RTS016",
+        "RTS017",
+        "RTS018",
+        "RTS019",
+        "RTS025",
+        "RTS026",
+        "RTS027",
+        "RTS003",
+        "RTS004",
+        "RTS005",
+        "RTS013",
+        "RTS014",
+        "RTS015",
+        "RTS010",
+        "RTS011",
+        "RTS012",
+        "RTS029",
+        "RTS022",
+        "RTS023",
+        "RTS024"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001",
+        "TM002"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-01",
+      "DOM-08"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [
+      "Site-driven"
+    ],
+    "rationale_text": "ICI with pelvic, abdominal, mucosal (esophagus, HN) or musculoskeletal (breast, bone, spine) RT may trigger or worsen immune-related toxicities: colitis (pelvic), pneumonitis (HN/chest adjacent), mucositis (HN/esophageal), or radiation recall/inflammation at any site. Monitor for irAEs at all sites. Discuss immunotherapy hold intervals around RT per institutional protocols.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Low",
+    "uncertainty": "High",
+    "evidence_basis_type": "Class evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR005",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-005"
+      ],
+      "rt_site_ids": [
+        "RTS016",
+        "RTS017",
+        "RTS018",
+        "RTS019",
+        "RTS025",
+        "RTS026",
+        "RTS027",
+        "RTS022",
+        "RTS023",
+        "RTS024",
+        "RTS006",
+        "RTS007",
+        "RTS008",
+        "RTS009",
+        "RTS003",
+        "RTS004",
+        "RTS005",
+        "RTS013",
+        "RTS014",
+        "RTS015",
+        "RTS010",
+        "RTS011",
+        "RTS012",
+        "RTS020",
+        "RTS029",
+        "RTS021"
+      ],
+      "fractionation_ids": null,
       "timing_ids": [
         "TM001",
         "TM002",
@@ -233,439 +614,58 @@
       ],
       "intent": null
     },
-    "output_alert_level": "Caution",
+    "output_alert_level": "Moderate toxicity alert",
     "output_toxicity_domains": [
-      "DOM-10"
+      "DOM-06",
+      "DOM-01",
+      "DOM-05"
     ],
-    "primary_risk_driver": "Combination-driven",
-    "secondary_risk_drivers": [],
-    "rationale_text": "SRS with immune checkpoint therapy may increase inflammatory imaging changes, oedema or radionecrosis in selected settings.",
-    "evidence_link_ids": [
-      "EVID-0002",
-      "EVID-0024"
+    "primary_risk_driver": "Agent-driven",
+    "secondary_risk_drivers": [
+      "Combination-driven",
+      "Site-driven"
     ],
-    "supporting_evidence_ids": [
-      "EVID-0005",
-      "EVID-0033"
-    ],
+    "rationale_text": "PARP inhibitors (olaparib, niraparib, rucaparib) inhibit DNA repair and may potentiate RT-induced normal tissue injury at all sites: marrow/GI (pelvic/abdominal), pulmonary (thoracic), mucosal (HN/esophageal), CNS (brain WBRT), cardiac (breast), or structural (bone). Consider hold discussion per agent and site. Evidence is mainly preclinical/class-level but mechanistically well supported.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
     "evidence_level": "Low",
-    "uncertainty": "Moderate",
-    "evidence_basis_type": "Retrospective evidence",
-    "expert_consensus_basis": false,
+    "uncertainty": "High",
+    "evidence_basis_type": "Class evidence/consensus",
+    "expert_consensus_basis": true,
     "applies_to_any_low_concern": false,
     "applies_to_no_direct_evidence": false,
     "version": "1.0",
-    "last_reviewed_date": "2026-06-12",
+    "last_reviewed_date": "2026-06-17",
     "status": "active"
   },
   {
     "rule_id": "IR006",
     "conditions": {
       "agent_class_ids": [
-        "CLS-005"
-      ],
-      "rt_site_ids": [
-        "RTS006",
-        "RTS007",
-        "RTS008",
-        "RTS009"
-      ],
-      "fractionation_ids": [
-        "FX002",
-        "FX003",
-        "FX004"
-      ],
-      "timing_ids": [
-        "TM001",
-        "TM002",
-        "TM003"
-      ],
-      "intent": null
-    },
-    "output_alert_level": "Moderate toxicity alert",
-    "output_toxicity_domains": [
-      "DOM-05"
-    ],
-    "primary_risk_driver": "Combination-driven",
-    "secondary_risk_drivers": [],
-    "rationale_text": "Potential additive interstitial lung disease/pneumonitis risk with thoracic RT.",
-    "evidence_link_ids": [
-      "EVID-0007",
-      "EVID-0008",
-      "EVID-0009"
-    ],
-    "supporting_evidence_ids": [
-      "EVID-0004",
-      "EVID-0005"
-    ],
-    "evidence_level": "Moderate",
-    "uncertainty": "Moderate",
-    "evidence_basis_type": "Clinical evidence/class extrapolation",
-    "expert_consensus_basis": false,
-    "applies_to_any_low_concern": false,
-    "applies_to_no_direct_evidence": false,
-    "version": "1.0",
-    "last_reviewed_date": "2026-06-12",
-    "status": "active"
-  },
-  {
-    "rule_id": "IR007",
-    "conditions": {
-      "agent_class_ids": [
+        "CLS-007",
         "CLS-006"
       ],
       "rt_site_ids": [
         "RTS006",
         "RTS007",
         "RTS008",
-        "RTS009"
-      ],
-      "fractionation_ids": [
-        "FX004"
-      ],
-      "timing_ids": [
-        "TM001"
-      ],
-      "intent": null
-    },
-    "output_alert_level": "Moderate toxicity alert",
-    "output_toxicity_domains": [
-      "DOM-05",
-      "DOM-04",
-      "DOM-03"
-    ],
-    "primary_risk_driver": "Combination-driven",
-    "secondary_risk_drivers": [],
-    "rationale_text": "Concurrent thoracic RT with targeted kinase inhibition may increase pulmonary toxicity.",
-    "evidence_link_ids": [
-      "EVID-0003"
-    ],
-    "supporting_evidence_ids": [
-      "EVID-0048",
-      "EVID-0049"
-    ],
-    "evidence_level": "Low",
-    "uncertainty": "Moderate",
-    "evidence_basis_type": "Consensus/class evidence",
-    "expert_consensus_basis": true,
-    "applies_to_any_low_concern": false,
-    "applies_to_no_direct_evidence": false,
-    "version": "1.0",
-    "last_reviewed_date": "2026-06-12",
-    "status": "active"
-  },
-  {
-    "rule_id": "IR008",
-    "conditions": {
-      "agent_class_ids": [
-        "CLS-007"
-      ],
-      "rt_site_ids": [
-        "RTS025",
-        "RTS026",
-        "RTS027",
-        "RTS020",
-        "RTS021",
-        "RTS028",
-        "RTS013"
-      ],
-      "fractionation_ids": null,
-      "timing_ids": [
-        "TM001"
-      ],
-      "intent": null
-    },
-    "output_alert_level": "Moderate toxicity alert",
-    "output_toxicity_domains": [
-      "DOM-04",
-      "DOM-19"
-    ],
-    "primary_risk_driver": "Agent-driven",
-    "secondary_risk_drivers": [
-      "combination-driven"
-    ],
-    "rationale_text": "BRAF inhibition may enhance radiation dermatitis and, rarely, visceral toxicity or radiation recall.",
-    "evidence_link_ids": [
-      "EVID-0003"
-    ],
-    "supporting_evidence_ids": [
-      "EVID-0069"
-    ],
-    "evidence_level": "Moderate",
-    "uncertainty": "Moderate",
-    "evidence_basis_type": "Clinical evidence/consensus",
-    "expert_consensus_basis": true,
-    "applies_to_any_low_concern": false,
-    "applies_to_no_direct_evidence": false,
-    "version": "1.0",
-    "last_reviewed_date": "2026-06-12",
-    "status": "active"
-  },
-  {
-    "rule_id": "IR009",
-    "conditions": {
-      "agent_class_ids": [
-        "CLS-008"
-      ],
-      "rt_site_ids": [
-        "RTS016",
-        "RTS017",
-        "RTS018",
-        "RTS019",
-        "RTS025",
-        "RTS026",
-        "RTS027",
-        "RTS003",
-        "RTS004",
-        "RTS005",
-        "RTS013",
-        "RTS014",
-        "RTS015"
-      ],
-      "fractionation_ids": [
-        "FX001"
-      ],
-      "timing_ids": [
-        "TM001"
-      ],
-      "intent": "Curative"
-    },
-    "output_alert_level": "Caution",
-    "output_toxicity_domains": [
-      "DOM-03",
-      "DOM-01",
-      "DOM-06"
-    ],
-    "primary_risk_driver": "Combination-driven",
-    "secondary_risk_drivers": [],
-    "rationale_text": "This is a recognised concurrent chemoradiation combination; toxicity risk is expected and should be managed according to the relevant protocol.",
-    "evidence_link_ids": [
-      "EVID-0041",
-      "EVID-0043",
-      "EVID-0044"
-    ],
-    "supporting_evidence_ids": [
-      "EVID-0042"
-    ],
-    "evidence_level": "Moderate",
-    "uncertainty": "Low-moderate",
-    "evidence_basis_type": "Protocol evidence",
-    "expert_consensus_basis": false,
-    "applies_to_any_low_concern": false,
-    "applies_to_no_direct_evidence": false,
-    "version": "1.0",
-    "last_reviewed_date": "2026-06-12",
-    "status": "active"
-  },
-  {
-    "rule_id": "IR010",
-    "conditions": {
-      "agent_class_ids": [
-        "CLS-009"
-      ],
-      "rt_site_ids": [
-        "RTS016",
-        "RTS017",
-        "RTS025",
-        "RTS026",
-        "RTS003",
-        "RTS004",
-        "RTS005",
-        "RTS013",
-        "RTS014",
-        "RTS015"
-      ],
-      "fractionation_ids": null,
-      "timing_ids": [
-        "TM001"
-      ],
-      "intent": null
-    },
-    "output_alert_level": "Moderate toxicity alert",
-    "output_toxicity_domains": [
-      "DOM-03",
-      "DOM-01"
-    ],
-    "primary_risk_driver": "Combination-driven",
-    "secondary_risk_drivers": [],
-    "rationale_text": "Concurrent systemic therapy may intensify mucosal toxicity in the irradiated field.",
-    "evidence_link_ids": [
-      "EVID-0003",
-      "EVID-0041"
-    ],
-    "supporting_evidence_ids": [
-      "EVID-0042",
-      "EVID-0043"
-    ],
-    "evidence_level": "Low",
-    "uncertainty": "Moderate",
-    "evidence_basis_type": "Class evidence/consensus",
-    "expert_consensus_basis": true,
-    "applies_to_any_low_concern": false,
-    "applies_to_no_direct_evidence": false,
-    "version": "1.0",
-    "last_reviewed_date": "2026-06-12",
-    "status": "active"
-  },
-  {
-    "rule_id": "IR011",
-    "conditions": {
-      "agent_class_ids": [
-        "CLS-010"
-      ],
-      "rt_site_ids": [
-        "RTS006",
-        "RTS007",
-        "RTS008",
-        "RTS009"
-      ],
-      "fractionation_ids": null,
-      "timing_ids": [
-        "TM001",
-        "TM002",
-        "TM003"
-      ],
-      "intent": null
-    },
-    "output_alert_level": "Moderate toxicity alert",
-    "output_toxicity_domains": [
-      "DOM-05"
-    ],
-    "primary_risk_driver": "Agent-driven",
-    "secondary_risk_drivers": [
-      "site-driven"
-    ],
-    "rationale_text": "The selected systemic therapy and thoracic RT have overlapping pneumonitis/ILD risk.",
-    "evidence_link_ids": [
-      "EVID-0020",
-      "EVID-0025"
-    ],
-    "supporting_evidence_ids": [
-      "EVID-0021",
-      "EVID-0026",
-      "EVID-0027",
-      "EVID-0053"
-    ],
-    "evidence_level": "Moderate",
-    "uncertainty": "Moderate",
-    "evidence_basis_type": "Regulatory/clinical evidence",
-    "expert_consensus_basis": false,
-    "applies_to_any_low_concern": false,
-    "applies_to_no_direct_evidence": false,
-    "version": "1.0",
-    "last_reviewed_date": "2026-06-12",
-    "status": "active"
-  },
-  {
-    "rule_id": "IR012",
-    "conditions": {
-      "agent_class_ids": [
-        "CLS-011"
-      ],
-      "rt_site_ids": [
-        "RTS016",
-        "RTS017",
-        "RTS018",
-        "RTS019",
-        "RTS025",
-        "RTS026",
-        "RTS027"
-      ],
-      "fractionation_ids": null,
-      "timing_ids": [
-        "TM001"
-      ],
-      "intent": null
-    },
-    "output_alert_level": "Moderate toxicity alert",
-    "output_toxicity_domains": [
-      "DOM-01"
-    ],
-    "primary_risk_driver": "Combination-driven",
-    "secondary_risk_drivers": [],
-    "rationale_text": "Potential additive gastrointestinal toxicity from systemic therapy and bowel irradiation.",
-    "evidence_link_ids": [
-      "EVID-0001",
-      "EVID-0002"
-    ],
-    "supporting_evidence_ids": [
-      "EVID-0069"
-    ],
-    "evidence_level": "Low",
-    "uncertainty": "Moderate",
-    "evidence_basis_type": "Regulatory/class evidence",
-    "expert_consensus_basis": false,
-    "applies_to_any_low_concern": false,
-    "applies_to_no_direct_evidence": false,
-    "version": "1.0",
-    "last_reviewed_date": "2026-06-12",
-    "status": "active"
-  },
-  {
-    "rule_id": "IR013",
-    "conditions": {
-      "agent_class_ids": [
-        "CLS-012"
-      ],
-      "rt_site_ids": [
-        "RTS006",
-        "RTS007",
-        "RTS008",
         "RTS009",
-        "RTS020",
-        "RTS021",
-        "RTS013",
-        "RTS014",
-        "RTS015"
-      ],
-      "fractionation_ids": null,
-      "timing_ids": [
-        "TM001"
-      ],
-      "intent": null
-    },
-    "output_alert_level": "High toxicity alert",
-    "output_toxicity_domains": [
-      "DOM-10",
-      "DOM-06"
-    ],
-    "primary_risk_driver": "Timing-driven",
-    "secondary_risk_drivers": [
-      "agent-driven"
-    ],
-    "rationale_text": "Avoid elective RT during active cytokine-release syndrome, ICANS or unstable immune toxicity.",
-    "evidence_link_ids": [
-      "EVID-0066",
-      "EVID-0067"
-    ],
-    "supporting_evidence_ids": [
-      "EVID-0061",
-      "EVID-0062",
-      "EVID-0063"
-    ],
-    "evidence_level": "Low",
-    "uncertainty": "Moderate",
-    "evidence_basis_type": "Mechanistic/consensus",
-    "expert_consensus_basis": true,
-    "applies_to_any_low_concern": false,
-    "applies_to_no_direct_evidence": false,
-    "version": "1.0",
-    "last_reviewed_date": "2026-06-12",
-    "status": "active"
-  },
-  {
-    "rule_id": "IR014",
-    "conditions": {
-      "agent_class_ids": [
-        "CLS-013"
-      ],
-      "rt_site_ids": [
+        "RTS010",
+        "RTS011",
+        "RTS012",
         "RTS016",
         "RTS017",
-        "RTS025",
-        "RTS026",
-        "RTS028",
+        "RTS018",
+        "RTS019",
         "RTS013",
+        "RTS014",
+        "RTS015",
+        "RTS003",
+        "RTS004",
+        "RTS005",
+        "RTS022",
+        "RTS023",
+        "RTS024",
         "RTS029"
       ],
       "fractionation_ids": null,
@@ -676,106 +676,193 @@
       ],
       "intent": null
     },
-    "output_alert_level": "High toxicity alert",
+    "output_alert_level": "Moderate toxicity alert",
     "output_toxicity_domains": [
-      "DOM-09",
-      "DOM-07",
-      "DOM-08"
+      "DOM-05",
+      "DOM-04"
     ],
-    "primary_risk_driver": "Combination-driven",
-    "secondary_risk_drivers": [],
-    "rationale_text": "Systemic therapy may impair wound healing and increase tissue breakdown in the irradiated region.",
-    "evidence_link_ids": [
-      "EVID-0034"
+    "primary_risk_driver": "Agent-driven",
+    "secondary_risk_drivers": [
+      "Combination-driven",
+      "Fractionation-driven"
     ],
-    "supporting_evidence_ids": [
-      "EVID-0069"
-    ],
+    "rationale_text": "HER2-directed ADCs (trastuzumab deruxtecan/T-DXd, trastuzumab emtansine/T-DM1) carry class-level ILD/pneumonitis risk. Concurrent thoracic or breast RT may increase pulmonary toxicity. T-DXd has published ILD rates of 10-15%. HN/esophageal RT with HER2-directed therapy may increase mucosal toxicity. Bone/spine RT may compound haematological toxicity. Specialist review recommended.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
     "evidence_level": "Moderate",
     "uncertainty": "Moderate",
-    "evidence_basis_type": "Regulatory/clinical evidence",
-    "expert_consensus_basis": false,
+    "evidence_basis_type": "Regulatory/product-information warning",
+    "expert_consensus_basis": true,
     "applies_to_any_low_concern": false,
     "applies_to_no_direct_evidence": false,
     "version": "1.0",
-    "last_reviewed_date": "2026-06-12",
+    "last_reviewed_date": "2026-06-17",
     "status": "active"
   },
   {
-    "rule_id": "IR015",
+    "rule_id": "IR006b",
     "conditions": {
-      "agent_class_ids": [],
-      "rt_site_ids": null,
-      "fractionation_ids": [
-        "FX004",
-        "FX005",
-        "FX008"
+      "agent_class_ids": [
+        "CLS-007"
       ],
+      "rt_site_ids": [
+        "RTS020",
+        "RTS021",
+        "RTS025",
+        "RTS026",
+        "RTS027",
+        "RTS022",
+        "RTS023",
+        "RTS024",
+        "RTS013",
+        "RTS014",
+        "RTS015",
+        "RTS016",
+        "RTS017",
+        "RTS018",
+        "RTS019",
+        "RTS029",
+        "RTS003",
+        "RTS004",
+        "RTS005"
+      ],
+      "fractionation_ids": null,
       "timing_ids": [
-        "TM001"
+        "TM001",
+        "TM002"
       ],
       "intent": null
     },
-    "output_alert_level": "Uncertain / evidence limited",
-    "output_toxicity_domains": [],
-    "primary_risk_driver": "Uncertainty-driven",
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-06",
+      "DOM-10",
+      "DOM-13"
+    ],
+    "primary_risk_driver": "Agent-driven",
     "secondary_risk_drivers": [
-      "combination-driven"
+      "Combination-driven"
     ],
-    "rationale_text": "Direct evidence for this drug\u2013RT combination is insufficient. Specialist review and documented multidisciplinary reasoning are recommended.",
-    "evidence_link_ids": [
-      "EVID-0069",
-      "EVID-0070"
-    ],
+    "rationale_text": "ADCs carry payload-specific toxicity (marrow, GI, hepatic, CNS for some agents). Concurrent RT at sensitive sites may produce additive normal tissue injury. HN/esophageal RT with ADCs increases mucosal toxicity risk. Pelvic/bone RT may compound haematological toxicity. Verify payload-specific product information and discuss with medical oncology before concurrent use.",
+    "evidence_link_ids": [],
     "supporting_evidence_ids": [],
     "evidence_level": "Low",
     "uncertainty": "High",
-    "evidence_basis_type": "Evidence gap/consensus",
+    "evidence_basis_type": "Regulatory/product-information warning",
     "expert_consensus_basis": true,
     "applies_to_any_low_concern": false,
-    "applies_to_no_direct_evidence": true,
+    "applies_to_no_direct_evidence": false,
     "version": "1.0",
-    "last_reviewed_date": "2026-06-12",
+    "last_reviewed_date": "2026-06-17",
     "status": "active"
   },
   {
-    "rule_id": "IR016",
+    "rule_id": "IR006c",
     "conditions": {
-      "agent_class_ids": [],
-      "rt_site_ids": null,
+      "agent_class_ids": [
+        "CLS-006"
+      ],
+      "rt_site_ids": [
+        "RTS020",
+        "RTS021"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001",
+        "TM002",
+        "TM003"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-10",
+      "DOM-11",
+      "DOM-04"
+    ],
+    "primary_risk_driver": "Agent-driven",
+    "secondary_risk_drivers": [
+      "Combination-driven",
+      "Site-driven"
+    ],
+    "rationale_text": "HER2-directed therapies (trastuzumab, pertuzumab, T-DM1, T-DXd, tucatinib, lapatinib) combined with brain RT (WBRT or SRS) require specialist review. Trastuzumab with WBRT may increase neurocognitive toxicity; T-DM1 and T-DXd carry ILD risk that compounds with any RT. Concurrent HER2 therapy + brain RT is commonly encountered in HER2+ breast cancer with brain metastases \u2014 monitor for cardiotoxicity, ILD and CNS toxicity. Timing of HER2 therapy around brain RT should be discussed with neuro-oncology and medical oncology.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Moderate",
+    "uncertainty": "Moderate",
+    "evidence_basis_type": "Regulatory/product-information warning + clinical evidence",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR007",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-008"
+      ],
+      "rt_site_ids": [
+        "RTS003",
+        "RTS004",
+        "RTS005",
+        "RTS013",
+        "RTS014",
+        "RTS015",
+        "RTS006",
+        "RTS007",
+        "RTS008",
+        "RTS009",
+        "RTS016",
+        "RTS017",
+        "RTS018",
+        "RTS019",
+        "RTS025",
+        "RTS026",
+        "RTS027"
+      ],
       "fractionation_ids": [
         "FX001",
+        "FX002",
+        "FX003",
         "FX006",
         "FX007"
       ],
       "timing_ids": [
-        "TM004",
-        "TM005"
+        "TM001",
+        "TM002"
       ],
       "intent": null
     },
-    "output_alert_level": "No specific alert",
-    "output_toxicity_domains": [],
-    "primary_risk_driver": "Agent-driven",
-    "secondary_risk_drivers": [],
-    "rationale_text": "No major interaction signal identified; proceed with standard clinical checks and clinician override.",
-    "evidence_link_ids": [
-      "EVID-0069",
-      "EVID-0070"
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-03",
+      "DOM-06",
+      "DOM-01",
+      "DOM-12"
     ],
+    "primary_risk_driver": "Agent-driven",
+    "secondary_risk_drivers": [
+      "Combination-driven",
+      "Site-driven"
+    ],
+    "rationale_text": "Platinum-based agents (cisplatin, carboplatin, oxaliplatin) are established radiosensitisers. Radiosensitisation persists for weeks after last dose (TM002: recent before RT). Expected additive toxicity to mucosa (esophagitis, mucositis), marrow, GI tract and kidneys. This is often a planned interaction per protocol, but requires close monitoring and supportive care coordination.",
+    "evidence_link_ids": [],
     "supporting_evidence_ids": [],
-    "evidence_level": "Low",
-    "uncertainty": "Moderate",
-    "evidence_basis_type": "Low-level evidence/consensus",
+    "evidence_level": "High",
+    "uncertainty": "Low",
+    "evidence_basis_type": "Clinical evidence/consensus",
     "expert_consensus_basis": true,
-    "applies_to_any_low_concern": true,
+    "applies_to_any_low_concern": false,
     "applies_to_no_direct_evidence": false,
     "version": "1.0",
-    "last_reviewed_date": "2026-06-12",
+    "last_reviewed_date": "2026-06-17",
     "status": "active"
   },
   {
-    "rule_id": "IR017",
+    "rule_id": "IR007b",
     "conditions": {
       "agent_class_ids": [
         "CLS-008"
@@ -786,11 +873,12 @@
       ],
       "fractionation_ids": null,
       "timing_ids": [
-        "TM001"
+        "TM001",
+        "TM002"
       ],
       "intent": null
     },
-    "output_alert_level": "Caution",
+    "output_alert_level": "Moderate toxicity alert",
     "output_toxicity_domains": [
       "DOM-10",
       "DOM-06",
@@ -798,10 +886,9 @@
     ],
     "primary_risk_driver": "Agent-driven",
     "secondary_risk_drivers": [
-      "Combination-driven",
-      "Fractionation-driven"
+      "Combination-driven"
     ],
-    "rationale_text": "Concurrent cytotoxic chemotherapy with brain radiotherapy carries risk of additive neurotoxicity, enhanced radiosensitisation and increased treatment-related morbidity. Specialist multidisciplinary review and close monitoring are required. Evidence supports caution across conventional, hypofractionated and palliative brain RT schedules.",
+    "rationale_text": "Concurrent platinum-based chemotherapy with brain RT (WBRT or SRS) carries risk of additive neurotoxicity, leukoencephalopathy and bone marrow suppression. Cisplatin with WBRT is associated with increased neurocognitive toxicity and hearing loss. Careful monitoring required.",
     "evidence_link_ids": [],
     "supporting_evidence_ids": [],
     "evidence_level": "Moderate",
@@ -815,7 +902,155 @@
     "status": "active"
   },
   {
-    "rule_id": "IR018",
+    "rule_id": "IR007c",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-008"
+      ],
+      "rt_site_ids": [
+        "RTS010",
+        "RTS011",
+        "RTS012",
+        "RTS022",
+        "RTS023",
+        "RTS024",
+        "RTS029"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001",
+        "TM002"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Caution",
+    "output_toxicity_domains": [
+      "DOM-06",
+      "DOM-04"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [],
+    "rationale_text": "Platinum agents with breast, spine or bone RT: marrow suppression from platinum overlaps with marrow-containing RT fields. Dermatitis and skin toxicity may increase with concurrent platinum. Monitor FBC and skin toxicity.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Low",
+    "uncertainty": "Moderate-high",
+    "evidence_basis_type": "Class evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR008",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-009"
+      ],
+      "rt_site_ids": [
+        "RTS013",
+        "RTS014",
+        "RTS015",
+        "RTS003",
+        "RTS004",
+        "RTS005",
+        "RTS016",
+        "RTS017",
+        "RTS018",
+        "RTS019",
+        "RTS025",
+        "RTS026",
+        "RTS027"
+      ],
+      "fractionation_ids": [
+        "FX001",
+        "FX002"
+      ],
+      "timing_ids": [
+        "TM001",
+        "TM002"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-03",
+      "DOM-06",
+      "DOM-01",
+      "DOM-02"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [
+      "Agent-driven",
+      "Site-driven"
+    ],
+    "rationale_text": "Concurrent or recent cytotoxic chemotherapy with mucosal or pelvic RT is an established chemoradiation practice. Radiosensitisation from cytotoxics persists within weeks of last dose. Expected additive toxicity includes mucositis, oesophagitis, diarrhoea and myelosuppression. Treatment is usually protocol-guided; requires close clinical monitoring and supportive care.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "High",
+    "uncertainty": "Low",
+    "evidence_basis_type": "Established chemoradiation evidence",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR008b",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-009"
+      ],
+      "rt_site_ids": [
+        "RTS006",
+        "RTS007",
+        "RTS008",
+        "RTS009"
+      ],
+      "fractionation_ids": [
+        "FX001",
+        "FX002",
+        "FX003",
+        "FX004",
+        "FX006",
+        "FX007"
+      ],
+      "timing_ids": [
+        "TM001",
+        "TM002"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "High toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-05",
+      "DOM-03",
+      "DOM-06"
+    ],
+    "primary_risk_driver": "Agent-driven",
+    "secondary_risk_drivers": [
+      "Combination-driven",
+      "Fractionation-driven"
+    ],
+    "rationale_text": "Concurrent or recent cytotoxic chemotherapy (particularly gemcitabine, taxanes, vinorelbine) with thoracic RT carries significant pulmonary radiosensitisation risk. Radiosensitisation may persist for weeks after last dose. Gemcitabine concurrent with thoracic RT is generally contraindicated. Careful agent-specific review required.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "High",
+    "uncertainty": "Low",
+    "evidence_basis_type": "Clinical evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR008c",
     "conditions": {
       "agent_class_ids": [
         "CLS-009"
@@ -826,28 +1061,822 @@
       ],
       "fractionation_ids": null,
       "timing_ids": [
-        "TM001"
+        "TM001",
+        "TM002"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-10",
+      "DOM-06",
+      "DOM-03"
+    ],
+    "primary_risk_driver": "Agent-driven",
+    "secondary_risk_drivers": [
+      "Combination-driven",
+      "Site-driven"
+    ],
+    "rationale_text": "Concurrent cytotoxic chemotherapy with brain RT carries additive neurotoxicity risk, particularly leukoencephalopathy with temozolomide+RT (established protocol) and with older agents. Marrow suppression is also a concern. Palliative WBRT with concurrent cytotoxics requires careful monitoring.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Moderate",
+    "uncertainty": "Low-moderate",
+    "evidence_basis_type": "Established chemoradiation evidence",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR008d",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-009"
+      ],
+      "rt_site_ids": [
+        "RTS010",
+        "RTS011",
+        "RTS012"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001",
+        "TM002"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-04",
+      "DOM-06",
+      "DOM-11"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [],
+    "rationale_text": "Concurrent cytotoxic chemotherapy with breast RT increases dermatitis, marrow suppression and cardiac toxicity risk. Anthracyclines concurrent with RT carry additional cardiotoxicity concern. Standard practice avoids concurrent chemotherapy with adjuvant breast RT; concurrent use in palliative settings requires clinical review.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Moderate",
+    "uncertainty": "Moderate",
+    "evidence_basis_type": "Clinical evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR008e",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-009",
+        "CLS-008"
+      ],
+      "rt_site_ids": [
+        "RTS029",
+        "RTS022",
+        "RTS023",
+        "RTS024"
+      ],
+      "fractionation_ids": [
+        "FX006",
+        "FX007",
+        "FX001",
+        "FX002"
+      ],
+      "timing_ids": [
+        "TM001",
+        "TM002"
       ],
       "intent": null
     },
     "output_alert_level": "Caution",
     "output_toxicity_domains": [
-      "DOM-10",
+      "DOM-06",
+      "DOM-04"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [],
+    "rationale_text": "Palliative bone or spine RT with concurrent cytotoxic chemotherapy: potential additive marrow suppression from marrow-containing fields. Short-course palliative RT with cytotoxics is common and often safe, but verify marrow reserve and timing of chemotherapy nadir.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Moderate",
+    "uncertainty": "Moderate",
+    "evidence_basis_type": "Clinical evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR009",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-009",
+        "CLS-008"
+      ],
+      "rt_site_ids": null,
+      "fractionation_ids": [
+        "FX003",
+        "FX004",
+        "FX005"
+      ],
+      "timing_ids": [
+        "TM001",
+        "TM002"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "High toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-05",
       "DOM-03",
-      "DOM-06"
+      "DOM-06",
+      "DOM-07"
+    ],
+    "primary_risk_driver": "Fractionation-driven",
+    "secondary_risk_drivers": [
+      "Combination-driven",
+      "Agent-driven"
+    ],
+    "rationale_text": "Concurrent cytotoxic chemotherapy with SABR/SBRT or SRS substantially increases normal tissue toxicity risk at all sites. High dose-per-fraction RT combined with cytotoxics produces severe radiosensitisation. Avoid concurrent use unless specifically justified by a protocol or specialist review. Brief hold or sequential scheduling strongly recommended.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Moderate",
+    "uncertainty": "Low-moderate",
+    "evidence_basis_type": "Clinical evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR010",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-011"
+      ],
+      "rt_site_ids": [
+        "RTS013",
+        "RTS014",
+        "RTS015",
+        "RTS003",
+        "RTS004",
+        "RTS005"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001",
+        "TM002"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-03",
+      "DOM-04",
+      "DOM-16"
+    ],
+    "primary_risk_driver": "Agent-driven",
+    "secondary_risk_drivers": [
+      "Site-driven",
+      "Combination-driven"
+    ],
+    "rationale_text": "EGFR-targeted agents (cetuximab, panitumumab, erlotinib, gefitinib, osimertinib) with HN or oesophageal RT may increase mucositis, dermatitis and oesophagitis. Cetuximab concurrent with HN RT is an established protocol with expected additive skin and mucosal toxicity. EGFR TKIs have less direct evidence but class-level concern. Document expected toxicities and monitoring plan.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "High",
+    "uncertainty": "Low",
+    "evidence_basis_type": "Clinical evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR010b",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-011"
+      ],
+      "rt_site_ids": [
+        "RTS006",
+        "RTS007",
+        "RTS008",
+        "RTS009"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001",
+        "TM002"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-05",
+      "DOM-04"
+    ],
+    "primary_risk_driver": "Agent-driven",
+    "secondary_risk_drivers": [
+      "Combination-driven",
+      "Site-driven"
+    ],
+    "rationale_text": "EGFR inhibitors with thoracic RT carry additive ILD/pneumonitis risk. Osimertinib has published ILD rates of 3-4%. Concurrent thoracic RT may increase pneumonitis incidence. For palliative thoracic RT with EGFR TKI, monitor for respiratory symptoms and consider brief hold per Guimond/ESMO-ESTRO recommendations.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Moderate",
+    "uncertainty": "Moderate",
+    "evidence_basis_type": "Regulatory/product-information warning + class-level consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR010c",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-011"
+      ],
+      "rt_site_ids": [
+        "RTS020",
+        "RTS021",
+        "RTS016",
+        "RTS017",
+        "RTS018",
+        "RTS019",
+        "RTS029",
+        "RTS022",
+        "RTS023",
+        "RTS024",
+        "RTS010",
+        "RTS011",
+        "RTS012"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001",
+        "TM002"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Caution",
+    "output_toxicity_domains": [
+      "DOM-04",
+      "DOM-01"
+    ],
+    "primary_risk_driver": "Agent-driven",
+    "secondary_risk_drivers": [],
+    "rationale_text": "EGFR inhibitors with palliative RT at non-thoracic sites: dermatitis and GI toxicity may overlap with RT at skin or pelvic sites. Brain RT with osimertinib/erlotinib is sometimes concurrent; review for ILD risk. Document clinical intent and expected toxicities.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Low",
+    "uncertainty": "High",
+    "evidence_basis_type": "Class evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR011",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-012"
+      ],
+      "rt_site_ids": [
+        "RTS006",
+        "RTS007",
+        "RTS008",
+        "RTS009"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001",
+        "TM002"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-05"
+    ],
+    "primary_risk_driver": "Agent-driven",
+    "secondary_risk_drivers": [
+      "Combination-driven",
+      "Site-driven"
+    ],
+    "rationale_text": "ALK/ROS1 inhibitors (alectinib, brigatinib, crizotinib, lorlatinib) carry class-level ILD/pneumonitis risk (brigatinib highest at ~7% early-onset). Concurrent thoracic RT increases additive pneumonitis risk. Guimond/ESMO-ESTRO recommendation: consider suspending ALK inhibitor for the week of RT. Restart after field-specific toxicity assessment.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Moderate",
+    "uncertainty": "Moderate",
+    "evidence_basis_type": "Regulatory/product-information warning + class-level consensus (ESMO-ESTRO)",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR011b",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-012"
+      ],
+      "rt_site_ids": [
+        "RTS020",
+        "RTS021",
+        "RTS013",
+        "RTS014",
+        "RTS015",
+        "RTS016",
+        "RTS017",
+        "RTS018",
+        "RTS019",
+        "RTS029",
+        "RTS022",
+        "RTS023",
+        "RTS024",
+        "RTS003",
+        "RTS004",
+        "RTS005",
+        "RTS010",
+        "RTS011",
+        "RTS012"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001",
+        "TM002"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-10",
+      "DOM-05"
     ],
     "primary_risk_driver": "Agent-driven",
     "secondary_risk_drivers": [
       "Combination-driven"
     ],
-    "rationale_text": "Strong radiosensitising agents given concurrently with brain RT significantly amplify normal-tissue radiation effects. This includes enhanced risk of radionecrosis, neurocognitive injury and acute mucosal/systemic toxicity. Caution and specialist oversight are mandatory.",
+    "rationale_text": "ALK/ROS1 inhibitors with brain, HN, esophageal, breast, pelvic, bone or spine RT: CNS-penetrant agents (lorlatinib, alectinib) are used for brain metastases. ILD is a class-level risk that compounds with thoracic or adjacent RT. HN/esophageal RT with ALK inhibitors may increase mucosal toxicity. Pelvic/bone RT may compound haematological toxicity. Hold week of RT per ESMO-ESTRO recommendation; discuss restart timing.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Low",
+    "uncertainty": "High",
+    "evidence_basis_type": "Class evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR012",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-010"
+      ],
+      "rt_site_ids": [
+        "RTS028",
+        "RTS020",
+        "RTS021",
+        "RTS025",
+        "RTS026",
+        "RTS027",
+        "RTS006",
+        "RTS007",
+        "RTS008",
+        "RTS009",
+        "RTS003",
+        "RTS004",
+        "RTS005",
+        "RTS013",
+        "RTS014",
+        "RTS015",
+        "RTS010",
+        "RTS011",
+        "RTS012"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001",
+        "TM002",
+        "TM003"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-04",
+      "DOM-05",
+      "DOM-10",
+      "DOM-13"
+    ],
+    "primary_risk_driver": "Agent-driven",
+    "secondary_risk_drivers": [
+      "Combination-driven",
+      "Timing-driven"
+    ],
+    "rationale_text": "Targeted kinase inhibitors (BRAF/MEK: dabrafenib/trametinib, vemurafenib; mTOR: everolimus; multikinase TKIs: sorafenib, sunitinib, pazopanib) may cause radiation recall, potentiate skin/mucosal toxicity, or increase hepatic/pulmonary/CNS toxicity with concurrent RT. BRAF inhibitors have well-documented radiation recall risk particularly at skin/mucosal sites. Breast RT may produce skin radiation recall. Close timing with RT should be reviewed per agent.",
     "evidence_link_ids": [],
     "supporting_evidence_ids": [],
     "evidence_level": "Moderate",
+    "uncertainty": "Moderate",
+    "evidence_basis_type": "Retrospective evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR012b",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-010"
+      ],
+      "rt_site_ids": [
+        "RTS016",
+        "RTS017",
+        "RTS018",
+        "RTS019",
+        "RTS029",
+        "RTS022",
+        "RTS023",
+        "RTS024"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001",
+        "TM002"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-01",
+      "DOM-06",
+      "DOM-04"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [],
+    "rationale_text": "Multikinase inhibitors (sorafenib, sunitinib, cabozantinib) with pelvic, bone or spine RT may cause wound healing impairment, GI toxicity and marrow suppression. Sorafenib and similar agents carry anti-VEGF effects that impair normal tissue repair. Review hold requirements per agent.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Low",
+    "uncertainty": "High",
+    "evidence_basis_type": "Class evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR013",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-001"
+      ],
+      "rt_site_ids": [
+        "RTS001",
+        "RTS002",
+        "RTS016",
+        "RTS017",
+        "RTS018",
+        "RTS019",
+        "RTS010",
+        "RTS011",
+        "RTS012",
+        "RTS029",
+        "RTS003",
+        "RTS004",
+        "RTS005",
+        "RTS006",
+        "RTS007",
+        "RTS008",
+        "RTS009",
+        "RTS013",
+        "RTS014",
+        "RTS015",
+        "RTS020",
+        "RTS021",
+        "RTS022",
+        "RTS023",
+        "RTS024",
+        "RTS025",
+        "RTS026",
+        "RTS027",
+        "RTS028"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001",
+        "TM002",
+        "TM003",
+        "TM004",
+        "TM005"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Caution",
+    "output_toxicity_domains": [
+      "DOM-18",
+      "DOM-06"
+    ],
+    "primary_risk_driver": "Agent-driven",
+    "secondary_risk_drivers": [],
+    "rationale_text": "Hormonal/endocrine therapy (LHRH agonists, anti-androgens, aromatase inhibitors, tamoxifen) concurrent with RT is standard practice for prostate, breast and gynaecological cancers. Direct interaction risk is generally low at most sites. Additive effects on cardiovascular risk (LHRH agonists), sexual/fertility toxicity and minor marrow effects in large pelvic fields may occur. For brain RT, spinal, or other palliative sites, hormonal therapy poses minimal direct interaction risk \u2014 document concurrent use and apply standard clinical checks.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "High",
+    "uncertainty": "Low",
+    "evidence_basis_type": "Established concurrent use",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR014",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-003",
+        "CLS-010"
+      ],
+      "rt_site_ids": [
+        "RTS028",
+        "RTS016",
+        "RTS017",
+        "RTS018",
+        "RTS019",
+        "RTS025",
+        "RTS026",
+        "RTS027"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001",
+        "TM002",
+        "TM003"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "High toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-09",
+      "DOM-08",
+      "DOM-07"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [
+      "Agent-driven",
+      "Site-driven"
+    ],
+    "rationale_text": "Anti-VEGF agents and selected kinase inhibitors (sorafenib, sunitinib, pazopanib) impair wound healing and vascular repair. Combined with RT to skin, bowel or postoperative sites, the risk of wound breakdown, fistula and tissue necrosis is substantially elevated. Avoid concurrent use unless clinically justified; coordinate hold intervals with medical oncology.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "High",
+    "uncertainty": "Low",
+    "evidence_basis_type": "Clinical evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR015",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-009"
+      ],
+      "rt_site_ids": [
+        "RTS013",
+        "RTS014",
+        "RTS015",
+        "RTS003",
+        "RTS004",
+        "RTS005",
+        "RTS016",
+        "RTS017",
+        "RTS018",
+        "RTS019"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001",
+        "TM002"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-03",
+      "DOM-01",
+      "DOM-17"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [
+      "Agent-driven",
+      "Site-driven"
+    ],
+    "rationale_text": "Strong mucosal radiosensitisers (5-FU/capecitabine, taxanes, hydroxyurea) with mucosal or GI RT produce additive mucositis, oesophagitis, diarrhoea and nutrition compromise. This is often a planned concurrent chemoradiation interaction (5-FU + rectal RT, capecitabine + pancreatic RT). Requires systematic nutritional assessment and supportive care planning.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "High",
     "uncertainty": "Low",
     "evidence_basis_type": "Established chemoradiation evidence",
     "expert_consensus_basis": true,
     "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR016",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-004",
+        "CLS-007",
+        "CLS-005",
+        "CLS-002",
+        "CLS-011",
+        "CLS-012"
+      ],
+      "rt_site_ids": [
+        "RTS006",
+        "RTS007",
+        "RTS008",
+        "RTS009"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001",
+        "TM002"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-05"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [
+      "Agent-driven",
+      "Site-driven"
+    ],
+    "rationale_text": "Multiple modern systemic therapy classes carry ILD/pneumonitis as a class-level adverse effect. Combining these agents with thoracic RT further elevates pulmonary toxicity risk. For any of these classes with thoracic RT, perform baseline pulmonary assessment, monitor respiratory symptoms and consider imaging if symptomatic.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Moderate",
+    "uncertainty": "Moderate",
+    "evidence_basis_type": "Class evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR017",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-004",
+        "CLS-002",
+        "CLS-005",
+        "CLS-009"
+      ],
+      "rt_site_ids": [
+        "RTS016",
+        "RTS017",
+        "RTS018",
+        "RTS019",
+        "RTS025",
+        "RTS026",
+        "RTS027"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001",
+        "TM002"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Moderate toxicity alert",
+    "output_toxicity_domains": [
+      "DOM-01",
+      "DOM-02"
+    ],
+    "primary_risk_driver": "Combination-driven",
+    "secondary_risk_drivers": [
+      "Agent-driven",
+      "Site-driven"
+    ],
+    "rationale_text": "Agents associated with diarrhoea or colitis (ICI-related immune colitis; CDK4/6 inhibitor-associated diarrhoea; PARP inhibitor GI toxicity; cytotoxic diarrhoea) combined with pelvic or abdominal RT may produce severe additive GI toxicity. Closely monitor bowel symptoms; anti-diarrhoeal prophylaxis and dietary modification may be required.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Moderate",
+    "uncertainty": "Moderate",
+    "evidence_basis_type": "Class evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR018",
+    "conditions": {
+      "agent_class_ids": [],
+      "rt_site_ids": null,
+      "fractionation_ids": [
+        "FX004",
+        "FX005",
+        "FX008"
+      ],
+      "timing_ids": [
+        "TM001",
+        "TM002"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Uncertain / evidence limited",
+    "output_toxicity_domains": [],
+    "primary_risk_driver": "Fractionation-driven",
+    "secondary_risk_drivers": [
+      "Combination-driven"
+    ],
+    "rationale_text": "No direct clinical evidence exists for this agent with ablative or large-field RT. SABR/SBRT, SRS and marrow-exposing RT carry inherently higher risks with concurrent systemic therapy. Seek specialist review before proceeding with concurrent treatment.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Insufficient",
+    "uncertainty": "High",
+    "evidence_basis_type": "Absence of evidence",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": true,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR019",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-013"
+      ],
+      "rt_site_ids": null,
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001",
+        "TM002",
+        "TM003",
+        "TM004",
+        "TM005"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "No specific alert",
+    "output_toxicity_domains": [],
+    "primary_risk_driver": "Agent-driven",
+    "secondary_risk_drivers": [],
+    "rationale_text": "Agent classified as low concern for RT interaction. No major systemic-RT interaction identified at class level. Proceed with standard clinical checks and document concurrent use. Clinician may apply patient-specific risk factors.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Low",
+    "uncertainty": "Moderate",
+    "evidence_basis_type": "Class evidence/consensus",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": true,
     "applies_to_no_direct_evidence": false,
     "version": "1.0",
     "last_reviewed_date": "2026-06-17",
