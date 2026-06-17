@@ -1,0 +1,466 @@
+section,scenario_id,scenario_summary,question_number,step9_column,question_text,field_type,options,required,branching_logic,notes
+Reviewer Information,,,RI-1,reviewer_code,Reviewer initials or anonymous reviewer code,Short text,,Yes,,Do not request full name. Reviewer may use a code (e.g. RO-1).
+Reviewer Information,,,RI-2,reviewer_role,Specialty / role,Short text,,Yes,,e.g. Radiation Oncologist — Consultant; Radiation Oncologist — Trainee; Medical Physicist
+Reviewer Information,,,RI-3,experience_band,Years of Radiation Oncology experience,Multiple choice,Trainee|0–5 years|6–10 years|More than 10 years|Prefer not to say,Yes,,
+Scenario S001,S001,Agent: Enzalutamide | Agent class: Androgen receptor antagonist / ADT | RT site: Prostate — Prostate only | Timing: Sequential | Fractionation: Palliative single fraction,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S001,S001,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S001,S001,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S001,S001,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S001,S001,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S001,S001,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S001,S001,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S001,S001,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S001,S001,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S001,S001,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S001,S001,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S002,S002,Agent: Letrozole | Agent class: Aromatase inhibitor / endocrine therapy | RT site: Breast — Whole breast | Timing: Planned after RT | Fractionation: Palliative multifraction,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S002,S002,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S002,S002,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S002,S002,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S002,S002,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S002,S002,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S002,S002,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S002,S002,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S002,S002,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S002,S002,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S002,S002,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S003,S003,Agent: Abiraterone | Agent class: Androgen synthesis inhibitor / ADT | RT site: Prostate — Prostate + pelvic nodes | Timing: Sequential | Fractionation: Palliative multifraction,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S003,S003,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S003,S003,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S003,S003,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S003,S003,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S003,S003,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S003,S003,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S003,S003,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S003,S003,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S003,S003,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S003,S003,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S004,S004,Agent: Bicalutamide | Agent class: Androgen receptor antagonist / ADT | RT site: Spine — Lumbar/sacral | Timing: Sequential | Fractionation: Palliative multifraction,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S004,S004,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S004,S004,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S004,S004,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S004,S004,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S004,S004,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S004,S004,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S004,S004,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S004,S004,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S004,S004,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S004,S004,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S005,S005,Agent: Anastrozole | Agent class: Aromatase inhibitor / endocrine therapy | RT site: Breast — Chest wall | Timing: Planned after RT | Fractionation: Palliative single fraction,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S005,S005,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S005,S005,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S005,S005,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S005,S005,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S005,S005,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S005,S005,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S005,S005,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S005,S005,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S005,S005,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S005,S005,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S006,S006,Agent: Paclitaxel | Agent class: Cytotoxic chemotherapy — taxane | RT site: Head and neck — Larynx/hypopharynx | Timing: Concurrent | Fractionation: Conventional fractionation | Treatment intent: Curative,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S006,S006,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S006,S006,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S006,S006,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S006,S006,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S006,S006,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S006,S006,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S006,S006,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S006,S006,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S006,S006,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S006,S006,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S007,S007,Agent: Ipilimumab | Agent class: Immune checkpoint inhibitor — anti-CTLA-4 | RT site: Brain — SRS/focal | Timing: Concurrent | Fractionation: SRS,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S007,S007,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S007,S007,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S007,S007,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S007,S007,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S007,S007,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S007,S007,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S007,S007,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S007,S007,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S007,S007,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S007,S007,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S008,S008,Agent: Docetaxel | Agent class: Cytotoxic chemotherapy — taxane | RT site: Head and neck — Oral cavity/oropharynx | Timing: Concurrent | Fractionation: Conventional fractionation | Treatment intent: Curative,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S008,S008,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S008,S008,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S008,S008,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S008,S008,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S008,S008,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S008,S008,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S008,S008,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S008,S008,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S008,S008,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S008,S008,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S009,S009,Agent: Cisplatin | Agent class: Cytotoxic chemotherapy — platinum / strong mucosal radiosensitiser | RT site: Head and neck — Oral cavity/oropharynx | Timing: Concurrent | Fractionation: Conventional fractionation | Treatment intent: Curative,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S009,S009,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S009,S009,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S009,S009,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S009,S009,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S009,S009,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S009,S009,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S009,S009,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S009,S009,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S009,S009,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S009,S009,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S010,S010,Agent: Palbociclib | Agent class: CDK4/6 inhibitor | RT site: Pelvis — Rectal | Timing: Concurrent | Fractionation: Conventional fractionation,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S010,S010,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S010,S010,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S010,S010,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S010,S010,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S010,S010,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S010,S010,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S010,S010,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S010,S010,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S010,S010,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S010,S010,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S011,S011,Agent: Osimertinib | Agent class: EGFR TKI (3rd generation) | RT site: Lung — Peripheral | Timing: Concurrent | Fractionation: SABR/SBRT,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S011,S011,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S011,S011,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S011,S011,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S011,S011,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S011,S011,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S011,S011,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S011,S011,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S011,S011,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S011,S011,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S011,S011,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S012,S012,Agent: Trastuzumab deruxtecan (T-DXd) | Agent class: HER2-directed antibody-drug conjugate | RT site: Lung — Central | Timing: Concurrent | Fractionation: Moderate hypofractionation,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S012,S012,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S012,S012,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S012,S012,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S012,S012,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S012,S012,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S012,S012,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S012,S012,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S012,S012,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S012,S012,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S012,S012,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S013,S013,Agent: Nivolumab | Agent class: Immune checkpoint inhibitor — anti-PD-1 | RT site: Lung — Peripheral | Timing: Concurrent | Fractionation: Conventional fractionation,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S013,S013,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S013,S013,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S013,S013,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S013,S013,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S013,S013,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S013,S013,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S013,S013,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S013,S013,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S013,S013,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S013,S013,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S014,S014,Agent: Dabrafenib | Agent class: BRAF inhibitor | RT site: Skin/superficial — Skin lesion | Timing: Concurrent | Fractionation: Conventional fractionation,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S014,S014,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S014,S014,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S014,S014,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S014,S014,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S014,S014,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S014,S014,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S014,S014,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S014,S014,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S014,S014,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S014,S014,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S015,S015,Agent: Cetuximab | Agent class: EGFR-targeted monoclonal antibody | RT site: Oesophagus — Mid-thoracic | Timing: Concurrent | Fractionation: Conventional fractionation,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S015,S015,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S015,S015,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S015,S015,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S015,S015,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S015,S015,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S015,S015,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S015,S015,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S015,S015,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S015,S015,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S015,S015,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S016,S016,Agent: Ribociclib | Agent class: CDK4/6 inhibitor | RT site: Pelvis — Gynaecological | Timing: Concurrent | Fractionation: Moderate hypofractionation,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S016,S016,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S016,S016,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S016,S016,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S016,S016,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S016,S016,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S016,S016,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S016,S016,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S016,S016,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S016,S016,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S016,S016,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S017,S017,Agent: Gemcitabine | Agent class: Cytotoxic chemotherapy — antimetabolite / gemcitabine | RT site: Spine — Thoracic | Timing: Concurrent | Fractionation: Large-field marrow-exposing RT,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S017,S017,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S017,S017,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S017,S017,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S017,S017,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S017,S017,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S017,S017,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S017,S017,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S017,S017,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S017,S017,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S017,S017,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S018,S018,Agent: Bevacizumab | Agent class: Anti-VEGF monoclonal antibody | RT site: Upper abdomen — Pancreas | Timing: Concurrent | Fractionation: SABR/SBRT,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S018,S018,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S018,S018,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S018,S018,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S018,S018,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S018,S018,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S018,S018,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S018,S018,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S018,S018,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S018,S018,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S018,S018,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S019,S019,Agent: Axitinib | Agent class: Anti-VEGFR TKI | RT site: Upper abdomen — Liver | Timing: Concurrent | Fractionation: SABR/SBRT,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S019,S019,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S019,S019,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S019,S019,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S019,S019,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S019,S019,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S019,S019,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S019,S019,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S019,S019,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S019,S019,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S019,S019,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S020,S020,Agent: Sorafenib | Agent class: Multi-kinase / anti-VEGFR inhibitor | RT site: Upper abdomen — Adrenal | Timing: Concurrent | Fractionation: SABR/SBRT,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S020,S020,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S020,S020,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S020,S020,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S020,S020,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S020,S020,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S020,S020,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S020,S020,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S020,S020,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S020,S020,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S020,S020,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S021,S021,Agent: Tisagenlecleucel | Agent class: CAR-T cell therapy | RT site: Brain — Whole brain | Timing: Concurrent | Fractionation: Conventional fractionation,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S021,S021,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S021,S021,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S021,S021,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S021,S021,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S021,S021,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S021,S021,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S021,S021,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S021,S021,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S021,S021,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S021,S021,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S022,S022,Agent: Tarlatamab | Agent class: Bispecific T-cell engager (DLL3xCD3) | RT site: Head and neck — Oral cavity/oropharynx | Timing: Concurrent | Fractionation: Conventional fractionation,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S022,S022,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S022,S022,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S022,S022,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S022,S022,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S022,S022,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S022,S022,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S022,S022,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S022,S022,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S022,S022,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S022,S022,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S023,S023,Agent: Ramucirumab | Agent class: Anti-VEGFR2 monoclonal antibody | RT site: Oesophagus — Lower/GOJ | Timing: Concurrent | Fractionation: SABR/SBRT,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S023,S023,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S023,S023,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S023,S023,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S023,S023,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S023,S023,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S023,S023,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S023,S023,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S023,S023,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S023,S023,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S023,S023,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S024,S024,Agent: Gemcitabine | Agent class: Cytotoxic chemotherapy — antimetabolite / gemcitabine | RT site: Lung — Peripheral | Timing: Concurrent | Fractionation: Conventional fractionation,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S024,S024,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S024,S024,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S024,S024,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S024,S024,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S024,S024,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S024,S024,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S024,S024,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S024,S024,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S024,S024,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S024,S024,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S025,S025,Agent: Temozolomide | Agent class: Alkylating-like agent — TMZ | RT site: Brain — Whole brain | Timing: Concurrent | Fractionation: Conventional fractionation,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S025,S025,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S025,S025,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S025,S025,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S025,S025,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S025,S025,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S025,S025,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S025,S025,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S025,S025,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S025,S025,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S025,S025,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S026,S026,Agent: Olaparib | Agent class: PARP inhibitor | RT site: Pelvis — Gynaecological | Timing: Concurrent | Fractionation: Conventional fractionation,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S026,S026,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S026,S026,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S026,S026,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S026,S026,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S026,S026,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S026,S026,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S026,S026,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S026,S026,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S026,S026,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S026,S026,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S027,S027,Agent: Venetoclax | Agent class: BCL-2 inhibitor | RT site: Pelvis — Rectal | Timing: Concurrent | Fractionation: Conventional fractionation,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S027,S027,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S027,S027,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S027,S027,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S027,S027,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S027,S027,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S027,S027,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S027,S027,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S027,S027,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S027,S027,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S027,S027,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S028,S028,Agent: Datopotamab deruxtecan | Agent class: TROP2-directed antibody-drug conjugate (novel) | RT site: Lung — Peripheral | Timing: Concurrent | Fractionation: Conventional fractionation,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S028,S028,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S028,S028,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S028,S028,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S028,S028,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S028,S028,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S028,S028,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S028,S028,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S028,S028,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S028,S028,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S028,S028,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S029,S029,Agent: Zolbetuximab | Agent class: Claudin 18.2 monoclonal antibody (novel) | RT site: Oesophagus — Lower/GOJ | Timing: Concurrent | Fractionation: Conventional fractionation,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S029,S029,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S029,S029,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S029,S029,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S029,S029,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S029,S029,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S029,S029,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S029,S029,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S029,S029,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S029,S029,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S029,S029,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S030,S030,Agent: Sotorasib | Agent class: KRAS G12C inhibitor (evolving evidence) | RT site: Lung — Peripheral | Timing: Concurrent | Fractionation: SABR/SBRT,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S030,S030,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S030,S030,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S030,S030,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S030,S030,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S030,S030,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S030,S030,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S030,S030,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S030,S030,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S030,S030,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S030,S030,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S031,S031,Agent: Clodronate | Agent class: Bone-modifying agent — first-generation bisphosphonate | RT site: Spine — Lumbar/sacral | Timing: Concurrent | Fractionation: Conventional fractionation,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S031,S031,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S031,S031,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S031,S031,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S031,S031,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S031,S031,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S031,S031,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S031,S031,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S031,S031,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S031,S031,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S031,S031,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S032,S032,Agent: (No agent selected) | Agent class: — | RT site: Lung — Peripheral | Timing: Concurrent | Fractionation: Conventional fractionation,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S032,S032,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S032,S032,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S032,S032,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S032,S032,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S032,S032,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S032,S032,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S032,S032,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S032,S032,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S032,S032,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S032,S032,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S033,S033,Agent: Gemcitabine | Agent class: Cytotoxic chemotherapy — antimetabolite / gemcitabine | RT site: (No RT site selected) | Timing: Concurrent | Fractionation: Conventional fractionation,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S033,S033,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S033,S033,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S033,S033,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S033,S033,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S033,S033,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S033,S033,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S033,S033,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S033,S033,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S033,S033,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S033,S033,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S034,S034,Agent: Nivolumab | Agent class: Immune checkpoint inhibitor — anti-PD-1 | RT site: Lung — Peripheral | Timing: Concurrent | Fractionation: (Not selected),Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S034,S034,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S034,S034,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S034,S034,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S034,S034,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S034,S034,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S034,S034,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S034,S034,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S034,S034,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S034,S034,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S034,S034,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S035,S035,Agent: Ipilimumab + Nivolumab | Agent class: Immune checkpoint inhibitor — dual ICI (anti-CTLA-4 + anti-PD-1) | RT site: Lung — Peripheral | Timing: Concurrent | Fractionation: SABR/SBRT,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S035,S035,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S035,S035,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S035,S035,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S035,S035,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S035,S035,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S035,S035,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S035,S035,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S035,S035,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S035,S035,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S035,S035,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S036,S036,Agent: Carboplatin + Paclitaxel | Agent class: Cytotoxic chemotherapy — platinum + taxane doublet | RT site: Lung — Central | Timing: Concurrent | Fractionation: Conventional fractionation,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S036,S036,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S036,S036,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S036,S036,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S036,S036,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S036,S036,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S036,S036,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S036,S036,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S036,S036,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S036,S036,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S036,S036,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S037,S037,Agent: Bevacizumab | Agent class: Anti-VEGF monoclonal antibody | RT site: Upper abdomen — Liver | Timing: Planned after RT | Fractionation: SABR/SBRT,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S037,S037,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S037,S037,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S037,S037,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S037,S037,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S037,S037,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S037,S037,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S037,S037,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S037,S037,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S037,S037,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S037,S037,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S038,S038,Agent: Capecitabine | Agent class: Cytotoxic chemotherapy — fluoropyrimidine | RT site: Pelvis — Rectal | Timing: Recent before RT | Timing interval: 14 days before RT start | Fractionation: Conventional fractionation,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S038,S038,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S038,S038,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S038,S038,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S038,S038,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S038,S038,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S038,S038,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S038,S038,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S038,S038,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S038,S038,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S038,S038,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S039,S039,Agent: Doxorubicin | Agent class: Cytotoxic chemotherapy — anthracycline (radiation recall agent) | RT site: Breast — Chest wall | Timing: Recent after RT | Timing interval: 21 days after RT completion | Fractionation: Conventional fractionation,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S039,S039,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S039,S039,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S039,S039,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S039,S039,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S039,S039,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S039,S039,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S039,S039,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S039,S039,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S039,S039,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S039,S039,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S040,S040,Agent: Nivolumab | Agent class: Immune checkpoint inhibitor — anti-PD-1 | RT site: Lung — Peripheral | Timing: Concurrent | Fractionation: SABR/SBRT,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S040,S040,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S040,S040,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S040,S040,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S040,S040,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S040,S040,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S040,S040,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S040,S040,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S040,S040,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S040,S040,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S040,S040,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S041,S041,Agent: Palbociclib | Agent class: CDK4/6 inhibitor | RT site: Pelvis — Rectal | Timing: Concurrent | Fractionation: SABR/SBRT,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S041,S041,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S041,S041,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S041,S041,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S041,S041,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S041,S041,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S041,S041,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S041,S041,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S041,S041,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S041,S041,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S041,S041,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.
+Scenario S042,S042,Agent: Trastuzumab | Agent class: HER2-directed monoclonal antibody (non-ADC) | RT site: Breast — Breast/chest wall + regional nodes | Timing: Concurrent | Fractionation: Conventional fractionation,Q-ID,scenario_id,Scenario ID (pre-filled — do not change),Short text,,Yes,,Pre-fill with scenario ID. Required for Step 9 schema.
+Scenario S042,S042,,Q1,alert_appropriate,Is the app alert level clinically appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S042,S042,,Q2,preferred_alert_level,"If the alert is not appropriate, what level would you prefer? (Select N/A if alert is appropriate)",Multiple choice,N/A — alert is appropriate|No specific alert|Caution|Moderate toxicity alert|High toxicity alert|Uncertain / evidence limited,Yes,Show for all; reviewer selects N/A if Q1=Yes,Maps to preferred_alert_level in schema. N/A responses filtered in Step 9.
+Scenario S042,S042,,Q3,toxicity_domains_appropriate,Are the toxicity domains listed by the app appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S042,S042,,Q4,risk_driver_appropriate,Is the primary risk driver appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S042,S042,,Q5,rationale_appropriate,Is the rationale narrative accurate and appropriately qualified?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S042,S042,,Q6,evidence_appropriate,Is the evidence basis appropriate for the alert level?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S042,S042,,Q7,uncertainty_appropriate,Is the uncertainty signalling appropriate?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S042,S042,,Q8,false_reassurance,Does the app output risk creating false reassurance (under-alerting a real risk)?,Multiple choice,Yes|No|Uncertain,Yes,,
+Scenario S042,S042,,Q9,confidence,How confident are you in your assessment of this scenario?,Multiple choice,Low|Moderate|High,Yes,,
+Scenario S042,S042,,Q10,suggested_correction,Suggested correction or comment (optional). WARNING: Do not include any patient-identifying or case-specific information.,Short text,,No,,Only optional free-text field. Privacy warning embedded in label.

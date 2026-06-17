@@ -25,6 +25,10 @@ import rawDomains from './raw/toxicity_domains.json'
 import rawRules from './raw/interaction_rules.json'
 import rawEvidenceLinks from './raw/evidence_links.json'
 
+import rawAgentsAmended from './raw/agents-amended.json'
+import rawHighRiskWatchlist from './raw/high-risk-watchlist.json'
+import rawAustralianMaster from './raw/australian-medicine-master.json'
+import rawRTInteractionLogic from './raw/rt-interaction-logic.json'
 // ── Typed accessors ──────────────────────────────────────────────────────────
 
 export function getAgents(): Agent[] {
@@ -156,4 +160,22 @@ export interface EvidenceLink {
 
 export function getEvidenceLinks(): EvidenceLink[] {
   return (rawEvidenceLinks as EvidenceLink[]).filter((e) => e.status === 'active')
+}
+
+// ── Amended database accessors (June 2026) ──────────────────────────────────
+
+export function getAmendedAgents() {
+  return rawAgentsAmended as any[]
+}
+
+export function getHighRiskWatchlist() {
+  return rawHighRiskWatchlist as any[]
+}
+
+export function getAustralianMedicinesMaster() {
+  return rawAustralianMaster as any[]
+}
+
+export function getRTInteractionLogic() {
+  return rawRTInteractionLogic as any[]
 }

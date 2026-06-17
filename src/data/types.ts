@@ -4,6 +4,9 @@ export type AgentType = 'agent' | 'class'
 export type RecordStatus = 'active' | 'inactive'
 export type AliasType = 'brand' | 'common' | 'abbreviation' | 'generic'
 
+/** Controlled approximate-interval categories (shown for Recent / Sequential timing). */
+export type TimingInterval = 'lt1w' | '1-4w' | 'gt4w' | 'unknown'
+
 // ─── JSON data shapes ────────────────────────────────────────────────────────
 
 export interface Agent {
@@ -156,6 +159,10 @@ export interface RuleEngineInput {
   timingId: string | null
   fractionationId: string | null
   treatmentIntent: TreatmentIntent
-  /** Days between last drug dose and RT start; required for timing-sensitive agents with recent/concurrent timing. */
-  timingIntervalDays: number | null
+  /**
+   * Approximate interval between last systemic therapy dose and RT start.
+   * Required only for timing-sensitive agents when timing is Recent or Sequential.
+   * Not required for Concurrent, Planned, or Unknown timing.
+   */
+  timingInterval: TimingInterval | null
 }

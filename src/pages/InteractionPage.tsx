@@ -4,14 +4,13 @@ import { TherapyChip } from '@/components/interaction/TherapyChip'
 import { RTSiteSelector } from '@/components/interaction/RTSiteSelector'
 import { TimingSelector } from '@/components/interaction/TimingSelector'
 import { TimingIntervalField } from '@/components/interaction/TimingIntervalField'
-import { TreatmentIntentToggle } from '@/components/interaction/TreatmentIntentToggle'
 import { FractionationField } from '@/components/interaction/FractionationField'
 import { AlertCard } from '@/components/interaction/AlertCard'
 import { evaluateRules } from '@/engine/ruleEngine'
 import type {
   SelectedTherapy,
   RTSiteSelection,
-  TreatmentIntent,
+  TimingInterval,
   RuleEngineInput,
 } from '@/data/types'
 
@@ -19,10 +18,8 @@ export function InteractionPage(): React.ReactElement {
   const [selectedTherapies, setSelectedTherapies] = useState<SelectedTherapy[]>([])
   const [rtSite, setRtSite] = useState<RTSiteSelection | null>(null)
   const [timingId, setTimingId] = useState<string | null>(null)
-  const [timingIntervalDays, setTimingIntervalDays] = useState<number | null>(null)
+  const [timingInterval, setTimingInterval] = useState<TimingInterval | null>(null)
   const [fractionationId, setFractionationId] = useState<string | null>(null)
-  const [treatmentIntent, setTreatmentIntent] = useState<TreatmentIntent>(null)
-
   const handleAddTherapy = useCallback((therapy: SelectedTherapy) => {
     setSelectedTherapies((prev) => {
       if (prev.some((t) => t.agentId === therapy.agentId)) return prev
@@ -40,10 +37,10 @@ export function InteractionPage(): React.ReactElement {
       rtSite,
       timingId,
       fractionationId,
-      treatmentIntent,
-      timingIntervalDays,
+      treatmentIntent: null,
+      timingInterval,
     }),
-    [selectedTherapies, rtSite, timingId, fractionationId, treatmentIntent, timingIntervalDays],
+    [selectedTherapies, rtSite, timingId, fractionationId, timingInterval],
   )
 
   const engineOutput = useMemo(() => evaluateRules(engineInput), [engineInput])
@@ -54,24 +51,18 @@ export function InteractionPage(): React.ReactElement {
   //   - it's already been provided, OR
   //   - the engine says it's a missing required field
   //
-  // Show timing interval when:
+  // Show approximate interval when:
   //   - it's already been provided, OR
   //   - the engine says it's a missing required field
   //
-  // These two conditions ensure the field appears as soon as the engine
+  // These conditions ensure the field appears as soon as the engine
   // determines it's required, and stays visible once the user interacts.
 
-  const showFractionation = useMemo(() => {
-    if (fractionationId !== null) return true
-    if (!engineOutput.incomplete) return false
-    return engineOutput.missingFields.some((f) => f.field === 'fractionationId')
-  }, [fractionationId, engineOutput])
-
   const showTimingInterval = useMemo(() => {
-    if (timingIntervalDays !== null) return true
+    if (timingInterval !== null) return true
     if (!engineOutput.incomplete) return false
-    return engineOutput.missingFields.some((f) => f.field === 'timingIntervalDays')
-  }, [timingIntervalDays, engineOutput])
+    return engineOutput.missingFields.some((f) => f.field === 'timingInterval')
+  }, [timingInterval, engineOutput])
 
   return (
     <div className="flex flex-col gap-5">
@@ -119,24 +110,18 @@ export function InteractionPage(): React.ReactElement {
           {/* 4. Timing relationship */}
           <TimingSelector value={timingId} onChange={setTimingId} />
 
-          {/* 5. Conditional timing interval (days) */}
+          {/* 5. Conditional approximate interval (Recent or Sequential + timing-sensitive) */}
           <TimingIntervalField
-            value={timingIntervalDays}
-            onChange={setTimingIntervalDays}
+            value={timingInterval}
+            onChange={setTimingInterval}
             visible={showTimingInterval}
           />
 
-          {/* 6. Optional treatment intent */}
-          <TreatmentIntentToggle
-            value={treatmentIntent}
-            onChange={setTreatmentIntent}
-          />
-
-          {/* 7. Conditional fractionation category */}
+          {/* 6. Fractionation category */}
           <FractionationField
             value={fractionationId}
             onChange={setFractionationId}
-            visible={showFractionation}
+            visible={true}
           />
         </div>
       </section>

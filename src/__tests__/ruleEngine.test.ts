@@ -15,9 +15,9 @@
  *  RTS001   Prostate/Prostate only
  *  RTS007   Lung/Central
  *  RTS016   Pelvis/Rectal
- *  TM001    Concurrent
- *  TM002    Recent before RT
- *  TM004    Sequential
+ *  TM001    Concurrent         (no interval required)
+ *  TM002    Recent before RT   (interval required for timing-sensitive agents)
+ *  TM004    Sequential         (interval required for timing-sensitive agents)
  *  FX001    Conventional fractionation
  *  FX002    Moderate hypofractionation
  *  FX004    SABR/SBRT
@@ -51,7 +51,7 @@ function makeInput(overrides: Partial<RuleEngineInput> = {}): RuleEngineInput {
     timingId: null,
     fractionationId: null,
     treatmentIntent: null,
-    timingIntervalDays: null,
+    timingInterval: null,
     ...overrides,
   }
 }
@@ -77,9 +77,9 @@ describe('Test 1 — endocrine therapy + prostate RT → No specific alert', () 
     const output = evaluateRules(makeInput({
       selectedTherapies: [therapy('AGT-058', 'letrozole')],
       rtSite: site('RTS001', 'Prostate', 'Prostate only'),
-      timingId: 'TM004',           // Sequential — not recent, no interval needed
+      timingId: 'TM004',           // Sequential — interval required for timing-sensitive agent
       fractionationId: 'FX001',    // Conventional — matches IR016
-      timingIntervalDays: null,
+      timingInterval: 'gt4w',      // Required for timing-sensitive agent + Sequential
     }))
     expect(output.incomplete).toBe(false)
     if (!output.incomplete) {
@@ -95,9 +95,9 @@ describe('Test 2 — bevacizumab + recent pelvic RT → High toxicity alert', ()
     const output = evaluateRules(makeInput({
       selectedTherapies: [therapy('AGT-140', 'bevacizumab')],
       rtSite: site('RTS016', 'Pelvis', 'Rectal'),
-      timingId: 'TM002',           // Recent before RT
+      timingId: 'TM002',           // Recent before RT (interval required for timing-sensitive)
       fractionationId: 'FX004',    // SABR/SBRT — matches IR003
-      timingIntervalDays: 21,
+      timingInterval: '1-4w',
     }))
     expect(output.incomplete).toBe(false)
     if (!output.incomplete) {
@@ -113,9 +113,9 @@ describe('Test 3 — trastuzumab deruxtecan + thoracic RT → Moderate toxicity 
     const output = evaluateRules(makeInput({
       selectedTherapies: [therapy('AGT-041', 'trastuzumab deruxtecan')],
       rtSite: site('RTS007', 'Lung', 'Central'),
-      timingId: 'TM001',           // Concurrent
+      timingId: 'TM001',           // Concurrent — no interval required
       fractionationId: 'FX004',    // SABR — matches IR006 (CLS-005)
-      timingIntervalDays: 0,
+      timingInterval: null,
     }))
     expect(output.incomplete).toBe(false)
     if (!output.incomplete) {
@@ -138,9 +138,9 @@ describe('Test 4 — gemcitabine + concurrent central thoracic SABR', () => {
     const output = evaluateRules(makeInput({
       selectedTherapies: [therapy('AGT-050', 'gemcitabine')],
       rtSite: site('RTS007', 'Lung', 'Central'),
-      timingId: 'TM001',           // Concurrent
+      timingId: 'TM001',           // Concurrent — no interval required
       fractionationId: 'FX004',    // SABR
-      timingIntervalDays: 0,
+      timingInterval: null,
     }))
     expect(output.incomplete).toBe(false)
     if (!output.incomplete) {
@@ -157,9 +157,9 @@ describe('Test 5 — checkpoint inhibitor + thoracic RT → ≥ Caution', () => 
     const output = evaluateRules(makeInput({
       selectedTherapies: [therapy('AGT-123', 'pembrolizumab')],
       rtSite: site('RTS007', 'Lung', 'Central'),
-      timingId: 'TM001',           // Concurrent
+      timingId: 'TM001',           // Concurrent — no interval required
       fractionationId: 'FX004',    // SABR — matches IR004 (CLS-004)
-      timingIntervalDays: 0,
+      timingInterval: null,
     }))
     expect(output.incomplete).toBe(false)
     if (!output.incomplete) {
@@ -182,9 +182,9 @@ describe('Test 6 — recognised agent with no matching rule → Uncertain', () =
     const output = evaluateRules(makeInput({
       selectedTherapies: [therapy('AGT-001', 'capivasertib')],
       rtSite: site('RTS001', 'Prostate', 'Prostate only'),
-      timingId: 'TM001',
+      timingId: 'TM001',           // Concurrent — no interval required
       fractionationId: 'FX002',    // Moderate hypofractionation — no general rule
-      timingIntervalDays: 0,
+      timingInterval: null,
     }))
     expect(output.incomplete).toBe(false)
     if (!output.incomplete) {
@@ -201,9 +201,9 @@ describe('Test 7 — unrecognised agent ID excluded from rule evaluation', () =>
     const output = evaluateRules(makeInput({
       selectedTherapies: [therapy('UNKNOWN-9999', 'mystery drug')],
       rtSite: site('RTS007', 'Lung', 'Central'),
-      timingId: 'TM001',
+      timingId: 'TM001',           // Concurrent
       fractionationId: 'FX004',
-      timingIntervalDays: 0,
+      timingInterval: null,
     }))
     expect(output.incomplete).toBe(false)
     if (!output.incomplete) {
@@ -227,9 +227,9 @@ describe('Test 8 — multiple therapies → highest alert level wins', () => {
         therapy('AGT-140', 'bevacizumab'),
       ],
       rtSite: site('RTS016', 'Pelvis', 'Rectal'),
-      timingId: 'TM001',           // Concurrent — bevacizumab matches IR003/IR014
+      timingId: 'TM001',           // Concurrent — no interval required
       fractionationId: 'FX004',    // SABR
-      timingIntervalDays: 0,
+      timingInterval: null,
     }))
     expect(output.incomplete).toBe(false)
     if (!output.incomplete) {
@@ -253,9 +253,9 @@ describe('Test 9 — multiple therapies → toxicity domains are unioned', () =>
         therapy('AGT-123', 'pembrolizumab'),           // lung domains: DOM-05 + others
       ],
       rtSite: site('RTS007', 'Lung', 'Central'),
-      timingId: 'TM001',
+      timingId: 'TM001',           // Concurrent — no interval required
       fractionationId: 'FX004',
-      timingIntervalDays: 0,
+      timingInterval: null,
     }))
     expect(output.incomplete).toBe(false)
     if (!output.incomplete) {
@@ -346,7 +346,7 @@ describe('Test 12 — missing fractionation returns incomplete-input state', () 
       rtSite: site('RTS016', 'Pelvis', 'Rectal'),
       timingId: 'TM002',           // Recent before RT
       fractionationId: null,       // ← missing
-      timingIntervalDays: 21,
+      timingInterval: '1-4w',
     }))
     expect(output.incomplete).toBe(true)
     if (output.incomplete) {
@@ -358,18 +358,33 @@ describe('Test 12 — missing fractionation returns incomplete-input state', () 
 
 // ── Test 13: Missing timing interval returns incomplete-input state ────────────
 describe('Test 13 — missing timing interval returns incomplete-input state', () => {
-  it('bevacizumab (timing-sensitive) + concurrent timing + no interval → incomplete', () => {
+  it('bevacizumab (timing-sensitive) + Recent timing + no interval → incomplete', () => {
     const output = evaluateRules(makeInput({
       selectedTherapies: [therapy('AGT-140', 'bevacizumab')],
       rtSite: site('RTS016', 'Pelvis', 'Rectal'),
-      timingId: 'TM001',           // Concurrent — timing-sensitive flag applies
+      timingId: 'TM002',           // Recent before RT — interval required for timing-sensitive agent
       fractionationId: 'FX004',
-      timingIntervalDays: null,    // ← missing
+      timingInterval: null,        // ← missing
     }))
     expect(output.incomplete).toBe(true)
     if (output.incomplete) {
       const fields = output.missingFields.map((f) => f.field)
-      expect(fields).toContain('timingIntervalDays')
+      expect(fields).toContain('timingInterval')
+    }
+  })
+
+  it('bevacizumab + Concurrent (TM001) + no interval → NOT incomplete (Concurrent never requires interval)', () => {
+    const output = evaluateRules(makeInput({
+      selectedTherapies: [therapy('AGT-140', 'bevacizumab')],
+      rtSite: site('RTS016', 'Pelvis', 'Rectal'),
+      timingId: 'TM001',           // Concurrent — interval never required
+      fractionationId: 'FX004',
+      timingInterval: null,
+    }))
+    // Should NOT be incomplete due to missing interval
+    if (output.incomplete) {
+      const fields = output.missingFields.map((f) => f.field)
+      expect(fields).not.toContain('timingInterval')
     }
   })
 })
@@ -377,11 +392,6 @@ describe('Test 13 — missing timing interval returns incomplete-input state', (
 // ── Test 14: Missing evidence link returns evidence-pending state ─────────────
 describe('Test 14 — missing evidence link marked as pending (alert retained)', () => {
   it('evidence statuses contain pending when an ID is absent from catalogue', () => {
-    // Use bevacizumab scenario which references real evidence IDs.
-    // The engine checks each ID against evidence_links.json.
-    // EVID-0034 is referenced by IR003/IR014 — it should be 'present'.
-    // A synthetic absent ID would appear if a rule referenced it.
-    // We test the evidence resolver directly here.
     // resolveEvidence imported at top
     const knownIds = new Set(['EVID-0034', 'EVID-0035'])
     const statuses = resolveEvidence(
@@ -395,15 +405,12 @@ describe('Test 14 — missing evidence link marked as pending (alert retained)',
   })
 
   it('full engine: alert is retained when an evidence ID is absent (hasEvidencePending = true)', () => {
-    // In the normal evaluation path, all evidence IDs come from the JSON.
-    // We verify that the engine still returns an alert and sets hasEvidencePending
-    // correctly (false here since all known IDs should resolve).
     const output = evaluateRules(makeInput({
       selectedTherapies: [therapy('AGT-140', 'bevacizumab')],
       rtSite: site('RTS016', 'Pelvis', 'Rectal'),
       timingId: 'TM002',
       fractionationId: 'FX004',
-      timingIntervalDays: 21,
+      timingInterval: '1-4w',
     }))
     expect(output.incomplete).toBe(false)
     if (!output.incomplete) {
@@ -423,7 +430,7 @@ describe('Test 15 — absence of rule never produces No specific alert', () => {
       rtSite: site('RTS001', 'Prostate', 'Prostate only'),
       timingId: 'TM001',
       fractionationId: 'FX002',   // No general rule covers this combination
-      timingIntervalDays: 0,
+      timingInterval: null,
     }))
     expect(output.incomplete).toBe(false)
     if (!output.incomplete) {
@@ -437,7 +444,7 @@ describe('Test 15 — absence of rule never produces No specific alert', () => {
       rtSite: site('RTS001', 'Prostate', 'Prostate only'),
       timingId: 'TM001',
       fractionationId: 'FX001',
-      timingIntervalDays: 0,
+      timingInterval: null,
     }))
     expect(output.incomplete).toBe(false)
     if (!output.incomplete) {
@@ -456,9 +463,9 @@ describe('Test 16 — duplicate evidence IDs are deduplicated in output', () => 
         therapy('AGT-123', 'pembrolizumab'),
       ],
       rtSite: site('RTS007', 'Lung', 'Central'),
-      timingId: 'TM001',
+      timingId: 'TM001',           // Concurrent
       fractionationId: 'FX004',
-      timingIntervalDays: 0,
+      timingInterval: null,
     }))
     expect(output.incomplete).toBe(false)
     if (!output.incomplete) {
@@ -482,9 +489,9 @@ describe('Test 17 — combination-rule detection suppresses generic multi-agent 
         therapy('AGT-140', 'bevacizumab'),
       ],
       rtSite: site('RTS016', 'Pelvis', 'Rectal'),
-      timingId: 'TM001',
+      timingId: 'TM001',           // Concurrent
       fractionationId: 'FX004',
-      timingIntervalDays: 0,
+      timingInterval: null,
     }))
     expect(output.incomplete).toBe(false)
     if (!output.incomplete) {
@@ -548,9 +555,9 @@ describe('Test 18 — conflicting class-level rules at same tier generate diagno
     const output = evaluateRules(makeInput({
       selectedTherapies: [therapy('AGT-123', 'pembrolizumab')],
       rtSite: site('RTS007', 'Lung', 'Central'),
-      timingId: 'TM001',
+      timingId: 'TM001',           // Concurrent
       fractionationId: 'FX004',   // Matches both IR004 (FX004) and IR011 (any)
-      timingIntervalDays: 0,
+      timingInterval: null,
     }))
     expect(output.incomplete).toBe(false)
     if (!output.incomplete) {

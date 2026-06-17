@@ -9,8 +9,9 @@
  *  5.  Preventing duplicate selections
  *  6.  Unmatched medicine message
  *  7.  Selecting an RT site
- *  8.  Timing interval field appearing only when required
- *  9.  Fractionation field appearing only when required
+ *  8.  Approximate interval selector: appears only for timing-sensitive therapy
+ *      with Recent or Sequential timing; never for Concurrent / Planned / Unknown
+ *  9.  Fractionation field always visible
  *  10. Incomplete-input state (alert card neutral)
  *  11. Explicit low-concern result (No specific alert)
  *  12. Uncertain fallback result
@@ -41,9 +42,9 @@ function renderPage() {
 }
 
 /**
- * Drive the page to a fully evaluable state (letrozole + Prostate + Sequential
+ * Drive the page to a fully evaluable state (letrozole + Prostate + Planned after RT
  * + Conventional fractionation).  This combination produces "No specific alert"
- * via IR016 and does NOT require a timing interval.
+ * via IR016 and does NOT require an interval (TM005=Planned is excluded from interval requirement).
  *
  * Returns userEvent instance for further interaction.
  */
@@ -59,16 +60,16 @@ async function setupLowConcernState() {
   // Select Prostate site
   await user.selectOptions(screen.getByLabelText(/rt site/i), 'Prostate')
 
-  // Select Sequential timing
-  await user.selectOptions(screen.getByLabelText(/timing relationship/i), 'TM004')
+  // Select Planned after RT (TM005) — interval not required for Planned timing
+  await user.selectOptions(screen.getByLabelText(/timing relationship/i), 'TM005')
 
   return user
 }
 
 /**
  * Drive the page to a high-alert state (bevacizumab + Pelvis/Rectal +
- * Recent before RT + SABR).  Bevacizumab is timing-sensitive so a timing
- * interval is also required.
+ * Recent before RT + interval + SABR).  Bevacizumab is timing-sensitive
+ * so an approximate interval is required for Recent timing.
  */
 async function setupHighAlertState() {
   const user = userEvent.setup()
@@ -82,13 +83,12 @@ async function setupHighAlertState() {
   // Select Pelvis site
   await user.selectOptions(screen.getByLabelText(/rt site/i), 'Pelvis')
 
-  // Select Recent before RT timing
+  // Select Recent before RT timing (TM002)
   await user.selectOptions(screen.getByLabelText(/timing relationship/i), 'TM002')
 
-  // Fill timing interval (required for timing-sensitive agent + TM002)
-  const intervalInput = await screen.findByLabelText(/timing interval/i)
-  await user.clear(intervalInput)
-  await user.type(intervalInput, '21')
+  // Select approximate interval (required for timing-sensitive agent + Recent timing)
+  const intervalSelect = await screen.findByLabelText(/approximate interval/i)
+  await user.selectOptions(intervalSelect, '1-4w')
 
   // Select SABR fractionation (required for bevacizumab)
   const fracSelect = await screen.findByLabelText(/fractionation/i)
@@ -273,15 +273,15 @@ describe('Test 7 — selecting an RT site', () => {
   })
 })
 
-// ─── Test 8: Timing interval field appears only when required ─────────────────
+// ─── Test 8: Approximate interval selector visibility ────────────────────────
 
-describe('Test 8 — timing interval field appears only when required', () => {
+describe('Test 8 — approximate interval selector appears only when required', () => {
   it('is NOT shown before any therapy is selected', () => {
     renderPage()
-    expect(screen.queryByLabelText(/timing interval/i)).toBeNull()
+    expect(screen.queryByLabelText(/approximate interval/i)).toBeNull()
   })
 
-  it('appears for a timing-sensitive agent (bevacizumab) with concurrent timing', async () => {
+  it('is NOT shown for Concurrent timing (TM001) even for a timing-sensitive agent', async () => {
     const user = userEvent.setup()
     renderPage()
 
@@ -290,32 +290,29 @@ describe('Test 8 — timing interval field appears only when required', () => {
     await user.click(within(listbox).getByText('bevacizumab'))
 
     await user.selectOptions(screen.getByLabelText(/rt site/i), 'Pelvis')
+    // Select Concurrent — interval must NOT appear
     await user.selectOptions(screen.getByLabelText(/timing relationship/i), 'TM001')
 
-    // Fractionation required first; select it
-    const fracSelect = await screen.findByLabelText(/fractionation/i)
-    await user.selectOptions(fracSelect, 'FX004')
-
-    // Timing interval should now appear
-    expect(screen.queryByLabelText(/timing interval/i)).toBeDefined()
+    // Allow time for any state update
+    expect(screen.queryByLabelText(/approximate interval/i)).toBeNull()
   })
 
-  it('does NOT appear for a non-timing-sensitive agent (letrozole)', async () => {
-    await setupLowConcernState()
-    // After full setup for letrozole + Prostate + Sequential, no interval field
-    expect(screen.queryByLabelText(/timing interval/i)).toBeNull()
-  })
-})
-
-// ─── Test 9: Fractionation appears only when required ─────────────────────────
-
-describe('Test 9 — fractionation field appears only when required', () => {
-  it('is NOT shown before any therapy is selected', () => {
+  it('appears for a timing-sensitive agent (bevacizumab) with Recent timing (TM002)', async () => {
+    const user = userEvent.setup()
     renderPage()
-    expect(screen.queryByLabelText(/fractionation/i)).toBeNull()
+
+    await user.type(screen.getByLabelText(/systemic therapy/i), 'bevacizumab')
+    const listbox = await screen.findByRole('listbox')
+    await user.click(within(listbox).getByText('bevacizumab'))
+
+    await user.selectOptions(screen.getByLabelText(/rt site/i), 'Pelvis')
+    // Select Recent before RT — interval should appear for timing-sensitive agent
+    await user.selectOptions(screen.getByLabelText(/timing relationship/i), 'TM002')
+
+    expect(await screen.findByLabelText(/approximate interval/i)).toBeDefined()
   })
 
-  it('appears for a dose-relevant agent (bevacizumab) after site+timing selected', async () => {
+  it('has four controlled options: Less than 1 week, 1–4 weeks, More than 4 weeks, Unknown', async () => {
     const user = userEvent.setup()
     renderPage()
 
@@ -326,7 +323,59 @@ describe('Test 9 — fractionation field appears only when required', () => {
     await user.selectOptions(screen.getByLabelText(/rt site/i), 'Pelvis')
     await user.selectOptions(screen.getByLabelText(/timing relationship/i), 'TM002')
 
-    expect(await screen.findByLabelText(/fractionation/i)).toBeDefined()
+    const intervalSelect = await screen.findByLabelText(/approximate interval/i) as HTMLSelectElement
+    const optionTexts = Array.from(intervalSelect.options).map((o) => o.text)
+    expect(optionTexts).toContain('Less than 1 week')
+    expect(optionTexts).toContain('1–4 weeks')
+    expect(optionTexts).toContain('More than 4 weeks')
+    expect(optionTexts).toContain('Unknown')
+    // No numeric day field
+    expect(intervalSelect.type).toBe('select-one')
+  })
+
+  it('does NOT appear for Planned timing (TM005) regardless of agent sensitivity', async () => {
+    await setupLowConcernState()
+    // After full setup for letrozole + Prostate + Planned (TM005), no interval field
+    expect(screen.queryByLabelText(/approximate interval/i)).toBeNull()
+  })
+
+  it('no exact-day number input exists anywhere on the page', async () => {
+    const user = userEvent.setup()
+    renderPage()
+
+    await user.type(screen.getByLabelText(/systemic therapy/i), 'bevacizumab')
+    const listbox = await screen.findByRole('listbox')
+    await user.click(within(listbox).getByText('bevacizumab'))
+    await user.selectOptions(screen.getByLabelText(/rt site/i), 'Pelvis')
+    await user.selectOptions(screen.getByLabelText(/timing relationship/i), 'TM002')
+
+    // Wait for interval field to appear then verify no number input
+    await screen.findByLabelText(/approximate interval/i)
+    const numberInputs = document.querySelectorAll('input[type="number"]')
+    expect(numberInputs.length).toBe(0)
+  })
+})
+
+// ─── Test 9: Fractionation is always visible ─────────────────────────────────
+
+describe('Test 9 — fractionation field is always visible', () => {
+  it('is shown on initial render before any input', () => {
+    renderPage()
+    expect(screen.getByLabelText(/fractionation/i)).toBeDefined()
+  })
+
+  it('remains visible after therapy, site, and timing are selected', async () => {
+    const user = userEvent.setup()
+    renderPage()
+
+    await user.type(screen.getByLabelText(/systemic therapy/i), 'bevacizumab')
+    const listbox = await screen.findByRole('listbox')
+    await user.click(within(listbox).getByText('bevacizumab'))
+
+    await user.selectOptions(screen.getByLabelText(/rt site/i), 'Pelvis')
+    await user.selectOptions(screen.getByLabelText(/timing relationship/i), 'TM002')
+
+    expect(screen.getByLabelText(/fractionation/i)).toBeDefined()
   })
 })
 
@@ -358,7 +407,7 @@ describe('Test 10 — incomplete-input state in alert card', () => {
 // ─── Test 11: Explicit low-concern result ────────────────────────────────────
 
 describe('Test 11 — explicit low-concern result (No specific alert)', () => {
-  it('shows "No specific alert" level badge for letrozole + Prostate + Sequential + FX001', async () => {
+  it('shows "No specific alert" level badge for letrozole + Prostate + Planned (TM005) + FX001', async () => {
     const user = await setupLowConcernState()
 
     // Fractionation may appear — if it does, select FX001
@@ -386,14 +435,11 @@ describe('Test 12 — uncertain fallback result', () => {
     await user.click(within(listbox).getByText('capivasertib'))
 
     await user.selectOptions(screen.getByLabelText(/rt site/i), 'Prostate')
+    // Concurrent — no interval required
     await user.selectOptions(screen.getByLabelText(/timing relationship/i), 'TM001')
 
-    // Fill timing interval if it appears
-    const interval = screen.queryByLabelText(/timing interval/i)
-    if (interval) {
-      await user.clear(interval)
-      await user.type(interval, '0')
-    }
+    // No approximate interval field should appear for Concurrent timing
+    expect(screen.queryByLabelText(/approximate interval/i)).toBeNull()
 
     // Fractionation if required
     const frac = screen.queryByLabelText(/fractionation/i)
@@ -409,7 +455,7 @@ describe('Test 12 — uncertain fallback result', () => {
 // ─── Test 13: High-alert result ──────────────────────────────────────────────
 
 describe('Test 13 — high-alert result', () => {
-  it('shows High toxicity alert for bevacizumab + Pelvis + Recent + SABR', async () => {
+  it('shows High toxicity alert for bevacizumab + Pelvis + Recent + 1–4 weeks + SABR', async () => {
     await setupHighAlertState()
 
     const badge = await screen.findByTestId('alert-level-badge')
@@ -435,13 +481,8 @@ describe('Test 14 — multi-agent highest-alert behaviour', () => {
     await user.click(within(listbox).getByText('bevacizumab'))
 
     await user.selectOptions(screen.getByLabelText(/rt site/i), 'Pelvis')
+    // Concurrent — no interval required
     await user.selectOptions(screen.getByLabelText(/timing relationship/i), 'TM001')
-
-    const interval = screen.queryByLabelText(/timing interval/i)
-    if (interval) {
-      await user.clear(interval)
-      await user.type(interval, '0')
-    }
 
     const frac = await screen.findByLabelText(/fractionation/i)
     await user.selectOptions(frac as HTMLSelectElement, 'FX004')
@@ -481,13 +522,8 @@ describe('Test 15 — unioned toxicity-domain display', () => {
     const subsiteSelect = screen.queryByLabelText(/subsite/i) as HTMLSelectElement | null
     if (subsiteSelect) await user.selectOptions(subsiteSelect, 'RTS007')
 
+    // Concurrent — no interval required
     await user.selectOptions(screen.getByLabelText(/timing relationship/i), 'TM001')
-
-    const interval = screen.queryByLabelText(/timing interval/i)
-    if (interval) {
-      await user.clear(interval)
-      await user.type(interval, '0')
-    }
 
     const frac = await screen.findByLabelText(/fractionation/i)
     await user.selectOptions(frac as HTMLSelectElement, 'FX004')
@@ -542,13 +578,9 @@ describe('Test 17 — missing evidence wording', () => {
     await user.click(within(listbox).getByText('capivasertib'))
 
     await user.selectOptions(screen.getByLabelText(/rt site/i), 'Prostate')
+    // Concurrent — no interval required
     await user.selectOptions(screen.getByLabelText(/timing relationship/i), 'TM001')
 
-    const interval = screen.queryByLabelText(/timing interval/i)
-    if (interval) {
-      await user.clear(interval)
-      await user.type(interval, '0')
-    }
     const frac = screen.queryByLabelText(/fractionation/i)
     if (frac) await user.selectOptions(frac as HTMLSelectElement, 'FX002')
 
@@ -556,7 +588,6 @@ describe('Test 17 — missing evidence wording', () => {
     await screen.findByTestId('alert-card-complete')
 
     // The evidence link area — fallback may show pending inline or a button
-    // Either the pending inline text or the evidence link button
     const hasPendingInline = screen.queryByTestId('evidence-pending-inline')
     const hasLink = screen.queryByTestId('view-evidence-link')
     const hasPendingLink = screen.queryByTestId('evidence-pending-link')

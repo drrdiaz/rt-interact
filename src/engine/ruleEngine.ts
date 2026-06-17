@@ -167,7 +167,10 @@ export function evaluateRules(input: RuleEngineInput): EngineOutput {
   const agentMap = new Map(agents.map((a) => [a.agent_id, a]))
 
   const siteId = input.rtSite?.siteId ?? null
-  const { timingId, fractionationId, timingIntervalDays } = input
+  const { fractionationId, timingInterval } = input
+  // TM006 (Unknown/uncertain) is evaluated as TM001 (Concurrent) — worst-case assumption.
+  // The original timingId is preserved in the input for UI purposes (e.g. warning banner).
+  const timingId = input.timingId === 'TM006' ? 'TM001' : input.timingId
 
   // ── Validate basic evaluability ──
   if (
@@ -208,7 +211,7 @@ export function evaluateRules(input: RuleEngineInput): EngineOutput {
       agent,
       timingId,
       fractionationId,
-      timingIntervalDays ?? null,
+      timingInterval,
       candidates,
     )
   })

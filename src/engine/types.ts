@@ -112,7 +112,7 @@ export interface EvidenceStatus {
 // ─── Incomplete-input state ───────────────────────────────────────────────────
 
 export interface MissingField {
-  field: 'fractionationId' | 'timingIntervalDays'
+  field: 'fractionationId' | 'timingInterval'
   reason: string
 }
 

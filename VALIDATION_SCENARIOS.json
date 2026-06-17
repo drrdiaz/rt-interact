@@ -1,0 +1,1797 @@
+[
+  {
+    "scenario_id": "S001",
+    "category": "Low concern",
+    "agent_ids": [
+      "AGT-021"
+    ],
+    "display_names": [
+      "enzalutamide"
+    ],
+    "agent_class_ids": [],
+    "therapy_groups": [
+      "Androgen receptor antagonist / ADT"
+    ],
+    "rt_site_id": "RTS001",
+    "rt_site_display": "Prostate \u2014 Prostate only",
+    "timing_id": "TM004",
+    "timing_display": "Sequential",
+    "fractionation_id": "FX006",
+    "fractionation_display": "Palliative single fraction",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "No specific alert",
+    "expected_app_toxicity_domains": [],
+    "expected_app_risk_driver": "Agent-driven",
+    "expected_app_rationale": "No major interaction signal identified; proceed with standard clinical checks and clinician override.",
+    "matched_rules": [
+      "IR016"
+    ],
+    "app_evidence_ids": [
+      "EVID-0069",
+      "EVID-0070"
+    ],
+    "validation_purpose": "Well-established ADT + prostate RT combination. Confirm that sequential enzalutamide does not generate a spurious alert.",
+    "clinical_concern": "False-high alert risk",
+    "fractionation_sensitivity": false,
+    "timing_sensitivity": true
+  },
+  {
+    "scenario_id": "S002",
+    "category": "Low concern",
+    "agent_ids": [
+      "AGT-058"
+    ],
+    "display_names": [
+      "letrozole"
+    ],
+    "agent_class_ids": [],
+    "therapy_groups": [
+      "Aromatase inhibitor / endocrine therapy"
+    ],
+    "rt_site_id": "RTS010",
+    "rt_site_display": "Breast \u2014 Whole breast",
+    "timing_id": "TM005",
+    "timing_display": "Planned after RT",
+    "fractionation_id": "FX007",
+    "fractionation_display": "Palliative multifraction",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "No specific alert",
+    "expected_app_toxicity_domains": [],
+    "expected_app_risk_driver": "Agent-driven",
+    "expected_app_rationale": "No major interaction signal identified; proceed with standard clinical checks and clinician override.",
+    "matched_rules": [
+      "IR016"
+    ],
+    "app_evidence_ids": [
+      "EVID-0069",
+      "EVID-0070"
+    ],
+    "validation_purpose": "Aromatase inhibitor planned after breast RT. Confirm no false alert for this standard adjuvant sequence.",
+    "clinical_concern": "False-high alert risk",
+    "fractionation_sensitivity": false,
+    "timing_sensitivity": true
+  },
+  {
+    "scenario_id": "S003",
+    "category": "Low concern",
+    "agent_ids": [
+      "AGT-024"
+    ],
+    "display_names": [
+      "abiraterone"
+    ],
+    "agent_class_ids": [],
+    "therapy_groups": [
+      "Androgen synthesis inhibitor / ADT"
+    ],
+    "rt_site_id": "RTS002",
+    "rt_site_display": "Prostate \u2014 Prostate + pelvic nodes",
+    "timing_id": "TM004",
+    "timing_display": "Sequential",
+    "fractionation_id": "FX007",
+    "fractionation_display": "Palliative multifraction",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "No specific alert",
+    "expected_app_toxicity_domains": [],
+    "expected_app_risk_driver": "Agent-driven",
+    "expected_app_rationale": "No major interaction signal identified; proceed with standard clinical checks and clinician override.",
+    "matched_rules": [
+      "IR016"
+    ],
+    "app_evidence_ids": [
+      "EVID-0069",
+      "EVID-0070"
+    ],
+    "validation_purpose": "Abiraterone sequential before/after pelvic RT. Confirm appropriate low concern.",
+    "clinical_concern": "False-high alert risk",
+    "fractionation_sensitivity": false,
+    "timing_sensitivity": true
+  },
+  {
+    "scenario_id": "S004",
+    "category": "Low concern",
+    "agent_ids": [
+      "AGT-019"
+    ],
+    "display_names": [
+      "bicalutamide"
+    ],
+    "agent_class_ids": [],
+    "therapy_groups": [
+      "Androgen receptor antagonist / ADT"
+    ],
+    "rt_site_id": "RTS024",
+    "rt_site_display": "Spine \u2014 Lumbar/sacral",
+    "timing_id": "TM004",
+    "timing_display": "Sequential",
+    "fractionation_id": "FX007",
+    "fractionation_display": "Palliative multifraction",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "No specific alert",
+    "expected_app_toxicity_domains": [],
+    "expected_app_risk_driver": "Agent-driven",
+    "expected_app_rationale": "No major interaction signal identified; proceed with standard clinical checks and clinician override.",
+    "matched_rules": [
+      "IR016"
+    ],
+    "app_evidence_ids": [
+      "EVID-0069",
+      "EVID-0070"
+    ],
+    "validation_purpose": "Bicalutamide with palliative bone RT. Standard low-concern combination; confirm no false alert.",
+    "clinical_concern": "False-high alert risk",
+    "fractionation_sensitivity": false,
+    "timing_sensitivity": false
+  },
+  {
+    "scenario_id": "S005",
+    "category": "Low concern",
+    "agent_ids": [
+      "AGT-056"
+    ],
+    "display_names": [
+      "anastrozole"
+    ],
+    "agent_class_ids": [],
+    "therapy_groups": [
+      "Aromatase inhibitor / endocrine therapy"
+    ],
+    "rt_site_id": "RTS011",
+    "rt_site_display": "Breast \u2014 Chest wall",
+    "timing_id": "TM005",
+    "timing_display": "Planned after RT",
+    "fractionation_id": "FX006",
+    "fractionation_display": "Palliative single fraction",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "No specific alert",
+    "expected_app_toxicity_domains": [],
+    "expected_app_risk_driver": "Agent-driven",
+    "expected_app_rationale": "No major interaction signal identified; proceed with standard clinical checks and clinician override.",
+    "matched_rules": [
+      "IR016"
+    ],
+    "app_evidence_ids": [
+      "EVID-0069",
+      "EVID-0070"
+    ],
+    "validation_purpose": "Anastrozole planned after chest wall RT. Confirm appropriate low concern for this sequence.",
+    "clinical_concern": "False-high alert risk",
+    "fractionation_sensitivity": false,
+    "timing_sensitivity": true
+  },
+  {
+    "scenario_id": "S006",
+    "category": "Caution",
+    "agent_ids": [
+      "AGT-198"
+    ],
+    "display_names": [
+      "paclitaxel"
+    ],
+    "agent_class_ids": [
+      "CLS-001",
+      "CLS-008"
+    ],
+    "therapy_groups": [
+      "Cytotoxic chemotherapy \u2014 taxane"
+    ],
+    "rt_site_id": "RTS014",
+    "rt_site_display": "Head and neck \u2014 Larynx/hypopharynx",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX001",
+    "fractionation_display": "Conventional fractionation",
+    "interval_days": null,
+    "intent": "Curative",
+    "multi_agent": false,
+    "expected_app_alert": "Caution",
+    "expected_app_toxicity_domains": [
+      "DOM-03",
+      "DOM-01",
+      "DOM-06"
+    ],
+    "expected_app_risk_driver": "Combination-driven",
+    "expected_app_rationale": "This is a recognised concurrent chemoradiation combination; toxicity risk is expected and should be managed according to the relevant protocol.",
+    "matched_rules": [
+      "IR009"
+    ],
+    "app_evidence_ids": [
+      "EVID-0041",
+      "EVID-0043",
+      "EVID-0044"
+    ],
+    "validation_purpose": "Taxane-based H&N chemoradiation. Confirm Caution (not over-escalated to Moderate/High) for protocol combination. Assess whether mucositis, GI and marrow domains are appropriate.",
+    "clinical_concern": "Alert level calibration; domain completeness",
+    "fractionation_sensitivity": true,
+    "timing_sensitivity": true
+  },
+  {
+    "scenario_id": "S007",
+    "category": "Caution",
+    "agent_ids": [
+      "AGT-121"
+    ],
+    "display_names": [
+      "ipilimumab"
+    ],
+    "agent_class_ids": [
+      "CLS-004",
+      "CLS-010",
+      "CLS-011"
+    ],
+    "therapy_groups": [
+      "Immune checkpoint inhibitor \u2014 anti-CTLA-4"
+    ],
+    "rt_site_id": "RTS021",
+    "rt_site_display": "Brain \u2014 SRS/focal",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX005",
+    "fractionation_display": "SRS",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "Caution",
+    "expected_app_toxicity_domains": [
+      "DOM-10"
+    ],
+    "expected_app_risk_driver": "Combination-driven",
+    "expected_app_rationale": "SRS with immune checkpoint therapy may increase inflammatory imaging changes, oedema or radionecrosis in selected settings.",
+    "matched_rules": [
+      "IR005"
+    ],
+    "app_evidence_ids": [
+      "EVID-0002",
+      "EVID-0024"
+    ],
+    "validation_purpose": "Anti-CTLA-4 ICI with intracranial SRS. Assess whether Caution is appropriate, whether CNS oedema/radionecrosis is the correct domain, and whether uncertainty is adequately signalled.",
+    "clinical_concern": "Alert level; uncertainty signalling; potential for over-reassurance",
+    "fractionation_sensitivity": true,
+    "timing_sensitivity": false
+  },
+  {
+    "scenario_id": "S008",
+    "category": "Caution",
+    "agent_ids": [
+      "AGT-196"
+    ],
+    "display_names": [
+      "docetaxel"
+    ],
+    "agent_class_ids": [
+      "CLS-001",
+      "CLS-008"
+    ],
+    "therapy_groups": [
+      "Cytotoxic chemotherapy \u2014 taxane"
+    ],
+    "rt_site_id": "RTS013",
+    "rt_site_display": "Head and neck \u2014 Oral cavity/oropharynx",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX001",
+    "fractionation_display": "Conventional fractionation",
+    "interval_days": null,
+    "intent": "Curative",
+    "multi_agent": false,
+    "expected_app_alert": "Caution",
+    "expected_app_toxicity_domains": [
+      "DOM-03",
+      "DOM-01",
+      "DOM-06"
+    ],
+    "expected_app_risk_driver": "Combination-driven",
+    "expected_app_rationale": "This is a recognised concurrent chemoradiation combination; toxicity risk is expected and should be managed according to the relevant protocol.",
+    "matched_rules": [
+      "IR009"
+    ],
+    "app_evidence_ids": [
+      "EVID-0041",
+      "EVID-0043",
+      "EVID-0044"
+    ],
+    "validation_purpose": "Docetaxel H&N chemoradiation (curative). Confirm protocol-based Caution. Note: docetaxel lacks CLS-009 classification so IR010 does not fire; only Caution expected, not Moderate.",
+    "clinical_concern": "Alert calibration; class coverage completeness for taxanes",
+    "fractionation_sensitivity": true,
+    "timing_sensitivity": true
+  },
+  {
+    "scenario_id": "S009",
+    "category": "Moderate",
+    "agent_ids": [
+      "AGT-169"
+    ],
+    "display_names": [
+      "cisplatin"
+    ],
+    "agent_class_ids": [
+      "CLS-008",
+      "CLS-009"
+    ],
+    "therapy_groups": [
+      "Cytotoxic chemotherapy \u2014 platinum",
+      "Strong mucosal radiosensitiser"
+    ],
+    "rt_site_id": "RTS013",
+    "rt_site_display": "Head and neck \u2014 Oral cavity/oropharynx",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX001",
+    "fractionation_display": "Conventional fractionation",
+    "interval_days": null,
+    "intent": "Curative",
+    "multi_agent": false,
+    "expected_app_alert": "Moderate toxicity alert",
+    "expected_app_toxicity_domains": [
+      "DOM-03",
+      "DOM-01",
+      "DOM-06"
+    ],
+    "expected_app_risk_driver": "Combination-driven",
+    "expected_app_rationale": "Concurrent systemic therapy may intensify mucosal toxicity in the irradiated field. This is also a recognised concurrent chemoradiation combination with expected toxicity managed per protocol.",
+    "matched_rules": [
+      "IR009",
+      "IR010"
+    ],
+    "app_evidence_ids": [
+      "EVID-0003",
+      "EVID-0041",
+      "EVID-0043",
+      "EVID-0044"
+    ],
+    "validation_purpose": "Cisplatin concurrent H&N chemoradiation \u2014 highest-evidence combination in the app. Evaluate whether Moderate (not High) is appropriate for a well-documented radiosensitiser with severe mucositis risk. Assess domain completeness.",
+    "clinical_concern": "Under-alert risk; domain completeness; nausea/nephrotoxicity not captured in current domains",
+    "fractionation_sensitivity": true,
+    "timing_sensitivity": true
+  },
+  {
+    "scenario_id": "S010",
+    "category": "Moderate",
+    "agent_ids": [
+      "AGT-086"
+    ],
+    "display_names": [
+      "palbociclib"
+    ],
+    "agent_class_ids": [
+      "CLS-001",
+      "CLS-002",
+      "CLS-011"
+    ],
+    "therapy_groups": [
+      "CDK4/6 inhibitor"
+    ],
+    "rt_site_id": "RTS016",
+    "rt_site_display": "Pelvis \u2014 Rectal",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX001",
+    "fractionation_display": "Conventional fractionation",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "Moderate toxicity alert",
+    "expected_app_toxicity_domains": [
+      "DOM-01",
+      "DOM-06"
+    ],
+    "expected_app_risk_driver": "Combination-driven",
+    "expected_app_rationale": "Concurrent CDK4/6 inhibition may increase marrow and gastrointestinal toxicity, particularly with pelvic or abdominal RT.",
+    "matched_rules": [
+      "IR002",
+      "IR012"
+    ],
+    "app_evidence_ids": [
+      "EVID-0001",
+      "EVID-0002",
+      "EVID-0015",
+      "EVID-0016"
+    ],
+    "validation_purpose": "CDK4/6 inhibitor with pelvic RT. Assess whether Moderate is appropriate, and whether GI and marrow domains adequately reflect the risk. Evaluate evidence strength for this class effect.",
+    "clinical_concern": "Alert level; evidence quality; applicability of class-level rule to individual CDK4/6 agents",
+    "fractionation_sensitivity": true,
+    "timing_sensitivity": false
+  },
+  {
+    "scenario_id": "S011",
+    "category": "Moderate",
+    "agent_ids": [
+      "AGT-094"
+    ],
+    "display_names": [
+      "osimertinib"
+    ],
+    "agent_class_ids": [
+      "CLS-006",
+      "CLS-010",
+      "CLS-011"
+    ],
+    "therapy_groups": [
+      "EGFR TKI (3rd generation)"
+    ],
+    "rt_site_id": "RTS006",
+    "rt_site_display": "Lung \u2014 Peripheral",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX004",
+    "fractionation_display": "SABR/SBRT",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "Moderate toxicity alert",
+    "expected_app_toxicity_domains": [
+      "DOM-05",
+      "DOM-04",
+      "DOM-03"
+    ],
+    "expected_app_risk_driver": "Combination-driven",
+    "expected_app_rationale": "Concurrent thoracic RT with targeted kinase inhibition may increase pulmonary toxicity.",
+    "matched_rules": [
+      "IR007",
+      "IR011"
+    ],
+    "app_evidence_ids": [
+      "EVID-0003",
+      "EVID-0020",
+      "EVID-0025"
+    ],
+    "validation_purpose": "3rd-generation EGFR TKI with lung SBRT. Assess whether pneumonitis, skin and mucositis domains are appropriate. Evaluate whether Moderate is appropriately calibrated vs High for this combination.",
+    "clinical_concern": "Alert level; pneumonitis domain; ILD interaction evidence currency",
+    "fractionation_sensitivity": true,
+    "timing_sensitivity": true
+  },
+  {
+    "scenario_id": "S012",
+    "category": "Moderate",
+    "agent_ids": [
+      "AGT-041"
+    ],
+    "display_names": [
+      "trastuzumab deruxtecan"
+    ],
+    "agent_class_ids": [
+      "CLS-005",
+      "CLS-010"
+    ],
+    "therapy_groups": [
+      "HER2-directed antibody-drug conjugate"
+    ],
+    "rt_site_id": "RTS007",
+    "rt_site_display": "Lung \u2014 Central",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX002",
+    "fractionation_display": "Moderate hypofractionation",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "Moderate toxicity alert",
+    "expected_app_toxicity_domains": [
+      "DOM-05"
+    ],
+    "expected_app_risk_driver": "Combination-driven",
+    "expected_app_rationale": "Potential additive interstitial lung disease/pneumonitis risk with thoracic RT.",
+    "matched_rules": [
+      "IR006",
+      "IR011"
+    ],
+    "app_evidence_ids": [
+      "EVID-0007",
+      "EVID-0008",
+      "EVID-0009",
+      "EVID-0020",
+      "EVID-0025"
+    ],
+    "validation_purpose": "T-DXd (trastuzumab deruxtecan) with central lung RT. T-DXd has a specific ILD black-box warning. Assess whether Moderate is appropriately calibrated and whether pneumonitis domain alone is sufficient.",
+    "clinical_concern": "Alert level; ILD-specific evidence for T-DXd; potential under-alert",
+    "fractionation_sensitivity": true,
+    "timing_sensitivity": false
+  },
+  {
+    "scenario_id": "S013",
+    "category": "Moderate",
+    "agent_ids": [
+      "AGT-122"
+    ],
+    "display_names": [
+      "nivolumab"
+    ],
+    "agent_class_ids": [
+      "CLS-004",
+      "CLS-010",
+      "CLS-011"
+    ],
+    "therapy_groups": [
+      "Immune checkpoint inhibitor \u2014 anti-PD-1"
+    ],
+    "rt_site_id": "RTS006",
+    "rt_site_display": "Lung \u2014 Peripheral",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX001",
+    "fractionation_display": "Conventional fractionation",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "Moderate toxicity alert",
+    "expected_app_toxicity_domains": [
+      "DOM-05"
+    ],
+    "expected_app_risk_driver": "Combination-driven",
+    "expected_app_rationale": "The selected systemic therapy and thoracic RT have overlapping pneumonitis/ILD risk.",
+    "matched_rules": [
+      "IR004",
+      "IR011"
+    ],
+    "app_evidence_ids": [
+      "EVID-0002",
+      "EVID-0020",
+      "EVID-0025",
+      "EVID-0031"
+    ],
+    "validation_purpose": "Anti-PD-1 ICI with conventional thoracic RT. Assess whether Moderate is appropriate. Note: alert level does not change between conventional and SBRT for this combination (compare with S040).",
+    "clinical_concern": "Alert level appropriateness; fractionation insensitivity; pneumonitis domain completeness",
+    "fractionation_sensitivity": false,
+    "timing_sensitivity": false
+  },
+  {
+    "scenario_id": "S014",
+    "category": "Moderate",
+    "agent_ids": [
+      "AGT-060"
+    ],
+    "display_names": [
+      "dabrafenib"
+    ],
+    "agent_class_ids": [
+      "CLS-007",
+      "CLS-010"
+    ],
+    "therapy_groups": [
+      "BRAF inhibitor"
+    ],
+    "rt_site_id": "RTS028",
+    "rt_site_display": "Skin/superficial \u2014 Skin lesion",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX001",
+    "fractionation_display": "Conventional fractionation",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "Moderate toxicity alert",
+    "expected_app_toxicity_domains": [
+      "DOM-04",
+      "DOM-19"
+    ],
+    "expected_app_risk_driver": "Agent-driven",
+    "expected_app_rationale": "BRAF inhibition may enhance radiation dermatitis and, rarely, visceral toxicity or radiation recall.",
+    "matched_rules": [
+      "IR008"
+    ],
+    "app_evidence_ids": [
+      "EVID-0003"
+    ],
+    "validation_purpose": "BRAF inhibitor with skin RT. Assess whether Moderate is appropriate for radiation dermatitis and recall risk. Evaluate evidence basis (single reference EVID-0003) as sufficient for Moderate alert.",
+    "clinical_concern": "Evidence strength; domain completeness; recall risk signalling",
+    "fractionation_sensitivity": false,
+    "timing_sensitivity": false
+  },
+  {
+    "scenario_id": "S015",
+    "category": "Moderate",
+    "agent_ids": [
+      "AGT-141"
+    ],
+    "display_names": [
+      "cetuximab"
+    ],
+    "agent_class_ids": [
+      "CLS-003",
+      "CLS-009",
+      "CLS-013"
+    ],
+    "therapy_groups": [
+      "EGFR-targeted monoclonal antibody"
+    ],
+    "rt_site_id": "RTS004",
+    "rt_site_display": "Oesophagus \u2014 Mid-thoracic",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX001",
+    "fractionation_display": "Conventional fractionation",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "Moderate toxicity alert",
+    "expected_app_toxicity_domains": [
+      "DOM-03",
+      "DOM-01"
+    ],
+    "expected_app_risk_driver": "Combination-driven",
+    "expected_app_rationale": "Concurrent systemic therapy may intensify mucosal toxicity in the irradiated field.",
+    "matched_rules": [
+      "IR010"
+    ],
+    "app_evidence_ids": [
+      "EVID-0003",
+      "EVID-0041"
+    ],
+    "validation_purpose": "Cetuximab with oesophageal RT at conventional fractionation. Mucositis and GI are triggered via strong mucosal radiosensitiser class. Assess whether this accurately reflects cetuximab-specific toxicity.",
+    "clinical_concern": "Class vs agent-specific risk; domain completeness; skin toxicity not listed (cetuximab causes acneiform rash)",
+    "fractionation_sensitivity": false,
+    "timing_sensitivity": true
+  },
+  {
+    "scenario_id": "S016",
+    "category": "Moderate",
+    "agent_ids": [
+      "AGT-087"
+    ],
+    "display_names": [
+      "ribociclib"
+    ],
+    "agent_class_ids": [
+      "CLS-001",
+      "CLS-002",
+      "CLS-011"
+    ],
+    "therapy_groups": [
+      "CDK4/6 inhibitor"
+    ],
+    "rt_site_id": "RTS018",
+    "rt_site_display": "Pelvis \u2014 Gynaecological",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX002",
+    "fractionation_display": "Moderate hypofractionation",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "Moderate toxicity alert",
+    "expected_app_toxicity_domains": [
+      "DOM-01",
+      "DOM-06"
+    ],
+    "expected_app_risk_driver": "Combination-driven",
+    "expected_app_rationale": "Concurrent CDK4/6 inhibition may increase marrow and gastrointestinal toxicity, particularly with pelvic or abdominal RT.",
+    "matched_rules": [
+      "IR002",
+      "IR012"
+    ],
+    "app_evidence_ids": [
+      "EVID-0001",
+      "EVID-0002",
+      "EVID-0015",
+      "EVID-0016"
+    ],
+    "validation_purpose": "Ribociclib with hypofractionated gynaecological RT. Assess domain completeness and whether evidence for pelvic interaction is adequate.",
+    "clinical_concern": "Alert level; class extrapolation strength; clinical use context (ribociclib is HR+/HER2- breast cancer agent)",
+    "fractionation_sensitivity": true,
+    "timing_sensitivity": false
+  },
+  {
+    "scenario_id": "S017",
+    "category": "Moderate",
+    "agent_ids": [
+      "AGT-050"
+    ],
+    "display_names": [
+      "gemcitabine"
+    ],
+    "agent_class_ids": [
+      "CLS-001",
+      "CLS-008",
+      "CLS-009"
+    ],
+    "therapy_groups": [
+      "Cytotoxic chemotherapy \u2014 antimetabolite / gemcitabine"
+    ],
+    "rt_site_id": "RTS023",
+    "rt_site_display": "Spine \u2014 Thoracic",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX008",
+    "fractionation_display": "Large-field marrow-exposing RT",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "Moderate toxicity alert",
+    "expected_app_toxicity_domains": [
+      "DOM-06"
+    ],
+    "expected_app_risk_driver": "Combination-driven",
+    "expected_app_rationale": "Potential additive marrow suppression from systemic therapy and marrow-exposing RT.",
+    "matched_rules": [
+      "IR001"
+    ],
+    "app_evidence_ids": [
+      "EVID-0069",
+      "EVID-0070"
+    ],
+    "validation_purpose": "Gemcitabine with marrow-exposing thoracic spine RT. Only marrow suppression (DOM-06) is returned \u2014 not pulmonary toxicity (DOM-05). Assess whether this adequately captures the full risk.",
+    "clinical_concern": "Domain completeness; gemcitabine has high pulmonary radiosensitisation risk not captured by marrow rule alone",
+    "fractionation_sensitivity": true,
+    "timing_sensitivity": false
+  },
+  {
+    "scenario_id": "S018",
+    "category": "High",
+    "agent_ids": [
+      "AGT-140"
+    ],
+    "display_names": [
+      "bevacizumab"
+    ],
+    "agent_class_ids": [
+      "CLS-003",
+      "CLS-009",
+      "CLS-013"
+    ],
+    "therapy_groups": [
+      "Anti-VEGF monoclonal antibody"
+    ],
+    "rt_site_id": "RTS026",
+    "rt_site_display": "Upper abdomen \u2014 Pancreas",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX004",
+    "fractionation_display": "SABR/SBRT",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "High toxicity alert",
+    "expected_app_toxicity_domains": [
+      "DOM-07",
+      "DOM-08",
+      "DOM-09",
+      "DOM-03",
+      "DOM-01"
+    ],
+    "expected_app_risk_driver": "Combination-driven",
+    "expected_app_rationale": "Anti-VEGF pathway inhibition may increase bleeding, perforation, fistula, vascular injury and impaired healing with high-dose RT near hollow viscera or major vessels.",
+    "matched_rules": [
+      "IR003",
+      "IR010",
+      "IR014"
+    ],
+    "app_evidence_ids": [
+      "EVID-0034",
+      "EVID-0035"
+    ],
+    "validation_purpose": "Bevacizumab with pancreatic SBRT \u2014 highest-risk anti-VEGF scenario. Assess whether High is appropriate, domain completeness, and whether fistula/perforation/wound-healing domains are correctly prioritised.",
+    "clinical_concern": "Alert level; domain completeness; evidence strength for hollow-viscera interaction",
+    "fractionation_sensitivity": true,
+    "timing_sensitivity": true
+  },
+  {
+    "scenario_id": "S019",
+    "category": "High",
+    "agent_ids": [
+      "AGT-202"
+    ],
+    "display_names": [
+      "axitinib"
+    ],
+    "agent_class_ids": [
+      "CLS-003",
+      "CLS-013"
+    ],
+    "therapy_groups": [
+      "Anti-VEGFR TKI"
+    ],
+    "rt_site_id": "RTS025",
+    "rt_site_display": "Upper abdomen \u2014 Liver",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX004",
+    "fractionation_display": "SABR/SBRT",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "High toxicity alert",
+    "expected_app_toxicity_domains": [
+      "DOM-07",
+      "DOM-08",
+      "DOM-09"
+    ],
+    "expected_app_risk_driver": "Combination-driven",
+    "expected_app_rationale": "Anti-VEGF pathway inhibition may increase bleeding, perforation, fistula, vascular injury and impaired healing with high-dose RT near hollow viscera or major vessels.",
+    "matched_rules": [
+      "IR003",
+      "IR014"
+    ],
+    "app_evidence_ids": [
+      "EVID-0034",
+      "EVID-0035"
+    ],
+    "validation_purpose": "VEGFR TKI with liver SBRT. Assess whether High is appropriate for this combination and whether hepatotoxicity (DOM-13) is a missing domain.",
+    "clinical_concern": "Alert level; hepatic toxicity domain missing; evidence basis for VEGFR TKI class",
+    "fractionation_sensitivity": true,
+    "timing_sensitivity": false
+  },
+  {
+    "scenario_id": "S020",
+    "category": "High",
+    "agent_ids": [
+      "AGT-209"
+    ],
+    "display_names": [
+      "sorafenib"
+    ],
+    "agent_class_ids": [
+      "CLS-003",
+      "CLS-013"
+    ],
+    "therapy_groups": [
+      "Multi-kinase / anti-VEGFR inhibitor"
+    ],
+    "rt_site_id": "RTS027",
+    "rt_site_display": "Upper abdomen \u2014 Adrenal",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX004",
+    "fractionation_display": "SABR/SBRT",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "High toxicity alert",
+    "expected_app_toxicity_domains": [
+      "DOM-07",
+      "DOM-08",
+      "DOM-09"
+    ],
+    "expected_app_risk_driver": "Combination-driven",
+    "expected_app_rationale": "Anti-VEGF pathway inhibition may increase bleeding, perforation, fistula, vascular injury and impaired healing with high-dose RT near hollow viscera or major vessels.",
+    "matched_rules": [
+      "IR003",
+      "IR014"
+    ],
+    "app_evidence_ids": [
+      "EVID-0034",
+      "EVID-0035"
+    ],
+    "validation_purpose": "Multi-kinase inhibitor with adrenal SBRT. Assess whether High is appropriate for adrenal SBRT and anti-VEGF combination.",
+    "clinical_concern": "Alert level for adrenal site; adrenal gland-specific risks not captured",
+    "fractionation_sensitivity": true,
+    "timing_sensitivity": false
+  },
+  {
+    "scenario_id": "S021",
+    "category": "High",
+    "agent_ids": [
+      "AGT-084"
+    ],
+    "display_names": [
+      "tisagenlecleucel"
+    ],
+    "agent_class_ids": [
+      "CLS-012"
+    ],
+    "therapy_groups": [
+      "CAR-T cell therapy"
+    ],
+    "rt_site_id": "RTS020",
+    "rt_site_display": "Brain \u2014 Whole brain",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX001",
+    "fractionation_display": "Conventional fractionation",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "High toxicity alert",
+    "expected_app_toxicity_domains": [
+      "DOM-10",
+      "DOM-06"
+    ],
+    "expected_app_risk_driver": "Timing-driven",
+    "expected_app_rationale": "Avoid elective RT during active cytokine-release syndrome, ICANS or unstable immune toxicity.",
+    "matched_rules": [
+      "IR013"
+    ],
+    "app_evidence_ids": [
+      "EVID-0066",
+      "EVID-0067"
+    ],
+    "validation_purpose": "CAR-T therapy with whole brain RT. Assess whether High is appropriate for this combination (CRS, ICANS risk context), and whether CNS oedema and marrow suppression domains are correct.",
+    "clinical_concern": "Alert level; timing rationale (is WBRT typically delivered during active CAR-T therapy?); domain completeness",
+    "fractionation_sensitivity": false,
+    "timing_sensitivity": true
+  },
+  {
+    "scenario_id": "S022",
+    "category": "High",
+    "agent_ids": [
+      "AGT-220"
+    ],
+    "display_names": [
+      "tarlatamab"
+    ],
+    "agent_class_ids": [
+      "CLS-012"
+    ],
+    "therapy_groups": [
+      "Bispecific T-cell engager (DLL3xCD3)"
+    ],
+    "rt_site_id": "RTS013",
+    "rt_site_display": "Head and neck \u2014 Oral cavity/oropharynx",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX001",
+    "fractionation_display": "Conventional fractionation",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "High toxicity alert",
+    "expected_app_toxicity_domains": [
+      "DOM-10",
+      "DOM-06"
+    ],
+    "expected_app_risk_driver": "Timing-driven",
+    "expected_app_rationale": "Avoid elective RT during active cytokine-release syndrome, ICANS or unstable immune toxicity.",
+    "matched_rules": [
+      "IR013"
+    ],
+    "app_evidence_ids": [
+      "EVID-0066",
+      "EVID-0067"
+    ],
+    "validation_purpose": "Novel DLL3-targeted bispecific with H&N RT. Tarlatamab's individual agent_alert_level is Caution, but the class rule (CLS-012) fires High. Assess whether High is clinically appropriate for this novel agent in this setting.",
+    "clinical_concern": "Class vs agent-specific alert level discrepancy; evolving evidence for tarlatamab specifically; domain appropriateness for H&N RT",
+    "fractionation_sensitivity": false,
+    "timing_sensitivity": true
+  },
+  {
+    "scenario_id": "S023",
+    "category": "High",
+    "agent_ids": [
+      "AGT-150"
+    ],
+    "display_names": [
+      "ramucirumab"
+    ],
+    "agent_class_ids": [
+      "CLS-003",
+      "CLS-009",
+      "CLS-013"
+    ],
+    "therapy_groups": [
+      "Anti-VEGFR2 monoclonal antibody"
+    ],
+    "rt_site_id": "RTS005",
+    "rt_site_display": "Oesophagus \u2014 Lower/GOJ",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX004",
+    "fractionation_display": "SABR/SBRT",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "High toxicity alert",
+    "expected_app_toxicity_domains": [
+      "DOM-07",
+      "DOM-08",
+      "DOM-09",
+      "DOM-03",
+      "DOM-01"
+    ],
+    "expected_app_risk_driver": "Combination-driven",
+    "expected_app_rationale": "Anti-VEGF pathway inhibition may increase bleeding, perforation, fistula, vascular injury and impaired healing with high-dose RT near hollow viscera or major vessels.",
+    "matched_rules": [
+      "IR003",
+      "IR010"
+    ],
+    "app_evidence_ids": [
+      "EVID-0034",
+      "EVID-0035",
+      "EVID-0003",
+      "EVID-0041"
+    ],
+    "validation_purpose": "Anti-VEGFR2 antibody with GOJ SBRT. Gastric/oesophageal fistula and perforation are well-recognised risks. Assess whether High is appropriate and domain set is complete.",
+    "clinical_concern": "Alert level; site-specific fistula risk; esophageal/gastric anatomy proximity to SBRT",
+    "fractionation_sensitivity": true,
+    "timing_sensitivity": false
+  },
+  {
+    "scenario_id": "S024",
+    "category": "Uncertain",
+    "agent_ids": [
+      "AGT-050"
+    ],
+    "display_names": [
+      "gemcitabine"
+    ],
+    "agent_class_ids": [
+      "CLS-001",
+      "CLS-008",
+      "CLS-009"
+    ],
+    "therapy_groups": [
+      "Cytotoxic chemotherapy \u2014 antimetabolite / gemcitabine"
+    ],
+    "rt_site_id": "RTS006",
+    "rt_site_display": "Lung \u2014 Peripheral",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX001",
+    "fractionation_display": "Conventional fractionation",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "Uncertain / evidence limited",
+    "expected_app_toxicity_domains": [
+      "DOM-01",
+      "DOM-03",
+      "DOM-04",
+      "DOM-05"
+    ],
+    "expected_app_risk_driver": "Uncertainty-driven",
+    "expected_app_rationale": "Direct evidence for this drug\u2013RT combination is insufficient. Specialist review and documented multidisciplinary reasoning are recommended.",
+    "matched_rules": [],
+    "app_evidence_ids": [],
+    "app_fallback_used": true,
+    "validation_purpose": "CRITICAL VALIDATION SCENARIO. Gemcitabine has agent_alert_level of High toxicity alert and is classified as a strong pulmonary radiosensitiser, yet the rule engine falls back to Uncertain for lung RT because no class-level lung rule matches gemcitabine's parent classes. Assess whether this is a false reassurance risk and whether a High alert rule is needed.",
+    "clinical_concern": "Potential false reassurance; gemcitabine + thoracic RT is a high-risk, well-documented combination (radiation pneumonitis risk); this is a candidate rule gap",
+    "fractionation_sensitivity": false,
+    "timing_sensitivity": false
+  },
+  {
+    "scenario_id": "S025",
+    "category": "Uncertain",
+    "agent_ids": [
+      "AGT-017"
+    ],
+    "display_names": [
+      "temozolomide"
+    ],
+    "agent_class_ids": [],
+    "therapy_groups": [
+      "Alkylating-like agent \u2014 TMZ"
+    ],
+    "rt_site_id": "RTS020",
+    "rt_site_display": "Brain \u2014 Whole brain",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX001",
+    "fractionation_display": "Conventional fractionation",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "Uncertain / evidence limited",
+    "expected_app_toxicity_domains": [
+      "DOM-01",
+      "DOM-03",
+      "DOM-04",
+      "DOM-06",
+      "DOM-19"
+    ],
+    "expected_app_risk_driver": "Uncertainty-driven",
+    "expected_app_rationale": "Direct evidence for this drug\u2013RT combination is insufficient. Specialist review and documented multidisciplinary reasoning are recommended.",
+    "matched_rules": [],
+    "app_evidence_ids": [],
+    "app_fallback_used": true,
+    "validation_purpose": "CRITICAL VALIDATION SCENARIO. TMZ concurrent with brain RT is the standard of care for glioblastoma (Stupp protocol) and has well-characterised toxicity. The app produces Uncertain via fallback because TMZ has no parent class assignment. Assess whether Uncertain is acceptable or whether a Caution/Moderate rule is needed.",
+    "clinical_concern": "Potential false reassurance; standard-of-care protocol not recognized; candidate rule gap",
+    "fractionation_sensitivity": false,
+    "timing_sensitivity": false
+  },
+  {
+    "scenario_id": "S026",
+    "category": "Uncertain",
+    "agent_ids": [
+      "AGT-162"
+    ],
+    "display_names": [
+      "olaparib"
+    ],
+    "agent_class_ids": [
+      "CLS-001",
+      "CLS-010"
+    ],
+    "therapy_groups": [
+      "PARP inhibitor"
+    ],
+    "rt_site_id": "RTS018",
+    "rt_site_display": "Pelvis \u2014 Gynaecological",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX001",
+    "fractionation_display": "Conventional fractionation",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "Uncertain / evidence limited",
+    "expected_app_toxicity_domains": [
+      "DOM-03",
+      "DOM-04",
+      "DOM-05",
+      "DOM-06"
+    ],
+    "expected_app_risk_driver": "Uncertainty-driven",
+    "expected_app_rationale": "Direct evidence for this drug\u2013RT combination is insufficient. Specialist review and documented multidisciplinary reasoning are recommended.",
+    "matched_rules": [],
+    "app_evidence_ids": [],
+    "app_fallback_used": true,
+    "validation_purpose": "PARP inhibitor with pelvic gynaecological RT. PARP inhibitors are DNA damage repair inhibitors used in ovarian cancer; concurrent pelvic RT is an emerging setting. Assess whether Uncertain is appropriate or whether a Moderate alert is warranted.",
+    "clinical_concern": "Evolving evidence; potential radiosensitisation via DNA repair inhibition; no pelvic-specific PARP rule exists",
+    "fractionation_sensitivity": false,
+    "timing_sensitivity": false
+  },
+  {
+    "scenario_id": "S027",
+    "category": "Uncertain",
+    "agent_ids": [
+      "AGT-059"
+    ],
+    "display_names": [
+      "venetoclax"
+    ],
+    "agent_class_ids": [],
+    "therapy_groups": [
+      "BCL-2 inhibitor"
+    ],
+    "rt_site_id": "RTS016",
+    "rt_site_display": "Pelvis \u2014 Rectal",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX001",
+    "fractionation_display": "Conventional fractionation",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "Uncertain / evidence limited",
+    "expected_app_toxicity_domains": [
+      "DOM-01",
+      "DOM-06"
+    ],
+    "expected_app_risk_driver": "Uncertainty-driven",
+    "expected_app_rationale": "Direct evidence for this drug\u2013RT combination is insufficient. Specialist review and documented multidisciplinary reasoning are recommended.",
+    "matched_rules": [],
+    "app_evidence_ids": [],
+    "app_fallback_used": true,
+    "validation_purpose": "BCL-2 inhibitor with rectal chemoradiation context. Venetoclax has no parent class so falls back to Uncertain. Assess whether this is appropriate for a novel agent with limited RT interaction data.",
+    "clinical_concern": "Appropriate Uncertain for genuinely limited evidence; assess whether GI domain from agent is correct",
+    "fractionation_sensitivity": false,
+    "timing_sensitivity": false
+  },
+  {
+    "scenario_id": "S028",
+    "category": "Uncertain",
+    "agent_ids": [
+      "AGT-219"
+    ],
+    "display_names": [
+      "datopotamab deruxtecan"
+    ],
+    "agent_class_ids": [],
+    "therapy_groups": [
+      "TROP2-directed antibody-drug conjugate (novel)"
+    ],
+    "rt_site_id": "RTS006",
+    "rt_site_display": "Lung \u2014 Peripheral",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX001",
+    "fractionation_display": "Conventional fractionation",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "Uncertain / evidence limited",
+    "expected_app_toxicity_domains": [
+      "DOM-03",
+      "DOM-05",
+      "DOM-06"
+    ],
+    "expected_app_risk_driver": "Uncertainty-driven",
+    "expected_app_rationale": "Direct evidence for this drug\u2013RT combination is insufficient. Specialist review and documented multidisciplinary reasoning are recommended.",
+    "matched_rules": [],
+    "app_evidence_ids": [],
+    "app_fallback_used": true,
+    "validation_purpose": "Novel TROP2 ADC (datopotamab deruxtecan) with lung RT. Evolving evidence; assess whether Uncertain is appropriate and whether ILD/pneumonitis (DOM-05) is correctly flagged from agent data.",
+    "clinical_concern": "Appropriate Uncertain for novel agent; ILD domain from agent data; evolving evidence flag",
+    "fractionation_sensitivity": false,
+    "timing_sensitivity": false
+  },
+  {
+    "scenario_id": "S029",
+    "category": "Uncertain",
+    "agent_ids": [
+      "AGT-221"
+    ],
+    "display_names": [
+      "zolbetuximab"
+    ],
+    "agent_class_ids": [],
+    "therapy_groups": [
+      "Claudin 18.2 monoclonal antibody (novel)"
+    ],
+    "rt_site_id": "RTS005",
+    "rt_site_display": "Oesophagus \u2014 Lower/GOJ",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX001",
+    "fractionation_display": "Conventional fractionation",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "Uncertain / evidence limited",
+    "expected_app_toxicity_domains": [
+      "DOM-20"
+    ],
+    "expected_app_risk_driver": "Uncertainty-driven",
+    "expected_app_rationale": "Direct evidence for this drug\u2013RT combination is insufficient. Specialist review and documented multidisciplinary reasoning are recommended.",
+    "matched_rules": [],
+    "app_evidence_ids": [],
+    "app_fallback_used": true,
+    "validation_purpose": "Novel claudin 18.2 antibody (used in gastric/GOJ cancer) with oesophageal RT. No class assignment; only DOM-20 (Other site-specific) from agent. Assess whether Uncertain is appropriate and whether the domain placeholder is acceptable.",
+    "clinical_concern": "Appropriate Uncertain for genuinely novel agent; domain placeholder (DOM-20) appropriateness",
+    "fractionation_sensitivity": false,
+    "timing_sensitivity": false
+  },
+  {
+    "scenario_id": "S030",
+    "category": "Unmatched/evolving evidence",
+    "agent_ids": [
+      "AGT-218"
+    ],
+    "display_names": [
+      "sotorasib"
+    ],
+    "agent_class_ids": [],
+    "therapy_groups": [
+      "KRAS G12C inhibitor (evolving evidence)"
+    ],
+    "rt_site_id": "RTS006",
+    "rt_site_display": "Lung \u2014 Peripheral",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX004",
+    "fractionation_display": "SABR/SBRT",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "Uncertain / evidence limited",
+    "expected_app_toxicity_domains": [
+      "DOM-01",
+      "DOM-05",
+      "DOM-06",
+      "DOM-13"
+    ],
+    "expected_app_risk_driver": "Uncertainty-driven",
+    "expected_app_rationale": "Direct evidence for this drug\u2013RT combination is insufficient. Specialist review and documented multidisciplinary reasoning are recommended.",
+    "matched_rules": [],
+    "app_evidence_ids": [],
+    "app_fallback_used": true,
+    "validation_purpose": "KRAS G12C inhibitor (sotorasib) with lung SBRT. Novel agent with emerging RT interaction data. Assess whether Uncertain is appropriate and whether pneumonitis (DOM-05) and hepatotoxicity (DOM-13) domains from agent data are clinically relevant.",
+    "clinical_concern": "Evolving evidence; agent has known ILD risk; appropriate Uncertain vs should this be Moderate",
+    "fractionation_sensitivity": false,
+    "timing_sensitivity": false
+  },
+  {
+    "scenario_id": "S031",
+    "category": "Unmatched/evolving evidence",
+    "agent_ids": [
+      "AGT-075"
+    ],
+    "display_names": [
+      "clodronate"
+    ],
+    "agent_class_ids": [],
+    "therapy_groups": [
+      "Bone-modifying agent \u2014 first-generation bisphosphonate"
+    ],
+    "rt_site_id": "RTS024",
+    "rt_site_display": "Spine \u2014 Lumbar/sacral",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX001",
+    "fractionation_display": "Conventional fractionation",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "Uncertain / evidence limited",
+    "expected_app_toxicity_domains": [
+      "DOM-12",
+      "DOM-16"
+    ],
+    "expected_app_risk_driver": "Uncertainty-driven",
+    "expected_app_rationale": "Direct evidence for this drug\u2013RT combination is insufficient. Specialist review and documented multidisciplinary reasoning are recommended.",
+    "matched_rules": [],
+    "app_evidence_ids": [],
+    "app_fallback_used": true,
+    "validation_purpose": "Bone-modifying agent (bisphosphonate) with spinal RT. Assess whether Uncertain is appropriate, and whether renal toxicity (DOM-12) and osteonecrosis (DOM-16) domains are the correct domains for this agent/site combination.",
+    "clinical_concern": "Appropriate Uncertain for limited evidence; osteonecrosis (MRONJ) domain relevance to spinal RT context; zoledronic acid comparison",
+    "fractionation_sensitivity": false,
+    "timing_sensitivity": false
+  },
+  {
+    "scenario_id": "S032",
+    "category": "Missing input \u2014 no therapy",
+    "agent_ids": [],
+    "display_names": [],
+    "agent_class_ids": [],
+    "therapy_groups": [],
+    "rt_site_id": "RTS006",
+    "rt_site_display": "Lung \u2014 Peripheral",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX001",
+    "fractionation_display": "Conventional fractionation",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "Incomplete \u2014 no output",
+    "expected_app_toxicity_domains": [],
+    "expected_app_risk_driver": null,
+    "expected_app_rationale": "No therapy selected \u2014 app returns incomplete state.",
+    "matched_rules": [],
+    "app_evidence_ids": [],
+    "validation_purpose": "No therapy selected with site and timing. Confirm the app returns an incomplete/prompt state rather than a default alert. Assess whether the incomplete state is clearly communicated.",
+    "clinical_concern": "Safe handling of missing inputs; no default alert generated",
+    "fractionation_sensitivity": false,
+    "timing_sensitivity": false
+  },
+  {
+    "scenario_id": "S033",
+    "category": "Missing input \u2014 no site",
+    "agent_ids": [
+      "AGT-050"
+    ],
+    "display_names": [
+      "gemcitabine"
+    ],
+    "agent_class_ids": [
+      "CLS-001",
+      "CLS-008",
+      "CLS-009"
+    ],
+    "therapy_groups": [
+      "Cytotoxic chemotherapy \u2014 antimetabolite / gemcitabine"
+    ],
+    "rt_site_id": null,
+    "rt_site_display": "Not selected",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX001",
+    "fractionation_display": "Conventional fractionation",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "Incomplete \u2014 no output",
+    "expected_app_toxicity_domains": [],
+    "expected_app_risk_driver": null,
+    "expected_app_rationale": "No RT site selected \u2014 app returns incomplete state.",
+    "matched_rules": [],
+    "app_evidence_ids": [],
+    "validation_purpose": "Agent selected (gemcitabine) but no RT site chosen. Confirm incomplete state is returned. Assess whether a partial result or prompt is displayed.",
+    "clinical_concern": "Safe handling of missing site input; no premature alert generated",
+    "fractionation_sensitivity": false,
+    "timing_sensitivity": false
+  },
+  {
+    "scenario_id": "S034",
+    "category": "Missing input \u2014 fractionation required",
+    "agent_ids": [
+      "AGT-122"
+    ],
+    "display_names": [
+      "nivolumab"
+    ],
+    "agent_class_ids": [
+      "CLS-004",
+      "CLS-010",
+      "CLS-011"
+    ],
+    "therapy_groups": [
+      "Immune checkpoint inhibitor \u2014 anti-PD-1"
+    ],
+    "rt_site_id": "RTS006",
+    "rt_site_display": "Lung \u2014 Peripheral",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": null,
+    "fractionation_display": "Not selected",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "Incomplete \u2014 fractionation required",
+    "expected_app_toxicity_domains": [],
+    "expected_app_risk_driver": null,
+    "expected_app_rationale": "Fractionation not specified \u2014 app prompts for this field before completing evaluation.",
+    "matched_rules": [],
+    "app_evidence_ids": [],
+    "validation_purpose": "Nivolumab + lung RT with timing selected but fractionation missing. Assess whether the completeness check fires correctly and whether the fractionation prompt is appropriately displayed.",
+    "clinical_concern": "Completeness gate; fractionation is required for some rules (IR004); failure to prompt could cause missed alerts",
+    "fractionation_sensitivity": true,
+    "timing_sensitivity": false
+  },
+  {
+    "scenario_id": "S035",
+    "category": "Multi-agent",
+    "agent_ids": [
+      "AGT-121",
+      "AGT-122"
+    ],
+    "display_names": [
+      "ipilimumab",
+      "nivolumab"
+    ],
+    "agent_class_ids": [
+      "CLS-004",
+      "CLS-010",
+      "CLS-011"
+    ],
+    "therapy_groups": [
+      "Immune checkpoint inhibitor \u2014 dual ICI (anti-CTLA-4 + anti-PD-1)"
+    ],
+    "rt_site_id": "RTS006",
+    "rt_site_display": "Lung \u2014 Peripheral",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX004",
+    "fractionation_display": "SABR/SBRT",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": true,
+    "expected_app_alert": "Moderate toxicity alert",
+    "expected_app_toxicity_domains": [
+      "DOM-05"
+    ],
+    "expected_app_risk_driver": "Combination-driven",
+    "expected_app_rationale": "The selected systemic therapy and thoracic RT have overlapping pneumonitis/ILD risk. Note: combination-specific interaction effects between ipilimumab and nivolumab are not individually modelled.",
+    "matched_rules": [
+      "IR004",
+      "IR011"
+    ],
+    "app_evidence_ids": [
+      "EVID-0002",
+      "EVID-0020",
+      "EVID-0025",
+      "EVID-0031"
+    ],
+    "validation_purpose": "Dual ICI (nivolumab+ipilimumab) with lung SBRT. Each agent independently triggers Moderate via IR011. Assess whether Moderate is appropriate for dual ICI and whether the multi-agent warning is sufficient. Combination effects are not individually modelled.",
+    "clinical_concern": "Combination effect under-modelling; dual ICI increases pneumonitis risk beyond single-agent ICI; multi-agent warning adequacy",
+    "fractionation_sensitivity": false,
+    "timing_sensitivity": false
+  },
+  {
+    "scenario_id": "S036",
+    "category": "Multi-agent",
+    "agent_ids": [
+      "AGT-168",
+      "AGT-198"
+    ],
+    "display_names": [
+      "carboplatin",
+      "paclitaxel"
+    ],
+    "agent_class_ids": [
+      "CLS-008",
+      "CLS-009"
+    ],
+    "therapy_groups": [
+      "Cytotoxic chemotherapy \u2014 platinum + taxane doublet"
+    ],
+    "rt_site_id": "RTS007",
+    "rt_site_display": "Lung \u2014 Central",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX001",
+    "fractionation_display": "Conventional fractionation",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": true,
+    "expected_app_alert": "Uncertain / evidence limited",
+    "expected_app_toxicity_domains": [
+      "DOM-03",
+      "DOM-04",
+      "DOM-05",
+      "DOM-06",
+      "DOM-12",
+      "DOM-14"
+    ],
+    "expected_app_risk_driver": "Uncertainty-driven",
+    "expected_app_rationale": "Direct evidence for this drug\u2013RT combination is insufficient. Specialist review and documented multidisciplinary reasoning are recommended. Combination-specific effects not individually modelled.",
+    "matched_rules": [],
+    "app_evidence_ids": [],
+    "app_fallback_used": true,
+    "validation_purpose": "CRITICAL VALIDATION SCENARIO. Carboplatin+paclitaxel is a standard concurrent chemoradiation doublet for non-small cell lung cancer. Neither agent has a class rule matching lung central (RTS007). Both fall back to Uncertain. Assess whether this represents a significant clinical gap.",
+    "clinical_concern": "Potential false reassurance for a standard chemoradiation regimen; rule gap for platinum+taxane in thoracic RT; multi-agent interaction not modelled",
+    "fractionation_sensitivity": false,
+    "timing_sensitivity": false
+  },
+  {
+    "scenario_id": "S037",
+    "category": "Timing-sensitive",
+    "agent_ids": [
+      "AGT-140"
+    ],
+    "display_names": [
+      "bevacizumab"
+    ],
+    "agent_class_ids": [
+      "CLS-003",
+      "CLS-009",
+      "CLS-013"
+    ],
+    "therapy_groups": [
+      "Anti-VEGF monoclonal antibody"
+    ],
+    "rt_site_id": "RTS025",
+    "rt_site_display": "Upper abdomen \u2014 Liver",
+    "timing_id": "TM005",
+    "timing_display": "Planned after RT",
+    "fractionation_id": "FX004",
+    "fractionation_display": "SABR/SBRT",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "Uncertain / evidence limited",
+    "expected_app_toxicity_domains": [
+      "DOM-07",
+      "DOM-08",
+      "DOM-09",
+      "DOM-03",
+      "DOM-10",
+      "DOM-11"
+    ],
+    "expected_app_risk_driver": "Uncertainty-driven",
+    "expected_app_rationale": "Direct evidence for this drug\u2013RT combination is insufficient. Specialist review and documented multidisciplinary reasoning are recommended.",
+    "matched_rules": [],
+    "app_evidence_ids": [],
+    "app_fallback_used": true,
+    "validation_purpose": "Bevacizumab planned after liver SBRT (TM005). Compare with S018 (concurrent, High). IR003 requires TM001-003 so TM005 does not trigger the high alert. Assess whether the timing-based downgrade from High to Uncertain is clinically appropriate, or whether bevacizumab after SBRT still carries a wound-healing risk.",
+    "clinical_concern": "Timing-based alert collapse; bevacizumab wound-healing risk may persist after RT; incomplete timing-based rule coverage",
+    "fractionation_sensitivity": false,
+    "timing_sensitivity": true
+  },
+  {
+    "scenario_id": "S038",
+    "category": "Timing-sensitive",
+    "agent_ids": [
+      "AGT-044"
+    ],
+    "display_names": [
+      "capecitabine"
+    ],
+    "agent_class_ids": [
+      "CLS-001",
+      "CLS-008",
+      "CLS-009"
+    ],
+    "therapy_groups": [
+      "Cytotoxic chemotherapy \u2014 fluoropyrimidine"
+    ],
+    "rt_site_id": "RTS016",
+    "rt_site_display": "Pelvis \u2014 Rectal",
+    "timing_id": "TM002",
+    "timing_display": "Recent before RT",
+    "fractionation_id": "FX001",
+    "fractionation_display": "Conventional fractionation",
+    "interval_days": 14,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "Uncertain / evidence limited",
+    "expected_app_toxicity_domains": [
+      "DOM-01",
+      "DOM-03",
+      "DOM-04",
+      "DOM-06"
+    ],
+    "expected_app_risk_driver": "Uncertainty-driven",
+    "expected_app_rationale": "Direct evidence for this drug\u2013RT combination is insufficient. Specialist review and documented multidisciplinary reasoning are recommended.",
+    "matched_rules": [],
+    "app_evidence_ids": [],
+    "app_fallback_used": true,
+    "validation_purpose": "Capecitabine stopped 14 days before starting rectal RT. IR010 and IR009 only fire for TM001 (concurrent). Assess whether Uncertain is appropriate for recent capecitabine with residual radiosensitisation risk, or whether a Caution/Moderate rule should cover TM002.",
+    "clinical_concern": "Timing gap: recent capecitabine carries residual radiosensitisation risk; TM002 not covered by mucosal radiosensitiser rules; potential under-alert",
+    "fractionation_sensitivity": false,
+    "timing_sensitivity": true
+  },
+  {
+    "scenario_id": "S039",
+    "category": "Timing-sensitive",
+    "agent_ids": [
+      "AGT-027"
+    ],
+    "display_names": [
+      "doxorubicin"
+    ],
+    "agent_class_ids": [
+      "CLS-001",
+      "CLS-008"
+    ],
+    "therapy_groups": [
+      "Cytotoxic chemotherapy \u2014 anthracycline (radiation recall agent)"
+    ],
+    "rt_site_id": "RTS011",
+    "rt_site_display": "Breast \u2014 Chest wall",
+    "timing_id": "TM003",
+    "timing_display": "Recent after RT",
+    "fractionation_id": "FX001",
+    "fractionation_display": "Conventional fractionation",
+    "interval_days": 21,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "Uncertain / evidence limited",
+    "expected_app_toxicity_domains": [
+      "DOM-04",
+      "DOM-06",
+      "DOM-11",
+      "DOM-19"
+    ],
+    "expected_app_risk_driver": "Uncertainty-driven",
+    "expected_app_rationale": "Direct evidence for this drug\u2013RT combination is insufficient. Specialist review and documented multidisciplinary reasoning are recommended.",
+    "matched_rules": [],
+    "app_evidence_ids": [],
+    "app_fallback_used": true,
+    "validation_purpose": "Anthracycline started 21 days after chest wall RT. Doxorubicin is a well-known radiation recall agent; cardiac toxicity overlap with chest wall RT is also recognised. Fallback gives DOM-19 (recall). Assess whether Uncertain is adequate, and whether cardiac toxicity (DOM-11) and radiation recall (DOM-19) domains are appropriately emphasised.",
+    "clinical_concern": "Radiation recall risk; cardiac toxicity; Uncertain via fallback despite well-characterised recall potential; TM003 not covered by class rules for breast site",
+    "fractionation_sensitivity": false,
+    "timing_sensitivity": true
+  },
+  {
+    "scenario_id": "S040",
+    "category": "Fractionation-sensitive",
+    "agent_ids": [
+      "AGT-122"
+    ],
+    "display_names": [
+      "nivolumab"
+    ],
+    "agent_class_ids": [
+      "CLS-004",
+      "CLS-010",
+      "CLS-011"
+    ],
+    "therapy_groups": [
+      "Immune checkpoint inhibitor \u2014 anti-PD-1"
+    ],
+    "rt_site_id": "RTS006",
+    "rt_site_display": "Lung \u2014 Peripheral",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX004",
+    "fractionation_display": "SABR/SBRT",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "Moderate toxicity alert",
+    "expected_app_toxicity_domains": [
+      "DOM-05"
+    ],
+    "expected_app_risk_driver": "Combination-driven",
+    "expected_app_rationale": "The selected systemic therapy and thoracic RT have overlapping pneumonitis/ILD risk.",
+    "matched_rules": [
+      "IR004",
+      "IR011"
+    ],
+    "app_evidence_ids": [
+      "EVID-0002",
+      "EVID-0020",
+      "EVID-0025",
+      "EVID-0031"
+    ],
+    "validation_purpose": "Nivolumab with lung SBRT. Compare with S013 (conventional fractionation, same alert). The alert does not escalate with SBRT fractionation for ICI + lung, which may not reflect the potentially higher pneumonitis risk with SBRT. Assess whether fractionation insensitivity is clinically appropriate.",
+    "clinical_concern": "Fractionation insensitivity for ICI + lung: SBRT may carry higher pneumonitis risk than conventional RT; no SBRT-specific escalation rule for ICIs",
+    "fractionation_sensitivity": true,
+    "timing_sensitivity": false
+  },
+  {
+    "scenario_id": "S041",
+    "category": "Fractionation-sensitive",
+    "agent_ids": [
+      "AGT-086"
+    ],
+    "display_names": [
+      "palbociclib"
+    ],
+    "agent_class_ids": [
+      "CLS-001",
+      "CLS-002",
+      "CLS-011"
+    ],
+    "therapy_groups": [
+      "CDK4/6 inhibitor"
+    ],
+    "rt_site_id": "RTS016",
+    "rt_site_display": "Pelvis \u2014 Rectal",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX004",
+    "fractionation_display": "SABR/SBRT",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "Moderate toxicity alert",
+    "expected_app_toxicity_domains": [
+      "DOM-01"
+    ],
+    "expected_app_risk_driver": "Combination-driven",
+    "expected_app_rationale": "Potential additive gastrointestinal toxicity from systemic therapy and bowel irradiation.",
+    "matched_rules": [
+      "IR012"
+    ],
+    "app_evidence_ids": [
+      "EVID-0001",
+      "EVID-0002"
+    ],
+    "validation_purpose": "Palbociclib with pelvic SBRT. Compare with S010 (conventional, same agent): conventional gives DOM-01+DOM-06; SBRT gives only DOM-01. The marrow domain (DOM-06) is lost with SBRT because IR002 (which provides DOM-06) requires FX001-003. Assess whether this fractionation-dependent domain loss is clinically appropriate.",
+    "clinical_concern": "Fractionation-dependent domain change: marrow suppression risk (DOM-06) lost when fractionation is SBRT vs conventional; clinical impact assessment needed",
+    "fractionation_sensitivity": true,
+    "timing_sensitivity": false
+  },
+  {
+    "scenario_id": "S042",
+    "category": "Site-specific interaction",
+    "agent_ids": [
+      "AGT-152"
+    ],
+    "display_names": [
+      "trastuzumab"
+    ],
+    "agent_class_ids": [
+      "CLS-003",
+      "CLS-009",
+      "CLS-013"
+    ],
+    "therapy_groups": [
+      "HER2-directed monoclonal antibody (non-ADC)"
+    ],
+    "rt_site_id": "RTS012",
+    "rt_site_display": "Breast \u2014 Breast/chest wall + regional nodes",
+    "timing_id": "TM001",
+    "timing_display": "Concurrent",
+    "fractionation_id": "FX001",
+    "fractionation_display": "Conventional fractionation",
+    "interval_days": null,
+    "intent": null,
+    "multi_agent": false,
+    "expected_app_alert": "Uncertain / evidence limited",
+    "expected_app_toxicity_domains": [
+      "DOM-03",
+      "DOM-10",
+      "DOM-11"
+    ],
+    "expected_app_risk_driver": "Uncertainty-driven",
+    "expected_app_rationale": "Direct evidence for this drug\u2013RT combination is insufficient. Specialist review and documented multidisciplinary reasoning are recommended.",
+    "matched_rules": [],
+    "app_evidence_ids": [],
+    "app_fallback_used": true,
+    "validation_purpose": "CRITICAL VALIDATION SCENARIO. Trastuzumab is classified under CLS-003 (Anti-VEGF/VEGFR agent) in the data, which does not accurately reflect its mechanism (HER2-directed). No breast-specific rule fires for anti-VEGF class. The fallback returns DOM-11 (cardiac) from agent data, which is clinically relevant but arrived at via fallback. Assess: (1) whether the CLS-003 classification of trastuzumab is appropriate; (2) whether Uncertain is clinically appropriate for concurrent trastuzumab + breast/nodal RT; (3) whether a specific trastuzumab rule is needed.",
+    "clinical_concern": "Potential misclassification of trastuzumab as anti-VEGF class; cardiac toxicity (DOM-11) domain arrives via fallback only; Uncertain output for a clinically important combination",
+    "fractionation_sensitivity": false,
+    "timing_sensitivity": false
+  }
+]

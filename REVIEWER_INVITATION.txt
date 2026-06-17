@@ -1,0 +1,59 @@
+Subject: RT Interact Phase 1 — Expert Clinical Validation Review Invitation
+
+Dear [REVIEWER NAME],
+
+Thank you for agreeing to participate in the Phase 1 expert content validation of RT Interact.
+
+RT Interact is a research/QI prototype that generates interaction alerts between radiotherapy (RT) and systemic agents. This review assesses whether the app's alert levels, toxicity domains, and rationale are clinically appropriate across 42 synthetic scenarios. It is not approved for clinical use and must not be used to guide patient care.
+
+─────────────────────────────────────────────────
+
+WHAT YOU NEED
+
+1. Reviewer document (read before you begin):
+   [REVIEWER DOCUMENT LINK — e.g. Google Drive or OneDrive link]
+
+2. RT Interact prototype app (private link):
+   [APP LINK]
+
+3. Online review form (complete for each scenario):
+   [FORM LINK]
+
+─────────────────────────────────────────────────
+
+HOW TO COMPLETE THE REVIEW
+
+1. Read the reviewer document — it contains the purpose, instructions, scenario summaries, and known limitations.
+2. For each scenario: enter the listed inputs into the app, review the output, and complete the corresponding section of the online form.
+3. You may complete the form across multiple sessions — save your progress as you go.
+4. Submit the form when all assigned scenarios are complete.
+
+─────────────────────────────────────────────────
+
+PLEASE NOTE
+
+• Do not enter any patient information into the app or the review form at any time.
+• Reviews are independent — please complete your assessment without reference to other reviewers.
+• Do not share the app link or reviewer document with others.
+
+─────────────────────────────────────────────────
+
+REVIEW DEADLINE
+
+[DEADLINE DATE — e.g. Friday 4 July 2026]
+
+If you are unable to complete all scenarios by the deadline or have any questions, please contact:
+
+[PROJECT LEAD NAME]
+[EMAIL ADDRESS]
+[PHONE / PREFERRED CONTACT]
+
+Thank you for your time and expertise.
+
+[PROJECT LEAD NAME]
+[INSTITUTION / DEPARTMENT]
+[DATE]
+
+─────────────────────────────────────────────────
+RT Interact Phase 1 — Expert Clinical Validation
+Research/QI prototype — not for clinical use — not for external distribution

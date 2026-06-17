@@ -1,0 +1,82 @@
+[
+  {
+    "Therapy class / trigger": "Gemcitabine",
+    "Default RT concern": "Strong radiosensitiser with severe normal tissue toxicity reports",
+    "Key OARs/sites": "Lung, oesophagus, bowel, liver, skin, marrow",
+    "Fractionation issue": "Avoid SABR/hypofractionated concurrent use unless justified",
+    "Timing issue": "Hold/sequence discussion required",
+    "Default action": "Mandatory Med Onc and senior RO review"
+  },
+  {
+    "Therapy class / trigger": "Bleomycin",
+    "Default RT concern": "Pulmonary toxicity overlap",
+    "Key OARs/sites": "Lung",
+    "Fractionation issue": "Avoid unnecessary thoracic lung dose",
+    "Timing issue": "Review cumulative exposure/timing",
+    "Default action": "Mandatory review for thoracic RT"
+  },
+  {
+    "Therapy class / trigger": "Anti-VEGF/VEGFR/multikinase inhibitors",
+    "Default RT concern": "Bleeding, fistula, perforation, wound healing, vascular toxicity",
+    "Key OARs/sites": "Bowel, oesophagus, bronchus, bladder/rectum, vessels, wounds",
+    "Fractionation issue": "High caution with SABR near hollow viscus/central thorax/vessels",
+    "Timing issue": "Discuss hold before/after RT",
+    "Default action": "Mandatory Med Onc review for high-risk sites"
+  },
+  {
+    "Therapy class / trigger": "Immune checkpoint inhibitors",
+    "Default RT concern": "Pneumonitis, colitis, hepatitis, dermatitis, inflammatory toxicity",
+    "Key OARs/sites": "Lung, bowel, liver, skin, CNS",
+    "Fractionation issue": "Caution with thoracic RT, abdominal/pelvic RT, brain SRS/SABR",
+    "Timing issue": "Concurrent/recent/planned timing matters",
+    "Default action": "Discuss site-specific risk and monitoring"
+  },
+  {
+    "Therapy class / trigger": "ADC",
+    "Default RT concern": "Payload-specific toxicity including marrow, mucosa, skin, GI, hepatic, ILD/pneumonitis for selected drugs",
+    "Key OARs/sites": "Lung, marrow, mucosa, bowel, skin, liver",
+    "Fractionation issue": "Caution with SABR/hypofractionation and large fields",
+    "Timing issue": "Avoid unreviewed concurrent use",
+    "Default action": "Verify payload-specific PI and discuss with Med Onc"
+  },
+  {
+    "Therapy class / trigger": "PARP inhibitors",
+    "Default RT concern": "DNA repair inhibition and potential radiosensitisation",
+    "Key OARs/sites": "Marrow, bowel, bladder, mucosa, skin",
+    "Fractionation issue": "Caution with pelvic/abdominal/spine RT, SABR and large fields",
+    "Timing issue": "Hold/sequence discussion",
+    "Default action": "Med Onc review recommended"
+  },
+  {
+    "Therapy class / trigger": "CDK4/6 inhibitors",
+    "Default RT concern": "Marrow, GI, skin and possible lung toxicity overlap",
+    "Key OARs/sites": "Marrow, bowel, lung, skin",
+    "Fractionation issue": "Caution with pelvis, spine, thorax and large fields",
+    "Timing issue": "Consider holding around RT depending on context",
+    "Default action": "Med Onc review recommended"
+  },
+  {
+    "Therapy class / trigger": "mTOR inhibitors",
+    "Default RT concern": "Pneumonitis, mucositis, impaired healing, marrow toxicity",
+    "Key OARs/sites": "Lung, mucosa, skin, bowel, marrow",
+    "Fractionation issue": "Caution with thoracic/mucosal RT and hypofractionation",
+    "Timing issue": "Consider hold for high-risk sites",
+    "Default action": "Med Onc review recommended"
+  },
+  {
+    "Therapy class / trigger": "EGFR inhibitors",
+    "Default RT concern": "Mucositis, dermatitis, oesophagitis, pneumonitis/ILD depending agent",
+    "Key OARs/sites": "Skin, mucosa, oesophagus, lung",
+    "Fractionation issue": "Caution with HN/thoracic/hypofractionation",
+    "Timing issue": "Concurrent cetuximab-HN can be protocol-based",
+    "Default action": "Document expected toxicity"
+  },
+  {
+    "Therapy class / trigger": "Endocrine/ADT",
+    "Default RT concern": "Usually low direct interaction",
+    "Key OARs/sites": "Usually site-independent",
+    "Fractionation issue": "No specific fractionation warning",
+    "Timing issue": "Concurrent often standard of care",
+    "Default action": "Standard documentation"
+  }
+]

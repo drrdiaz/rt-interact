@@ -1,18 +1,26 @@
 /**
- * TimingIntervalField — conditional number input for days between
- * last drug dose and RT start.
+ * TimingIntervalField — controlled approximate-interval selector.
  *
- * Shown only when the engine's completeness check requires it.
+ * Shown only for timing-sensitive therapies when timing is Recent or Sequential.
+ * Never shown for Concurrent, Planned, or Unknown timing.
  */
 
 import React from 'react'
+import type { TimingInterval } from '@/data/types'
 
 interface TimingIntervalFieldProps {
-  value: number | null
-  onChange: (days: number | null) => void
+  value: TimingInterval | null
+  onChange: (interval: TimingInterval | null) => void
   /** Only rendered when true */
   visible: boolean
 }
+
+const INTERVAL_OPTIONS: { value: TimingInterval; label: string }[] = [
+  { value: 'lt1w',    label: 'Less than 1 week' },
+  { value: '1-4w',   label: '1–4 weeks' },
+  { value: 'gt4w',   label: 'More than 4 weeks' },
+  { value: 'unknown', label: 'Unknown' },
+]
 
 export function TimingIntervalField({
   value,
@@ -21,43 +29,42 @@ export function TimingIntervalField({
 }: TimingIntervalFieldProps): React.ReactElement | null {
   if (!visible) return null
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+  function handleChange(e: React.ChangeEvent<HTMLSelectElement>) {
     const raw = e.target.value
     if (raw === '') {
       onChange(null)
-      return
+    } else {
+      onChange(raw as TimingInterval)
     }
-    const parsed = parseInt(raw, 10)
-    if (!isNaN(parsed) && parsed >= 0) onChange(parsed)
   }
 
   return (
     <div>
       <label
-        htmlFor="timing-interval-input"
+        htmlFor="timing-interval-select"
         className="mb-1.5 block text-sm font-semibold text-slate-700"
       >
-        Timing interval
-        <span className="ml-1 text-xs font-normal text-slate-500">(days between last dose and RT)</span>
+        Approximate interval
       </label>
-      <input
-        id="timing-interval-input"
-        type="number"
-        inputMode="numeric"
-        min={0}
-        max={999}
-        step={1}
+      <select
+        id="timing-interval-select"
         value={value ?? ''}
         onChange={handleChange}
-        placeholder="e.g. 14"
         aria-describedby="timing-interval-hint"
         className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3
-                   text-base text-slate-800 placeholder:text-slate-400
-                   focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-200"
-      />
+                   text-base text-slate-800
+                   focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-200
+                   appearance-none"
+      >
+        <option value="">Select interval…</option>
+        {INTERVAL_OPTIONS.map((opt) => (
+          <option key={opt.value} value={opt.value}>
+            {opt.label}
+          </option>
+        ))}
+      </select>
       <p id="timing-interval-hint" className="mt-1.5 text-xs text-slate-500">
-        Enter the number of days between the last systemic therapy dose and the
-        start of RT. Required for timing-sensitive agents with recent or concurrent timing.
+        Shown only when the interval may materially affect the interaction assessment.
       </p>
     </div>
   )

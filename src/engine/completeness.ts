@@ -8,15 +8,21 @@
  * Rules:
  *  - fractionationId is required when the agent's dose_relevance_flag is true
  *    OR any potentially-applicable rule has non-null fractionation_ids.
- *  - timingIntervalDays is required when timingId is a recent/concurrent
- *    timing category AND the agent's timing_sensitivity_flag is true.
+ *  - timingInterval is required when timingId is Recent (TM002, TM003) or
+ *    Sequential (TM004) AND the agent's timing_sensitivity_flag is true.
+ *    Concurrent (TM001), Planned (TM005) and Unknown (TM006) do NOT require
+ *    an interval — Concurrent means therapy is on-treatment during RT.
  */
 
-import type { Agent, InteractionRule } from '@/data/types'
+import type { Agent, InteractionRule, TimingInterval } from '@/data/types'
 import type { MissingField } from './types'
 
-/** Timing IDs that represent recent or concurrent therapy (require an interval). */
-const RECENT_TIMING_IDS = new Set(['TM001', 'TM002', 'TM003'])
+/**
+ * Timing IDs for which an approximate interval is required
+ * (Recent before/after RT and Sequential).
+ * Concurrent, Planned and Unknown are intentionally excluded.
+ */
+const INTERVAL_REQUIRED_TIMING_IDS = new Set(['TM002', 'TM003', 'TM004'])
 
 /**
  * Check whether fractionation input is required for a given agent and
@@ -32,14 +38,15 @@ export function fractionationRequired(
 }
 
 /**
- * Check whether a timing interval (days) is required for a given agent.
+ * Check whether an approximate interval is required for a given agent.
+ * Returns true only for timing-sensitive agents with Recent or Sequential timing.
  */
 export function timingIntervalRequired(
   agent: Agent,
   timingId: string | null,
 ): boolean {
   if (!timingId) return false
-  return RECENT_TIMING_IDS.has(timingId) && agent.timing_sensitivity_flag
+  return INTERVAL_REQUIRED_TIMING_IDS.has(timingId) && agent.timing_sensitivity_flag
 }
 
 /**
@@ -48,7 +55,7 @@ export function timingIntervalRequired(
  * @param agent            Agent record.
  * @param timingId         Selected timing ID.
  * @param fractionationId  Selected fractionation ID (may be null).
- * @param timingIntervalDays  Days between therapy and RT (may be null).
+ * @param timingInterval   Selected interval category (may be null).
  * @param candidateRules   Rules that match agent+site+timing (pre-fractionation).
  * @returns Array of missing fields; empty = complete.
  */
@@ -56,7 +63,7 @@ export function checkAgentInputCompleteness(
   agent: Agent,
   timingId: string | null,
   fractionationId: string | null,
-  timingIntervalDays: number | null,
+  timingInterval: TimingInterval | null,
   candidateRules: InteractionRule[],
 ): MissingField[] {
   const missing: MissingField[] = []
@@ -73,12 +80,12 @@ export function checkAgentInputCompleteness(
     })
   }
 
-  if (timingIntervalRequired(agent, timingId) && timingIntervalDays === null) {
+  if (timingIntervalRequired(agent, timingId) && timingInterval === null) {
     missing.push({
-      field: 'timingIntervalDays',
+      field: 'timingInterval',
       reason:
-        `Timing interval (days) is required for ${agent.canonical_name} ` +
-        `with ${timingId} (timing-sensitive agent with recent/concurrent timing).`,
+        `Approximate interval is required for ${agent.canonical_name} ` +
+        `with ${timingId} (timing-sensitive agent with Recent or Sequential timing).`,
     })
   }
 

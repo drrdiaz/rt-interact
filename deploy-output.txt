@@ -1,0 +1,40 @@
+Need to install the following packages:
+vercel@54.14.0
+Ok to proceed? (y) npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@renovatebot/pep440@4.2.1',
+npm warn EBADENGINE   required: { node: '^20.9.0 || ^22.11.0 || ^24', pnpm: '^10.0.0' },
+npm warn EBADENGINE   current: { node: 'v26.3.0', npm: '11.16.0' }
+npm warn EBADENGINE }
+Vercel CLI 54.14.0 (Node.js 26.3.0)
+Retrieving project…
+Deploying rodrigo1976-s-projects1/rt-interact
+Uploading [--------------------] (0.0B/548.9KB)
+Uploading [=====---------------] (142.4KB/548.9KB)
+Uploading [==========----------] (286.4KB/548.9KB)
+Uploading [===============-----] (414.4KB/548.9KB)
+Uploading [====================] (548.9KB/548.9KB)
+  Inspect     https://vercel.com/rodrigo1976-s-projects1/rt-interact/4RNheNB6LSQgzNbTC7vGoGuKgUco
+▲ Production  https://rt-interact-co9hum4gz-rodrigo1976-s-projects1.vercel.app
+https://rt-interact-co9hum4gz-rodrigo1976-s-projects1.vercel.appBuilding…
+Building…
+Running build in Washington, D.C., USA (East) – iad1
+Build machine configuration: 2 cores, 8 GB
+Retrieving list of deployment files...
+Downloading 130 deployment files...
+Restored build cache from previous deployment (GpuirGSSyY5s2DocquLZUrpMhbkM)
+Running "vercel build"
+Vercel CLI 54.14.0
+Installing dependencies...
+up to date in 730ms
+58 packages are looking for funding
+run `npm fund` for details
+> rt-interact@1.0.0 build
+> tsc && vite build
+vite v5.4.21 building for production...
+transforming...
+✓ 67 modules transformed.
+[2K[1A[2K[G▲ Production  https://rt-interact-co9hum4gz-rodrigo1976-s-projects1.vercel.app
+Completing…
+▲ Aliased     https://rt-interact.vercel.app
+
+✓ Ready in 17s

@@ -16,7 +16,7 @@
  *  S08  multiple medicines with different alert levels
  *  S09  specific-agent rule overriding class rule
  *  S10  missing evidence link
- *  S11  timing-sensitive agent with missing interval
+ *  S11  timing-sensitive agent with missing interval (Recent timing)
  *  S12  dose-relevant agent with missing fractionation
  */
 
@@ -37,7 +37,7 @@ function inp(overrides: Partial<RuleEngineInput> = {}): RuleEngineInput {
     timingId: null,
     fractionationId: null,
     treatmentIntent: null,
-    timingIntervalDays: null,
+    timingInterval: null,
     ...overrides,
   }
 }
@@ -58,8 +58,9 @@ describe('S01 — Endocrine therapy + prostate RT', () => {
   const baseInput = () => inp({
     selectedTherapies: [t('AGT-058', 'letrozole')],
     rtSite: s('RTS001', 'Prostate', 'Prostate only'),
-    timingId: 'TM004',
+    timingId: 'TM004',         // Sequential — interval required for timing-sensitive agents
     fractionationId: 'FX001',
+    timingInterval: 'gt4w',    // More than 4 weeks — required since letrozole is timing-sensitive
   })
 
   it('alert level: No specific alert', () => {
@@ -99,9 +100,9 @@ describe('S02 — Bevacizumab + recent pelvic/GI RT', () => {
   const baseInput = () => inp({
     selectedTherapies: [t('AGT-140', 'bevacizumab')],
     rtSite: s('RTS016', 'Pelvis', 'Rectal'),
-    timingId: 'TM002',
+    timingId: 'TM002',         // Recent before RT — interval required
     fractionationId: 'FX004',
-    timingIntervalDays: 21,
+    timingInterval: '1-4w',
   })
 
   it('alert level: High toxicity alert', () => {
@@ -142,9 +143,9 @@ describe('S03 — Trastuzumab deruxtecan + thoracic RT', () => {
   const baseInput = () => inp({
     selectedTherapies: [t('AGT-041', 'trastuzumab deruxtecan')],
     rtSite: s('RTS007', 'Lung', 'Central'),
-    timingId: 'TM001',
+    timingId: 'TM001',         // Concurrent — no interval required
     fractionationId: 'FX004',
-    timingIntervalDays: 0,
+    timingInterval: null,
   })
 
   it('alert level: at least Moderate toxicity alert', () => {
@@ -183,9 +184,9 @@ describe('S04 — Gemcitabine + concurrent central thoracic SABR', () => {
   const baseInput = () => inp({
     selectedTherapies: [t('AGT-050', 'gemcitabine')],
     rtSite: s('RTS007', 'Lung', 'Central'),
-    timingId: 'TM001',
+    timingId: 'TM001',         // Concurrent — no interval required
     fractionationId: 'FX004',
-    timingIntervalDays: 0,
+    timingInterval: null,
   })
 
   it('alert level: Uncertain / evidence limited (no lung class rule for gemcitabine)', () => {
@@ -213,9 +214,9 @@ describe('S05 — Checkpoint inhibitor + thoracic RT', () => {
   const baseInput = () => inp({
     selectedTherapies: [t('AGT-123', 'pembrolizumab')],
     rtSite: s('RTS007', 'Lung', 'Central'),
-    timingId: 'TM001',
+    timingId: 'TM001',         // Concurrent — no interval required
     fractionationId: 'FX004',
-    timingIntervalDays: 0,
+    timingInterval: null,
   })
 
   it('alert level: at least Caution', () => {
@@ -252,9 +253,9 @@ describe('S06 — Recognised agent with no applicable rule (pure fallback)', () 
   const baseInput = () => inp({
     selectedTherapies: [t('AGT-001', 'capivasertib')],
     rtSite: s('RTS001', 'Prostate', 'Prostate only'),
-    timingId: 'TM001',
+    timingId: 'TM001',         // Concurrent — no interval required
     fractionationId: 'FX002',
-    timingIntervalDays: 0,
+    timingInterval: null,
   })
 
   it('alert level: Uncertain / evidence limited', () => {
@@ -292,9 +293,9 @@ describe('S07 — Unmatched medicine (agent not in catalogue)', () => {
   const baseInput = () => inp({
     selectedTherapies: [t('UNKNOWN-9999', 'mystery drug')],
     rtSite: s('RTS007', 'Lung', 'Central'),
-    timingId: 'TM001',
+    timingId: 'TM001',         // Concurrent
     fractionationId: 'FX004',
-    timingIntervalDays: 0,
+    timingInterval: null,
   })
 
   it('alert level: Uncertain / evidence limited (never No specific alert)', () => {
@@ -333,9 +334,9 @@ describe('S08 — Multiple medicines, highest alert wins', () => {
       t('AGT-140', 'bevacizumab'),
     ],
     rtSite: s('RTS016', 'Pelvis', 'Rectal'),
-    timingId: 'TM001',
+    timingId: 'TM001',         // Concurrent — no interval required
     fractionationId: 'FX004',
-    timingIntervalDays: 0,
+    timingInterval: null,
   })
 
   it('overall alert = High (highest of No specific alert + High)', () => {
@@ -464,7 +465,7 @@ describe('S10 — Missing evidence link', () => {
       rtSite: s('RTS016', 'Pelvis', 'Rectal'),
       timingId: 'TM002',
       fractionationId: 'FX004',
-      timingIntervalDays: 21,
+      timingInterval: '1-4w',
     }))
     expect(out.incomplete).toBe(false)
     if (!out.incomplete) {
@@ -479,38 +480,38 @@ describe('S10 — Missing evidence link', () => {
       rtSite: s('RTS016', 'Pelvis', 'Rectal'),
       timingId: 'TM002',
       fractionationId: 'FX004',
-      timingIntervalDays: 21,
+      timingInterval: '1-4w',
     }))
     if (!out.incomplete) expect(Array.isArray(out.evidenceStatuses)).toBe(true)
   })
 })
 
 // ─────────────────────────────────────────────────────────────────────────────
-// S11 — Timing-sensitive agent with missing interval
+// S11 — Timing-sensitive agent with missing interval (Recent timing)
 // ─────────────────────────────────────────────────────────────────────────────
 
-describe('S11 — Timing-sensitive agent with missing interval', () => {
-  it('engine returns incomplete state', () => {
+describe('S11 — Timing-sensitive agent with missing interval (Recent timing)', () => {
+  it('engine returns incomplete state when timingInterval is null with Recent timing', () => {
     const out = evaluateRules(inp({
       selectedTherapies: [t('AGT-140', 'bevacizumab')],
       rtSite: s('RTS016', 'Pelvis', 'Rectal'),
-      timingId: 'TM001',
+      timingId: 'TM002',         // Recent before RT — interval required for timing-sensitive
       fractionationId: 'FX004',
-      timingIntervalDays: null,
+      timingInterval: null,
     }))
     expect(out.incomplete).toBe(true)
   })
 
-  it('missingFields contains timingIntervalDays', () => {
+  it('missingFields contains timingInterval', () => {
     const out = evaluateRules(inp({
       selectedTherapies: [t('AGT-140', 'bevacizumab')],
       rtSite: s('RTS016', 'Pelvis', 'Rectal'),
-      timingId: 'TM001',
+      timingId: 'TM002',
       fractionationId: 'FX004',
-      timingIntervalDays: null,
+      timingInterval: null,
     }))
     if (out.incomplete) {
-      expect(out.missingFields.map(f => f.field)).toContain('timingIntervalDays')
+      expect(out.missingFields.map(f => f.field)).toContain('timingInterval')
     }
   })
 
@@ -518,12 +519,25 @@ describe('S11 — Timing-sensitive agent with missing interval', () => {
     const out = evaluateRules(inp({
       selectedTherapies: [t('AGT-140', 'bevacizumab')],
       rtSite: s('RTS016', 'Pelvis', 'Rectal'),
-      timingId: 'TM001',
+      timingId: 'TM002',
       fractionationId: 'FX004',
-      timingIntervalDays: null,
+      timingInterval: null,
     }))
     expect(out.incomplete).toBe(true)
     expect((out as { alertLevel?: unknown }).alertLevel).toBeUndefined()
+  })
+
+  it('Concurrent (TM001) + no interval → NOT incomplete (Concurrent never requires interval)', () => {
+    const out = evaluateRules(inp({
+      selectedTherapies: [t('AGT-140', 'bevacizumab')],
+      rtSite: s('RTS016', 'Pelvis', 'Rectal'),
+      timingId: 'TM001',         // Concurrent — interval never required
+      fractionationId: 'FX004',
+      timingInterval: null,
+    }))
+    if (out.incomplete) {
+      expect(out.missingFields.map(f => f.field)).not.toContain('timingInterval')
+    }
   })
 })
 
@@ -538,7 +552,7 @@ describe('S12 — Dose-relevant agent with missing fractionation', () => {
       rtSite: s('RTS016', 'Pelvis', 'Rectal'),
       timingId: 'TM002',
       fractionationId: null,
-      timingIntervalDays: 21,
+      timingInterval: '1-4w',
     }))
     expect(out.incomplete).toBe(true)
   })
@@ -549,7 +563,7 @@ describe('S12 — Dose-relevant agent with missing fractionation', () => {
       rtSite: s('RTS016', 'Pelvis', 'Rectal'),
       timingId: 'TM002',
       fractionationId: null,
-      timingIntervalDays: 21,
+      timingInterval: '1-4w',
     }))
     if (out.incomplete) {
       expect(out.missingFields.map(f => f.field)).toContain('fractionationId')
@@ -562,7 +576,7 @@ describe('S12 — Dose-relevant agent with missing fractionation', () => {
       rtSite: s('RTS016', 'Pelvis', 'Rectal'),
       timingId: 'TM002',
       fractionationId: null,
-      timingIntervalDays: 21,
+      timingInterval: '1-4w',
     }))
     if (out.incomplete) {
       expect(out.partialPerAgentResults.length).toBeGreaterThan(0)
