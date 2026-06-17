@@ -722,7 +722,7 @@
     "secondary_risk_drivers": [
       "combination-driven"
     ],
-    "rationale_text": "Direct evidence for this drug–RT combination is insufficient. Specialist review and documented multidisciplinary reasoning are recommended.",
+    "rationale_text": "Direct evidence for this drug\u2013RT combination is insufficient. Specialist review and documented multidisciplinary reasoning are recommended.",
     "evidence_link_ids": [
       "EVID-0069",
       "EVID-0070"
@@ -772,6 +772,85 @@
     "applies_to_no_direct_evidence": false,
     "version": "1.0",
     "last_reviewed_date": "2026-06-12",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR017",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-008"
+      ],
+      "rt_site_ids": [
+        "RTS020",
+        "RTS021"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Caution",
+    "output_toxicity_domains": [
+      "DOM-10",
+      "DOM-06",
+      "DOM-03"
+    ],
+    "primary_risk_driver": "Agent-driven",
+    "secondary_risk_drivers": [
+      "Combination-driven",
+      "Fractionation-driven"
+    ],
+    "rationale_text": "Concurrent cytotoxic chemotherapy with brain radiotherapy carries risk of additive neurotoxicity, enhanced radiosensitisation and increased treatment-related morbidity. Specialist multidisciplinary review and close monitoring are required. Evidence supports caution across conventional, hypofractionated and palliative brain RT schedules.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Moderate",
+    "uncertainty": "Low-moderate",
+    "evidence_basis_type": "Established chemoradiation evidence",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
+    "status": "active"
+  },
+  {
+    "rule_id": "IR018",
+    "conditions": {
+      "agent_class_ids": [
+        "CLS-009"
+      ],
+      "rt_site_ids": [
+        "RTS020",
+        "RTS021"
+      ],
+      "fractionation_ids": null,
+      "timing_ids": [
+        "TM001"
+      ],
+      "intent": null
+    },
+    "output_alert_level": "Caution",
+    "output_toxicity_domains": [
+      "DOM-10",
+      "DOM-03",
+      "DOM-06"
+    ],
+    "primary_risk_driver": "Agent-driven",
+    "secondary_risk_drivers": [
+      "Combination-driven"
+    ],
+    "rationale_text": "Strong radiosensitising agents given concurrently with brain RT significantly amplify normal-tissue radiation effects. This includes enhanced risk of radionecrosis, neurocognitive injury and acute mucosal/systemic toxicity. Caution and specialist oversight are mandatory.",
+    "evidence_link_ids": [],
+    "supporting_evidence_ids": [],
+    "evidence_level": "Moderate",
+    "uncertainty": "Low",
+    "evidence_basis_type": "Established chemoradiation evidence",
+    "expert_consensus_basis": true,
+    "applies_to_any_low_concern": false,
+    "applies_to_no_direct_evidence": false,
+    "version": "1.0",
+    "last_reviewed_date": "2026-06-17",
     "status": "active"
   }
 ]
