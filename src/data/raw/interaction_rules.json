@@ -576,7 +576,10 @@
     "rule_id": "IR005",
     "conditions": {
       "agent_class_ids": [
-        "CLS-005"
+        "AGT-161",
+        "AGT-162",
+        "AGT-163",
+        "AGT-164"
       ],
       "rt_site_ids": [
         "RTS016",
@@ -642,8 +645,8 @@
     "rule_id": "IR006",
     "conditions": {
       "agent_class_ids": [
-        "CLS-007",
-        "CLS-006"
+        "AGT-041",
+        "AGT-042"
       ],
       "rt_site_ids": [
         "RTS006",
@@ -703,7 +706,7 @@
     "rule_id": "IR006b",
     "conditions": {
       "agent_class_ids": [
-        "CLS-007"
+        "CLS-005"
       ],
       "rt_site_ids": [
         "RTS020",
@@ -760,7 +763,14 @@
     "rule_id": "IR006c",
     "conditions": {
       "agent_class_ids": [
-        "CLS-006"
+        "AGT-041",
+        "AGT-042",
+        "AGT-106",
+        "AGT-107",
+        "AGT-108",
+        "AGT-145",
+        "AGT-149",
+        "AGT-152"
       ],
       "rt_site_ids": [
         "RTS020",
@@ -1222,7 +1232,13 @@
     "rule_id": "IR010",
     "conditions": {
       "agent_class_ids": [
-        "CLS-011"
+        "AGT-092",
+        "AGT-093",
+        "AGT-094",
+        "AGT-095",
+        "AGT-096",
+        "AGT-141",
+        "AGT-148"
       ],
       "rt_site_ids": [
         "RTS013",
@@ -1267,7 +1283,13 @@
     "rule_id": "IR010b",
     "conditions": {
       "agent_class_ids": [
-        "CLS-011"
+        "AGT-092",
+        "AGT-093",
+        "AGT-094",
+        "AGT-095",
+        "AGT-096",
+        "AGT-141",
+        "AGT-148"
       ],
       "rt_site_ids": [
         "RTS006",
@@ -1309,7 +1331,13 @@
     "rule_id": "IR010c",
     "conditions": {
       "agent_class_ids": [
-        "CLS-011"
+        "AGT-092",
+        "AGT-093",
+        "AGT-094",
+        "AGT-095",
+        "AGT-096",
+        "AGT-141",
+        "AGT-148"
       ],
       "rt_site_ids": [
         "RTS020",
@@ -1357,7 +1385,11 @@
     "rule_id": "IR011",
     "conditions": {
       "agent_class_ids": [
-        "CLS-012"
+        "AGT-002",
+        "AGT-003",
+        "AGT-004",
+        "AGT-005",
+        "AGT-006"
       ],
       "rt_site_ids": [
         "RTS006",
@@ -1398,7 +1430,11 @@
     "rule_id": "IR011b",
     "conditions": {
       "agent_class_ids": [
-        "CLS-012"
+        "AGT-002",
+        "AGT-003",
+        "AGT-004",
+        "AGT-005",
+        "AGT-006"
       ],
       "rt_site_ids": [
         "RTS020",
@@ -1454,7 +1490,25 @@
     "rule_id": "IR012",
     "conditions": {
       "agent_class_ids": [
-        "CLS-010"
+        "AGT-060",
+        "AGT-061",
+        "AGT-062",
+        "AGT-134",
+        "AGT-135",
+        "AGT-136",
+        "AGT-216",
+        "AGT-217",
+        "AGT-202",
+        "AGT-203",
+        "AGT-204",
+        "AGT-205",
+        "AGT-206",
+        "AGT-207",
+        "AGT-208",
+        "AGT-209",
+        "AGT-210",
+        "AGT-211",
+        "AGT-212"
       ],
       "rt_site_ids": [
         "RTS028",
@@ -1514,7 +1568,17 @@
     "rule_id": "IR012b",
     "conditions": {
       "agent_class_ids": [
-        "CLS-010"
+        "AGT-202",
+        "AGT-203",
+        "AGT-204",
+        "AGT-205",
+        "AGT-206",
+        "AGT-207",
+        "AGT-208",
+        "AGT-209",
+        "AGT-210",
+        "AGT-211",
+        "AGT-212"
       ],
       "rt_site_ids": [
         "RTS016",
@@ -1558,7 +1622,7 @@
     "rule_id": "IR013",
     "conditions": {
       "agent_class_ids": [
-        "CLS-001"
+        "CLS-014"
       ],
       "rt_site_ids": [
         "RTS001",
@@ -1625,8 +1689,7 @@
     "rule_id": "IR014",
     "conditions": {
       "agent_class_ids": [
-        "CLS-003",
-        "CLS-010"
+        "CLS-003"
       ],
       "rt_site_ids": [
         "RTS028",

@@ -432,6 +432,39 @@
     "status": "active"
   },
   {
+    "agent_id": "CLS-014",
+    "type": "class",
+    "canonical_name": "Hormonal / endocrine therapy",
+    "description": "LHRH agonists, anti-androgens, aromatase inhibitors, selective oestrogen receptor modulators/degraders and progestins used in oncology",
+    "therapy_class": "Hormonal / endocrine therapy",
+    "subclass": null,
+    "oncology_use_category": null,
+    "route": null,
+    "is_adc": false,
+    "is_targeted": false,
+    "is_io": false,
+    "is_endocrine": true,
+    "is_bone_modifying": false,
+    "is_radiopharmaceutical": false,
+    "agent_alert_level": null,
+    "toxicity_domain_ids": [
+      "DOM-18",
+      "DOM-06"
+    ],
+    "risk_drivers": [],
+    "dose_relevance_flag": false,
+    "timing_sensitivity_flag": false,
+    "evolving_evidence_flag": false,
+    "radiation_recall_flag": false,
+    "evidence_level": null,
+    "uncertainty": null,
+    "primary_evidence_ids": [],
+    "supporting_evidence_ids": [],
+    "review_date": "2026-06-18",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
     "agent_id": "AGT-001",
     "type": "agent",
     "canonical_name": "capivasertib",
@@ -1210,7 +1243,9 @@
     "type": "agent",
     "canonical_name": "apalutamide",
     "therapy_class": "Androgen receptor inhibitor",
-    "parent_class_ids": [],
+    "parent_class_ids": [
+      "CLS-014"
+    ],
     "subclass": "AR signalling inhibitor",
     "oncology_use_category": "Prostate cancer systemic therapy",
     "route": "Oral",
@@ -1250,7 +1285,9 @@
     "type": "agent",
     "canonical_name": "bicalutamide",
     "therapy_class": "Androgen receptor inhibitor",
-    "parent_class_ids": [],
+    "parent_class_ids": [
+      "CLS-014"
+    ],
     "subclass": "Non-steroidal antiandrogen",
     "oncology_use_category": "Prostate cancer systemic therapy",
     "route": "Oral",
@@ -1290,7 +1327,9 @@
     "type": "agent",
     "canonical_name": "darolutamide",
     "therapy_class": "Androgen receptor inhibitor",
-    "parent_class_ids": [],
+    "parent_class_ids": [
+      "CLS-014"
+    ],
     "subclass": "AR signalling inhibitor",
     "oncology_use_category": "Prostate cancer systemic therapy",
     "route": "Oral",
@@ -1330,7 +1369,9 @@
     "type": "agent",
     "canonical_name": "enzalutamide",
     "therapy_class": "Androgen receptor inhibitor",
-    "parent_class_ids": [],
+    "parent_class_ids": [
+      "CLS-014"
+    ],
     "subclass": "AR signalling inhibitor",
     "oncology_use_category": "Prostate cancer systemic therapy",
     "route": "Oral",
@@ -1370,7 +1411,9 @@
     "type": "agent",
     "canonical_name": "flutamide",
     "therapy_class": "Androgen receptor inhibitor",
-    "parent_class_ids": [],
+    "parent_class_ids": [
+      "CLS-014"
+    ],
     "subclass": "Non-steroidal antiandrogen",
     "oncology_use_category": "Prostate cancer systemic therapy",
     "route": "Oral",
@@ -1410,7 +1453,9 @@
     "type": "agent",
     "canonical_name": "nilutamide",
     "therapy_class": "Androgen receptor inhibitor",
-    "parent_class_ids": [],
+    "parent_class_ids": [
+      "CLS-014"
+    ],
     "subclass": "Non-steroidal antiandrogen",
     "oncology_use_category": "Prostate cancer systemic therapy",
     "route": "Oral",
@@ -1450,7 +1495,9 @@
     "type": "agent",
     "canonical_name": "abiraterone",
     "therapy_class": "Androgen-axis therapy",
-    "parent_class_ids": [],
+    "parent_class_ids": [
+      "CLS-014"
+    ],
     "subclass": "CYP17 inhibitor",
     "oncology_use_category": "Prostate cancer systemic therapy",
     "route": "Oral",
@@ -1783,7 +1830,9 @@
     "type": "agent",
     "canonical_name": "cyproterone acetate",
     "therapy_class": "Antiandrogen/progestogen",
-    "parent_class_ids": [],
+    "parent_class_ids": [
+      "CLS-014"
+    ],
     "subclass": "Steroidal antiandrogen",
     "oncology_use_category": "Prostate cancer systemic therapy",
     "route": "Oral",
@@ -3001,7 +3050,9 @@
     "type": "agent",
     "canonical_name": "anastrozole",
     "therapy_class": "Aromatase inhibitor",
-    "parent_class_ids": [],
+    "parent_class_ids": [
+      "CLS-014"
+    ],
     "subclass": "Aromatase inhibitor",
     "oncology_use_category": "Breast cancer endocrine therapy",
     "route": "Oral",
@@ -3041,7 +3092,9 @@
     "type": "agent",
     "canonical_name": "exemestane",
     "therapy_class": "Aromatase inhibitor",
-    "parent_class_ids": [],
+    "parent_class_ids": [
+      "CLS-014"
+    ],
     "subclass": "Steroidal aromatase inhibitor",
     "oncology_use_category": "Breast cancer endocrine therapy",
     "route": "Oral",
@@ -3081,7 +3134,9 @@
     "type": "agent",
     "canonical_name": "letrozole",
     "therapy_class": "Aromatase inhibitor",
-    "parent_class_ids": [],
+    "parent_class_ids": [
+      "CLS-014"
+    ],
     "subclass": "Aromatase inhibitor",
     "oncology_use_category": "Breast cancer endocrine therapy",
     "route": "Oral",
@@ -5021,7 +5076,9 @@
     "type": "agent",
     "canonical_name": "goserelin",
     "therapy_class": "GnRH agonist",
-    "parent_class_ids": [],
+    "parent_class_ids": [
+      "CLS-014"
+    ],
     "subclass": "Androgen deprivation/endocrine therapy",
     "oncology_use_category": "Endocrine therapy",
     "route": "SC implant",
@@ -5061,7 +5118,9 @@
     "type": "agent",
     "canonical_name": "leuprorelin",
     "therapy_class": "GnRH agonist",
-    "parent_class_ids": [],
+    "parent_class_ids": [
+      "CLS-014"
+    ],
     "subclass": "Androgen deprivation/endocrine therapy",
     "oncology_use_category": "Endocrine therapy",
     "route": "SC/IM depot",
@@ -5101,7 +5160,9 @@
     "type": "agent",
     "canonical_name": "triptorelin",
     "therapy_class": "GnRH agonist",
-    "parent_class_ids": [],
+    "parent_class_ids": [
+      "CLS-014"
+    ],
     "subclass": "Androgen deprivation therapy",
     "oncology_use_category": "Endocrine therapy",
     "route": "IM depot",
@@ -5141,7 +5202,9 @@
     "type": "agent",
     "canonical_name": "degarelix",
     "therapy_class": "GnRH antagonist",
-    "parent_class_ids": [],
+    "parent_class_ids": [
+      "CLS-014"
+    ],
     "subclass": "Androgen deprivation therapy",
     "oncology_use_category": "Prostate cancer systemic therapy",
     "route": "SC",
@@ -5181,7 +5244,9 @@
     "type": "agent",
     "canonical_name": "relugolix",
     "therapy_class": "GnRH antagonist",
-    "parent_class_ids": [],
+    "parent_class_ids": [
+      "CLS-014"
+    ],
     "subclass": "Androgen deprivation therapy",
     "oncology_use_category": "Prostate cancer systemic therapy",
     "route": "Oral",
@@ -6956,8 +7021,6 @@
     "canonical_name": "cetuximab",
     "therapy_class": "Monoclonal antibody",
     "parent_class_ids": [
-      "CLS-003",
-      "CLS-009",
       "CLS-013"
     ],
     "subclass": "Anti-EGFR",
@@ -7004,8 +7067,6 @@
     "canonical_name": "daratumumab",
     "therapy_class": "Monoclonal antibody",
     "parent_class_ids": [
-      "CLS-003",
-      "CLS-009",
       "CLS-013"
     ],
     "subclass": "Anti-CD38",
@@ -7049,8 +7110,6 @@
     "canonical_name": "elotuzumab",
     "therapy_class": "Monoclonal antibody",
     "parent_class_ids": [
-      "CLS-003",
-      "CLS-009",
       "CLS-013"
     ],
     "subclass": "SLAMF7 antibody",
@@ -7093,8 +7152,6 @@
     "canonical_name": "isatuximab",
     "therapy_class": "Monoclonal antibody",
     "parent_class_ids": [
-      "CLS-003",
-      "CLS-009",
       "CLS-013"
     ],
     "subclass": "Anti-CD38",
@@ -7137,8 +7194,6 @@
     "canonical_name": "margetuximab",
     "therapy_class": "Monoclonal antibody",
     "parent_class_ids": [
-      "CLS-003",
-      "CLS-009",
       "CLS-013"
     ],
     "subclass": "Anti-HER2",
@@ -7184,8 +7239,6 @@
     "canonical_name": "obinutuzumab",
     "therapy_class": "Monoclonal antibody",
     "parent_class_ids": [
-      "CLS-003",
-      "CLS-009",
       "CLS-013"
     ],
     "subclass": "Anti-CD20",
@@ -7228,8 +7281,6 @@
     "canonical_name": "ofatumumab",
     "therapy_class": "Monoclonal antibody",
     "parent_class_ids": [
-      "CLS-003",
-      "CLS-009",
       "CLS-013"
     ],
     "subclass": "Anti-CD20",
@@ -7272,8 +7323,6 @@
     "canonical_name": "panitumumab",
     "therapy_class": "Monoclonal antibody",
     "parent_class_ids": [
-      "CLS-003",
-      "CLS-009",
       "CLS-013"
     ],
     "subclass": "Anti-EGFR",
@@ -7320,8 +7369,6 @@
     "canonical_name": "pertuzumab",
     "therapy_class": "Monoclonal antibody",
     "parent_class_ids": [
-      "CLS-003",
-      "CLS-009",
       "CLS-013"
     ],
     "subclass": "Anti-HER2",
@@ -7416,8 +7463,6 @@
     "canonical_name": "rituximab",
     "therapy_class": "Monoclonal antibody",
     "parent_class_ids": [
-      "CLS-003",
-      "CLS-009",
       "CLS-013"
     ],
     "subclass": "Anti-CD20",
@@ -7461,8 +7506,6 @@
     "canonical_name": "trastuzumab",
     "therapy_class": "Monoclonal antibody",
     "parent_class_ids": [
-      "CLS-003",
-      "CLS-009",
       "CLS-013"
     ],
     "subclass": "Anti-HER2",
@@ -8316,7 +8359,9 @@
     "type": "agent",
     "canonical_name": "megestrol acetate",
     "therapy_class": "Progestogen",
-    "parent_class_ids": [],
+    "parent_class_ids": [
+      "CLS-014"
+    ],
     "subclass": "Hormonal therapy",
     "oncology_use_category": "Cancer/endocrine/supportive therapy",
     "route": "Oral",
@@ -9177,7 +9222,9 @@
     "type": "agent",
     "canonical_name": "elacestrant",
     "therapy_class": "Selective estrogen receptor degrader",
-    "parent_class_ids": [],
+    "parent_class_ids": [
+      "CLS-014"
+    ],
     "subclass": "Oral SERD",
     "oncology_use_category": "Breast cancer endocrine therapy",
     "route": "Oral",
@@ -9217,7 +9264,9 @@
     "type": "agent",
     "canonical_name": "fulvestrant",
     "therapy_class": "Selective estrogen receptor degrader",
-    "parent_class_ids": [],
+    "parent_class_ids": [
+      "CLS-014"
+    ],
     "subclass": "SERD",
     "oncology_use_category": "Breast cancer endocrine therapy",
     "route": "IM",
@@ -9257,7 +9306,9 @@
     "type": "agent",
     "canonical_name": "tamoxifen",
     "therapy_class": "Selective estrogen receptor modulator",
-    "parent_class_ids": [],
+    "parent_class_ids": [
+      "CLS-014"
+    ],
     "subclass": "SERM",
     "oncology_use_category": "Breast cancer endocrine therapy",
     "route": "Oral",
@@ -9297,7 +9348,9 @@
     "type": "agent",
     "canonical_name": "toremifene",
     "therapy_class": "Selective estrogen receptor modulator",
-    "parent_class_ids": [],
+    "parent_class_ids": [
+      "CLS-014"
+    ],
     "subclass": "SERM",
     "oncology_use_category": "Breast cancer endocrine therapy",
     "route": "Oral",
