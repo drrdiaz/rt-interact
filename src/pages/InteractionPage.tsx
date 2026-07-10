@@ -79,7 +79,7 @@ export function InteractionPage(): React.ReactElement {
   const handleRtSiteChange = useCallback(
     (newSite: RTSiteSelection | null) => {
       setRtSite(newSite)
-      if (fractionationId && !isFractionationValidForSite(fractionationId, newSite?.site_id)) {
+      if (fractionationId && !isFractionationValidForSite(fractionationId, newSite?.siteId)) {
         setFractionationId(null)
       }
     },
@@ -164,7 +164,7 @@ export function InteractionPage(): React.ReactElement {
             value={fractionationId}
             onChange={setFractionationId}
             visible={true}
-            siteId={rtSite?.site_id}
+            siteId={rtSite?.siteId}
           />
         </div>
       </section>
