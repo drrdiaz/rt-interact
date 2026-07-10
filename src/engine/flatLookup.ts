@@ -231,6 +231,12 @@ function rowToPerAgentResult(
       ? row.site_recommendation.trim()
       : null
 
+  const citationText =
+    row.citations && row.citations.trim() &&
+    !'none n/a'.includes(row.citations.trim().toLowerCase())
+      ? row.citations.trim()
+      : null
+
   if (row.medonc_discussion === 'Yes' || row.medonc_discussion === 'Consider')
     secondaryRiskDrivers.push('Medical Oncology discussion recommended')
   if (row.senior_ro_review === 'Yes')
@@ -251,6 +257,7 @@ function rowToPerAgentResult(
     rationaleText,
     fractionationWarning,
     siteRecommendation,
+    citationText,
     fallbackUsed: false,
     fallbackReason: null,
     agentUnrecognised: false,

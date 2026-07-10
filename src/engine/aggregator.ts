@@ -160,6 +160,7 @@ export function aggregateResults(
     rationaleText: dominant.rationaleText ?? '',
     fractionationWarning: dominant.fractionationWarning ?? null,
     siteRecommendation: dominant.siteRecommendation ?? null,
+    citationText: dominant.citationText ?? null,
     evidenceLinkIds,
     supportingEvidenceIds,
     evidenceLevel: dominant.evidenceLevel ?? 'Not assessed',

@@ -99,6 +99,8 @@ export interface PerAgentResult {
   fractionationWarning: string | null
   /** Site-specific recommendation from the flat DB. */
   siteRecommendation: string | null
+  /** Raw citation text from the flat DB (semicolon-separated references). */
+  citationText: string | null
   fallbackUsed: boolean
   fallbackReason: string | null
   /** True when the agent_id was not found in the agent catalogue. */
@@ -179,6 +181,8 @@ export interface ToxicityAlert {
   fractionationWarning: string | null
   /** Site-specific recommendation (if any). */
   siteRecommendation: string | null
+  /** Raw citation text from the flat DB (semicolon-separated). */
+  citationText: string | null
   /** Deduplicated primary evidence IDs. */
   evidenceLinkIds: string[]
   /** Deduplicated supporting evidence IDs. */

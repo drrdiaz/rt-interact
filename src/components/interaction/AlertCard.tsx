@@ -107,6 +107,68 @@ function ChevronIcon({ open }: { open: boolean }) {
   )
 }
 
+// ─── Citation renderer ────────────────────────────────────────────────────────
+
+/** Extracts a PubMed/PMC link from a citation fragment if present. */
+function extractLink(fragment: string): { href: string; label: string } | null {
+  // PMID XXXXXXX or PMID:XXXXXXX
+  const pmidMatch = fragment.match(/PMID[:\s]+?(\d{6,9})/i)
+  if (pmidMatch)
+    return {
+      href: `https://pubmed.ncbi.nlm.nih.gov/${pmidMatch[1]}/`,
+      label: `PMID ${pmidMatch[1]}`,
+    }
+  // PMC XXXXXXX (standalone, not inside a word)
+  const pmcMatch = fragment.match(/\bPMC(\d{5,9})\b/)
+  if (pmcMatch)
+    return {
+      href: `https://www.ncbi.nlm.nih.gov/pmc/articles/PMC${pmcMatch[1]}/`,
+      label: `PMC${pmcMatch[1]}`,
+    }
+  return null
+}
+
+function CitationList({ raw }: { raw: string }) {
+  const refs = raw
+    .split(';')
+    .map((s) => s.trim())
+    .filter(Boolean)
+
+  return (
+    <div data-testid="citation-list">
+      <span className="text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        References
+      </span>
+      <ol className="mt-1.5 flex flex-col gap-1">
+        {refs.map((ref, i) => {
+          const link = extractLink(ref)
+          return (
+            <li key={i} className="text-xs text-slate-600 flex gap-1.5">
+              <span className="shrink-0 text-slate-400">{i + 1}.</span>
+              <span>
+                {ref}
+                {link && (
+                  <>
+                    {' '}
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-teal-700 hover:underline font-medium"
+                    >
+                      [{link.label}]
+                    </a>
+                  </>
+                )}
+              </span>
+            </li>
+          )
+        })}
+      </ol>
+    </div>
+  )
+}
+
 // ─── Main component ───────────────────────────────────────────────────────────
 
 export function AlertCard({
@@ -298,17 +360,9 @@ export function AlertCard({
           </div>
         )}
 
-        {/* Uncertainty / evidence-limited flag */}
-        {output.hasEvidencePending && (
-          <p
-            className="mt-2 text-xs text-slate-500"
-            data-testid="evidence-pending-inline"
-          >
-            Evidence pending / requires review
-          </p>
-        )}
 
-        {/* 6. Evidence link — one only */}
+
+        {/* 6. References */}
         <div className="mt-4 border-t border-black/10 pt-3">
           {hasEvidenceLink ? (
             <button
@@ -321,14 +375,9 @@ export function AlertCard({
             >
               View evidence / Reference →
             </button>
-          ) : (
-            <span
-              className="text-xs text-slate-500"
-              data-testid="evidence-pending-link"
-            >
-              Evidence pending / requires review
-            </span>
-          )}
+          ) : output.citationText ? (
+            <CitationList raw={output.citationText} />
+          ) : null}
         </div>
 
         {/* Secondary risk drivers — expandable */}
