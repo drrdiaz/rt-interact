@@ -177,6 +177,7 @@ export function AlertCard({
 }: AlertCardProps): React.ReactElement {
   const [evidenceOpen, setEvidenceOpen] = useState(false)
   const [secondaryExpanded, setSecondaryExpanded] = useState(false)
+  const [referencesExpanded, setReferencesExpanded] = useState(false)
   const [perAgentExpanded, setPerAgentExpanded] = useState(false)
 
   // ── Empty state — not enough to evaluate ────────────────────────────────────
@@ -362,22 +363,38 @@ export function AlertCard({
 
 
 
-        {/* 6. References — only rendered when there is content */}
+        {/* 6. References — collapsible, only rendered when there is content */}
         {(hasEvidenceLink || output.citationText) && (
-          <div className="mt-4 border-t border-black/10 pt-3">
-            {hasEvidenceLink ? (
-              <button
-                type="button"
-                onClick={() => setEvidenceOpen(true)}
-                className="text-xs font-semibold text-teal-700 hover:text-teal-900
-                           hover:underline focus:outline-none focus:ring-2
-                           focus:ring-teal-400 rounded"
-                data-testid="view-evidence-link"
-              >
-                View evidence / Reference →
-              </button>
-            ) : (
-              <CitationList raw={output.citationText!} />
+          <div className="mt-3 border-t border-black/10 pt-3">
+            <button
+              type="button"
+              onClick={() => setReferencesExpanded((v) => !v)}
+              className="flex w-full items-center justify-between text-xs font-semibold
+                         text-slate-600 hover:text-slate-800 focus:outline-none
+                         focus:ring-2 focus:ring-teal-400 rounded"
+              aria-expanded={referencesExpanded}
+              aria-controls="references-panel"
+            >
+              <span>References</span>
+              <ChevronIcon open={referencesExpanded} />
+            </button>
+            {referencesExpanded && (
+              <div id="references-panel" className="mt-2">
+                {hasEvidenceLink ? (
+                  <button
+                    type="button"
+                    onClick={() => setEvidenceOpen(true)}
+                    className="text-xs font-semibold text-teal-700 hover:text-teal-900
+                               hover:underline focus:outline-none focus:ring-2
+                               focus:ring-teal-400 rounded"
+                    data-testid="view-evidence-link"
+                  >
+                    View evidence / Reference →
+                  </button>
+                ) : (
+                  <CitationList raw={output.citationText!} />
+                )}
+              </div>
             )}
           </div>
         )}
