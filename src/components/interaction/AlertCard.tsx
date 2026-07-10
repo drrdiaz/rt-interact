@@ -237,7 +237,7 @@ export function AlertCard({
           </span>
         </div>
 
-        {/* 2. Toxicity statement */}
+        {/* 2. Toxicity statement (interaction_warning only) */}
         <p
           className="mt-3 text-sm font-medium text-slate-800 leading-snug"
           data-testid="toxicity-statement"
@@ -255,7 +255,7 @@ export function AlertCard({
           </p>
         )}
 
-        {/* 3. Toxicity domain chips */}
+        {/* 3. Toxicity domain chips — shown once only */}
         {output.toxicityDomainLabels.length > 0 && (
           <div
             className="mt-3 flex flex-wrap gap-1.5"
@@ -274,29 +274,28 @@ export function AlertCard({
           </div>
         )}
 
-        {/* 4. Primary risk driver */}
-        {output.primaryRiskDriver && (
-          <div className="mt-3">
+        {/* 4. Fractionation note (if distinct from main warning) */}
+        {output.fractionationWarning && (
+          <div className="mt-3 rounded-lg bg-white/50 border border-black/10 px-3 py-2">
             <span className="text-xs font-semibold text-slate-500 uppercase tracking-wide">
-              Primary risk driver
+              Fractionation note
             </span>
-            <p
-              className="mt-0.5 text-sm text-slate-700"
-              data-testid="primary-risk-driver"
-            >
-              {output.primaryRiskDriver}
+            <p className="mt-0.5 text-xs text-slate-700" data-testid="fractionation-warning">
+              {output.fractionationWarning}
             </p>
           </div>
         )}
 
-        {/* 5. Rationale */}
-        {output.rationaleText && (
-          <p
-            className="mt-3 text-xs text-slate-600 italic"
-            data-testid="rationale-text"
-          >
-            {output.rationaleText}
-          </p>
+        {/* 5. Site recommendation (if present) */}
+        {output.siteRecommendation && (
+          <div className="mt-2 rounded-lg bg-white/50 border border-black/10 px-3 py-2">
+            <span className="text-xs font-semibold text-slate-500 uppercase tracking-wide">
+              Site recommendation
+            </span>
+            <p className="mt-0.5 text-xs text-slate-700" data-testid="site-recommendation">
+              {output.siteRecommendation}
+            </p>
+          </div>
         )}
 
         {/* Uncertainty / evidence-limited flag */}

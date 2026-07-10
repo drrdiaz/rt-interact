@@ -146,7 +146,6 @@ export function aggregateResults(
   const toxicityStatement = buildToxicityStatement(
     dominant.alertLevel,
     dominant.rationaleText,
-    toxicityDomainLabels,
     dominant.fallbackUsed,
     dominant.fallbackReason,
   )
@@ -159,6 +158,8 @@ export function aggregateResults(
     primaryRiskDriver: dominant.primaryRiskDriver ?? 'Unclassified',
     secondaryRiskDrivers,
     rationaleText: dominant.rationaleText ?? '',
+    fractionationWarning: dominant.fractionationWarning ?? null,
+    siteRecommendation: dominant.siteRecommendation ?? null,
     evidenceLinkIds,
     supportingEvidenceIds,
     evidenceLevel: dominant.evidenceLevel ?? 'Not assessed',
@@ -177,7 +178,6 @@ export function aggregateResults(
 function buildToxicityStatement(
   alertLevel: AlertLevel,
   rationaleText: string | null,
-  domainLabels: string[],
   fallbackUsed: boolean,
   fallbackReason: string | null,
 ): string {
@@ -185,17 +185,6 @@ function buildToxicityStatement(
 
   if (alertLevel === 'No specific alert') {
     return 'No specific interaction alert identified for the selected combination and timing.'
-  }
-
-  if (alertLevel === 'Uncertain / evidence limited') {
-    return rationaleText ?? 'Direct evidence for this drug–RT scenario is insufficient.'
-  }
-
-  if (domainLabels.length > 0) {
-    const domains = domainLabels.join(', ')
-    return rationaleText
-      ? `${rationaleText} Risk domains: ${domains}.`
-      : `Potential interaction involving: ${domains}.`
   }
 
   return rationaleText ?? `${alertLevel} — see per-agent details.`

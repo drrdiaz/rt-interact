@@ -95,6 +95,10 @@ export interface PerAgentResult {
   primaryRiskDriver: string | null
   secondaryRiskDrivers: string[]
   rationaleText: string | null
+  /** Fractionation-specific warning from the flat DB (separate from main interaction_warning). */
+  fractionationWarning: string | null
+  /** Site-specific recommendation from the flat DB. */
+  siteRecommendation: string | null
   fallbackUsed: boolean
   fallbackReason: string | null
   /** True when the agent_id was not found in the agent catalogue. */
@@ -169,8 +173,12 @@ export interface ToxicityAlert {
   primaryRiskDriver: string
   /** Secondary risk drivers from all matched rules, deduplicated. */
   secondaryRiskDrivers: string[]
-  /** One-line rationale. */
+  /** One-line rationale (interaction_warning text). */
   rationaleText: string
+  /** Fractionation-specific note (if any). */
+  fractionationWarning: string | null
+  /** Site-specific recommendation (if any). */
+  siteRecommendation: string | null
   /** Deduplicated primary evidence IDs. */
   evidenceLinkIds: string[]
   /** Deduplicated supporting evidence IDs. */

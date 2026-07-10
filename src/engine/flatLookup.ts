@@ -219,12 +219,17 @@ function rowToPerAgentResult(
   const primaryRiskDriver = riskDriverParts[0] ?? 'Agent-driven'
   const secondaryRiskDrivers = riskDriverParts.slice(1)
 
-  const rationaleparts: string[] = []
-  if (row.interaction_warning) rationaleparts.push(row.interaction_warning)
-  if (row.fractionation_warning && row.fractionation_warning !== 'None')
-    rationaleparts.push(`Fractionation: ${row.fractionation_warning}`)
-  if (row.site_recommendation && row.site_recommendation !== 'None')
-    rationaleparts.push(`Site: ${row.site_recommendation}`)
+  const rationaleText = row.interaction_warning?.trim() || null
+
+  const fractionationWarning =
+    row.fractionation_warning && row.fractionation_warning !== 'None'
+      ? row.fractionation_warning.trim()
+      : null
+
+  const siteRecommendation =
+    row.site_recommendation && row.site_recommendation !== 'None'
+      ? row.site_recommendation.trim()
+      : null
 
   if (row.medonc_discussion === 'Yes' || row.medonc_discussion === 'Consider')
     secondaryRiskDrivers.push('Medical Oncology discussion recommended')
@@ -243,7 +248,9 @@ function rowToPerAgentResult(
     uncertainty: row.uncertainty ?? 'Not assessed',
     primaryRiskDriver,
     secondaryRiskDrivers: [...new Set(secondaryRiskDrivers)],
-    rationaleText: rationaleparts.join(' | ') || null,
+    rationaleText,
+    fractionationWarning,
+    siteRecommendation,
     fallbackUsed: false,
     fallbackReason: null,
     agentUnrecognised: false,
