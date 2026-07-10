@@ -34,6 +34,7 @@ import { checkAgentInputCompleteness } from './completeness'
 import { deduplicateIds, resolveEvidence } from './evidence'
 import { aggregateResults } from './aggregator'
 import { buildDiagnostics } from './diagnostics'
+import { lookupInFlatDatabase } from './flatLookup'
 
 // ─── Evidence catalogue (loaded once) ────────────────────────────────────────
 
@@ -243,6 +244,22 @@ export function evaluateRules(input: RuleEngineInput): EngineOutput {
   let totalMatched = 0
 
   for (const agent of recognisedAgents) {
+    // ── Try v22 flat database first (specific agent+site+frac+timing) ──────────
+    const flatResult = lookupInFlatDatabase(
+      agent.agent_id,
+      agent.canonical_name,
+      siteId,
+      fractionationId,
+      timingId,
+    )
+
+    if (flatResult) {
+      // Flat DB matched — use it directly, skip class-based rule engine
+      perAgentResults.push(flatResult)
+      continue
+    }
+
+    // ── Fall back to class-based rule engine ──────────────────────────────────
     const matched = matchRulesForAgent(agent, siteId, timingId, fractionationId, rules)
     totalMatched += matched.length
 

@@ -178,5 +178,1145 @@
     "canonical_name": "fluorouracil",
     "version": "1.0",
     "status": "active"
+  },
+  {
+    "alias_id": "ALI-019",
+    "alias_text": "abraxane",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-197",
+    "resolves_to_type": "agent",
+    "canonical_name": "nab-paclitaxel",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-020",
+    "alias_text": "adriamycin",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-027",
+    "resolves_to_type": "agent",
+    "canonical_name": "doxorubicin",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-021",
+    "alias_text": "afinitor",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-216",
+    "resolves_to_type": "agent",
+    "canonical_name": "everolimus",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-022",
+    "alias_text": "alecensa",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-002",
+    "resolves_to_type": "agent",
+    "canonical_name": "alectinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-023",
+    "alias_text": "alunbrig",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-003",
+    "resolves_to_type": "agent",
+    "canonical_name": "brigatinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-024",
+    "alias_text": "arzerra",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-147",
+    "resolves_to_type": "agent",
+    "canonical_name": "ofatumumab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-025",
+    "alias_text": "braftovi",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-061",
+    "resolves_to_type": "agent",
+    "canonical_name": "encorafenib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-026",
+    "alias_text": "brukinsa",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-066",
+    "resolves_to_type": "agent",
+    "canonical_name": "zanubrutinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-027",
+    "alias_text": "caelyx",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-030",
+    "resolves_to_type": "agent",
+    "canonical_name": "liposomal doxorubicin",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-028",
+    "alias_text": "calquence",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-063",
+    "resolves_to_type": "agent",
+    "canonical_name": "acalabrutinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-029",
+    "alias_text": "camptosar",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-200",
+    "resolves_to_type": "agent",
+    "canonical_name": "irinotecan",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-030",
+    "alias_text": "cotellic",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-135",
+    "resolves_to_type": "agent",
+    "canonical_name": "cobimetinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-031",
+    "alias_text": "cyramza",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-150",
+    "resolves_to_type": "agent",
+    "canonical_name": "ramucirumab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-032",
+    "alias_text": "darzalex",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-142",
+    "resolves_to_type": "agent",
+    "canonical_name": "daratumumab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-033",
+    "alias_text": "doxil",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-030",
+    "resolves_to_type": "agent",
+    "canonical_name": "liposomal doxorubicin",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-034",
+    "alias_text": "eloxatin",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-170",
+    "resolves_to_type": "agent",
+    "canonical_name": "oxaliplatin",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-035",
+    "alias_text": "empliciti",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-143",
+    "resolves_to_type": "agent",
+    "canonical_name": "elotuzumab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-036",
+    "alias_text": "erleada",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-018",
+    "resolves_to_type": "agent",
+    "canonical_name": "apalutamide",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-037",
+    "alias_text": "etopophos",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-199",
+    "resolves_to_type": "agent",
+    "canonical_name": "etoposide",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-038",
+    "alias_text": "gazyva",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-146",
+    "resolves_to_type": "agent",
+    "canonical_name": "obinutuzumab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-039",
+    "alias_text": "gemzar",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-050",
+    "resolves_to_type": "agent",
+    "canonical_name": "gemcitabine",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-040",
+    "alias_text": "gilotrif",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-095",
+    "resolves_to_type": "agent",
+    "canonical_name": "afatinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-041",
+    "alias_text": "halaven",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-139",
+    "resolves_to_type": "agent",
+    "canonical_name": "eribulin",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-042",
+    "alias_text": "herceptin",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-152",
+    "resolves_to_type": "agent",
+    "canonical_name": "trastuzumab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-043",
+    "alias_text": "hycamtin",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-201",
+    "resolves_to_type": "agent",
+    "canonical_name": "topotecan",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-044",
+    "alias_text": "hydrea",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-157",
+    "resolves_to_type": "agent",
+    "canonical_name": "hydroxycarbamide",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-045",
+    "alias_text": "imbruvica",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-064",
+    "resolves_to_type": "agent",
+    "canonical_name": "ibrutinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-046",
+    "alias_text": "imfinzi",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-120",
+    "resolves_to_type": "agent",
+    "canonical_name": "durvalumab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-047",
+    "alias_text": "imnovid",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-127",
+    "resolves_to_type": "agent",
+    "canonical_name": "pomalidomide",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-048",
+    "alias_text": "inrebic",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-129",
+    "resolves_to_type": "agent",
+    "canonical_name": "fedratinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-049",
+    "alias_text": "iressa",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-093",
+    "resolves_to_type": "agent",
+    "canonical_name": "gefitinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-050",
+    "alias_text": "jakafi",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-131",
+    "resolves_to_type": "agent",
+    "canonical_name": "ruxolitinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-051",
+    "alias_text": "jakavi",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-131",
+    "resolves_to_type": "agent",
+    "canonical_name": "ruxolitinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-052",
+    "alias_text": "jaypirca",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-065",
+    "resolves_to_type": "agent",
+    "canonical_name": "pirtobrutinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-053",
+    "alias_text": "kadcyla",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-042",
+    "resolves_to_type": "agent",
+    "canonical_name": "trastuzumab emtansine",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-054",
+    "alias_text": "kyprolis",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-173",
+    "resolves_to_type": "agent",
+    "canonical_name": "carfilzomib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-055",
+    "alias_text": "libtayo",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-118",
+    "resolves_to_type": "agent",
+    "canonical_name": "cemiplimab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-056",
+    "alias_text": "lorbrena",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-005",
+    "resolves_to_type": "agent",
+    "canonical_name": "lorlatinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-057",
+    "alias_text": "lynparza",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-162",
+    "resolves_to_type": "agent",
+    "canonical_name": "olaparib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-058",
+    "alias_text": "mabthera",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-151",
+    "resolves_to_type": "agent",
+    "canonical_name": "rituximab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-059",
+    "alias_text": "mekinist",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-136",
+    "resolves_to_type": "agent",
+    "canonical_name": "trametinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-060",
+    "alias_text": "mektovi",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-134",
+    "resolves_to_type": "agent",
+    "canonical_name": "binimetinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-061",
+    "alias_text": "myocet",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-030",
+    "resolves_to_type": "agent",
+    "canonical_name": "liposomal doxorubicin",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-062",
+    "alias_text": "navelbine",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-215",
+    "resolves_to_type": "agent",
+    "canonical_name": "vinorelbine",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-063",
+    "alias_text": "ninlaro",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-174",
+    "resolves_to_type": "agent",
+    "canonical_name": "ixazomib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-064",
+    "alias_text": "onivyde",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-200",
+    "resolves_to_type": "agent",
+    "canonical_name": "irinotecan",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-065",
+    "alias_text": "paraplatin",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-168",
+    "resolves_to_type": "agent",
+    "canonical_name": "carboplatin",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-066",
+    "alias_text": "perjeta",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-149",
+    "resolves_to_type": "agent",
+    "canonical_name": "pertuzumab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-067",
+    "alias_text": "piqray",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-165",
+    "resolves_to_type": "agent",
+    "canonical_name": "alpelisib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-068",
+    "alias_text": "platinol",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-169",
+    "resolves_to_type": "agent",
+    "canonical_name": "cisplatin",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-069",
+    "alias_text": "pomalyst",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-127",
+    "resolves_to_type": "agent",
+    "canonical_name": "pomalidomide",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-070",
+    "alias_text": "prolia",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-076",
+    "resolves_to_type": "agent",
+    "canonical_name": "denosumab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-071",
+    "alias_text": "revlimid",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-126",
+    "resolves_to_type": "agent",
+    "canonical_name": "lenalidomide",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-072",
+    "alias_text": "rituxan",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-151",
+    "resolves_to_type": "agent",
+    "canonical_name": "rituximab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-073",
+    "alias_text": "rubraca",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-163",
+    "resolves_to_type": "agent",
+    "canonical_name": "rucaparib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-074",
+    "alias_text": "sarclisa",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-144",
+    "resolves_to_type": "agent",
+    "canonical_name": "isatuximab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-075",
+    "alias_text": "tafinlar",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-060",
+    "resolves_to_type": "agent",
+    "canonical_name": "dabrafenib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-076",
+    "alias_text": "tagrisso",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-094",
+    "resolves_to_type": "agent",
+    "canonical_name": "osimertinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-077",
+    "alias_text": "talzenna",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-164",
+    "resolves_to_type": "agent",
+    "canonical_name": "talazoparib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-078",
+    "alias_text": "tarceva",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-092",
+    "resolves_to_type": "agent",
+    "canonical_name": "erlotinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-079",
+    "alias_text": "taxol",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-198",
+    "resolves_to_type": "agent",
+    "canonical_name": "paclitaxel",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-080",
+    "alias_text": "taxotere",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-196",
+    "resolves_to_type": "agent",
+    "canonical_name": "docetaxel",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-081",
+    "alias_text": "tecentriq",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-116",
+    "resolves_to_type": "agent",
+    "canonical_name": "atezolizumab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-082",
+    "alias_text": "temodal",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-017",
+    "resolves_to_type": "agent",
+    "canonical_name": "temozolomide",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-083",
+    "alias_text": "temodar",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-017",
+    "resolves_to_type": "agent",
+    "canonical_name": "temozolomide",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-084",
+    "alias_text": "thalomid",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-128",
+    "resolves_to_type": "agent",
+    "canonical_name": "thalidomide",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-085",
+    "alias_text": "torisel",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-217",
+    "resolves_to_type": "agent",
+    "canonical_name": "temsirolimus",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-086",
+    "alias_text": "trisenox",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-155",
+    "resolves_to_type": "agent",
+    "canonical_name": "arsenic trioxide",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-087",
+    "alias_text": "truqap",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-001",
+    "resolves_to_type": "agent",
+    "canonical_name": "capivasertib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-088",
+    "alias_text": "velcade",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-172",
+    "resolves_to_type": "agent",
+    "canonical_name": "bortezomib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-089",
+    "alias_text": "venclexta",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-059",
+    "resolves_to_type": "agent",
+    "canonical_name": "venetoclax",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-090",
+    "alias_text": "venclyxto",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-059",
+    "resolves_to_type": "agent",
+    "canonical_name": "venetoclax",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-091",
+    "alias_text": "vepesid",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-199",
+    "resolves_to_type": "agent",
+    "canonical_name": "etoposide",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-092",
+    "alias_text": "verzenios",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-085",
+    "resolves_to_type": "agent",
+    "canonical_name": "abemaciclib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-093",
+    "alias_text": "xalkori",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-006",
+    "resolves_to_type": "agent",
+    "canonical_name": "crizotinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-094",
+    "alias_text": "xgeva",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-076",
+    "resolves_to_type": "agent",
+    "canonical_name": "denosumab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-095",
+    "alias_text": "yervoy",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-121",
+    "resolves_to_type": "agent",
+    "canonical_name": "ipilimumab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-096",
+    "alias_text": "zejula",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-161",
+    "resolves_to_type": "agent",
+    "canonical_name": "niraparib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-097",
+    "alias_text": "zelboraf",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-062",
+    "resolves_to_type": "agent",
+    "canonical_name": "vemurafenib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-098",
+    "alias_text": "zometa",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-078",
+    "resolves_to_type": "agent",
+    "canonical_name": "zoledronic acid",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-099",
+    "alias_text": "zykadia",
+    "alias_type": "brand",
+    "resolves_to_id": "AGT-004",
+    "resolves_to_type": "agent",
+    "canonical_name": "ceritinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-100",
+    "alias_text": "Trifluridine/tipiracil",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-222",
+    "resolves_to_type": "agent",
+    "canonical_name": "trifluridine/tipiracil",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-101",
+    "alias_text": "Arsenic trioxide (ATO)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-155",
+    "resolves_to_type": "agent",
+    "canonical_name": "arsenic trioxide",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-102",
+    "alias_text": "Asparaginase (L-asparaginase / PEG-asparaginase / Erwinia asparaginase)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-156",
+    "resolves_to_type": "agent",
+    "canonical_name": "asparaginase",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-103",
+    "alias_text": "Hydroxycarbamide (hydroxyurea; HU)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-157",
+    "resolves_to_type": "agent",
+    "canonical_name": "hydroxycarbamide",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-104",
+    "alias_text": "Vemurafenib (BRAFi)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-062",
+    "resolves_to_type": "agent",
+    "canonical_name": "vemurafenib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-105",
+    "alias_text": "Dabrafenib (BRAFi)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-060",
+    "resolves_to_type": "agent",
+    "canonical_name": "dabrafenib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-106",
+    "alias_text": "Vemurafenib / Dabrafenib (BRAFi)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-060",
+    "resolves_to_type": "agent",
+    "canonical_name": "dabrafenib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-107",
+    "alias_text": "Vemurafenib / Dabrafenib (BRAFi) + Trametinib / Cobimetinib (MEKi)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-135",
+    "resolves_to_type": "agent",
+    "canonical_name": "cobimetinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-108",
+    "alias_text": "Trametinib (MEKi)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-136",
+    "resolves_to_type": "agent",
+    "canonical_name": "trametinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-109",
+    "alias_text": "Cobimetinib (MEKi)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-135",
+    "resolves_to_type": "agent",
+    "canonical_name": "cobimetinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-110",
+    "alias_text": "All BRAFi (Vemurafenib / Dabrafenib)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-060",
+    "resolves_to_type": "agent",
+    "canonical_name": "dabrafenib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-111",
+    "alias_text": "Trametinib / Cobimetinib (MEKi)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-135",
+    "resolves_to_type": "agent",
+    "canonical_name": "cobimetinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-112",
+    "alias_text": "Erlotinib / Gefitinib (1st-gen)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-092",
+    "resolves_to_type": "agent",
+    "canonical_name": "erlotinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-113",
+    "alias_text": "Osimertinib (3rd-gen)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-094",
+    "resolves_to_type": "agent",
+    "canonical_name": "osimertinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-114",
+    "alias_text": "Afatinib (2nd-gen)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-095",
+    "resolves_to_type": "agent",
+    "canonical_name": "afatinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-115",
+    "alias_text": "Erlotinib / Gefitinib / Afatinib / Osimertinib (all agents)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-095",
+    "resolves_to_type": "agent",
+    "canonical_name": "afatinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-116",
+    "alias_text": "Erlotinib / Afatinib (all agents)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-095",
+    "resolves_to_type": "agent",
+    "canonical_name": "afatinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-117",
+    "alias_text": "Erlotinib / Gefitinib / Afatinib / Osimertinib",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-095",
+    "resolves_to_type": "agent",
+    "canonical_name": "afatinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-118",
+    "alias_text": "Erlotinib (predominant data)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-092",
+    "resolves_to_type": "agent",
+    "canonical_name": "erlotinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-119",
+    "alias_text": "Erlotinib / Gefitinib / Osimertinib / Afatinib",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-095",
+    "resolves_to_type": "agent",
+    "canonical_name": "afatinib",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-120",
+    "alias_text": "Anti-PD-L1 (durvalumab)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-120",
+    "resolves_to_type": "agent",
+    "canonical_name": "durvalumab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-121",
+    "alias_text": "Anti-PD-1 (nivolumab, pembrolizumab, cemiplimab)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-118",
+    "resolves_to_type": "agent",
+    "canonical_name": "cemiplimab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-122",
+    "alias_text": "Anti-CTLA-4 (ipilimumab, tremelimumab)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-121",
+    "resolves_to_type": "agent",
+    "canonical_name": "ipilimumab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-123",
+    "alias_text": "Anti-CTLA-4 (ipilimumab) + Anti-PD-1 (nivolumab) \u2014 dual ICI",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-121",
+    "resolves_to_type": "agent",
+    "canonical_name": "ipilimumab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-124",
+    "alias_text": "Anti-PD-1 (nivolumab, pembrolizumab)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-122",
+    "resolves_to_type": "agent",
+    "canonical_name": "nivolumab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-125",
+    "alias_text": "Anti-PD-1 (pembrolizumab)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-123",
+    "resolves_to_type": "agent",
+    "canonical_name": "pembrolizumab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-126",
+    "alias_text": "T-DM1 (Trastuzumab emtansine)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-042",
+    "resolves_to_type": "agent",
+    "canonical_name": "trastuzumab emtansine",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-127",
+    "alias_text": "T-DXd (Trastuzumab deruxtecan)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-041",
+    "resolves_to_type": "agent",
+    "canonical_name": "trastuzumab deruxtecan",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-128",
+    "alias_text": "Trastuzumab / Pertuzumab",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-149",
+    "resolves_to_type": "agent",
+    "canonical_name": "pertuzumab",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-129",
+    "alias_text": "Liposomal doxorubicin (PLD)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-030",
+    "resolves_to_type": "agent",
+    "canonical_name": "liposomal doxorubicin",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-130",
+    "alias_text": "Carmustine (BCNU)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-009",
+    "resolves_to_type": "agent",
+    "canonical_name": "carmustine",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-131",
+    "alias_text": "Lomustine (CCNU)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-013",
+    "resolves_to_type": "agent",
+    "canonical_name": "lomustine",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "alias_id": "ALI-132",
+    "alias_text": "Dacarbazine (DTIC)",
+    "alias_type": "combined/parenthetical -> components",
+    "resolves_to_id": "AGT-016",
+    "resolves_to_type": "agent",
+    "canonical_name": "dacarbazine",
+    "version": "1.0",
+    "status": "active"
   }
 ]

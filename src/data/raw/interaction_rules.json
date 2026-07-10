@@ -795,7 +795,7 @@
       "Combination-driven",
       "Site-driven"
     ],
-    "rationale_text": "HER2-directed therapies (trastuzumab, pertuzumab, T-DM1, T-DXd, tucatinib, lapatinib) combined with brain RT (WBRT or SRS) require specialist review. Trastuzumab with WBRT may increase neurocognitive toxicity; T-DM1 and T-DXd carry ILD risk that compounds with any RT. Concurrent HER2 therapy + brain RT is commonly encountered in HER2+ breast cancer with brain metastases \u2014 monitor for cardiotoxicity, ILD and CNS toxicity. Timing of HER2 therapy around brain RT should be discussed with neuro-oncology and medical oncology.",
+    "rationale_text": "HER2-directed therapies (trastuzumab, pertuzumab, T-DM1, T-DXd, tucatinib, lapatinib) combined with brain RT (WBRT or SRS) require specialist review. Trastuzumab with WBRT may increase neurocognitive toxicity; T-DM1 and T-DXd carry ILD risk that compounds with any RT. Concurrent HER2 therapy + brain RT is commonly encountered in HER2+ breast cancer with brain metastases — monitor for cardiotoxicity, ILD and CNS toxicity. Timing of HER2 therapy around brain RT should be discussed with neuro-oncology and medical oncology.",
     "evidence_link_ids": [],
     "supporting_evidence_ids": [],
     "evidence_level": "Moderate",
@@ -812,7 +812,9 @@
     "rule_id": "IR007",
     "conditions": {
       "agent_class_ids": [
-        "CLS-008"
+        "AGT-168",
+        "AGT-169",
+        "AGT-170"
       ],
       "rt_site_ids": [
         "RTS003",
@@ -875,7 +877,9 @@
     "rule_id": "IR007b",
     "conditions": {
       "agent_class_ids": [
-        "CLS-008"
+        "AGT-168",
+        "AGT-169",
+        "AGT-170"
       ],
       "rt_site_ids": [
         "RTS020",
@@ -915,7 +919,9 @@
     "rule_id": "IR007c",
     "conditions": {
       "agent_class_ids": [
-        "CLS-008"
+        "AGT-168",
+        "AGT-169",
+        "AGT-170"
       ],
       "rt_site_ids": [
         "RTS010",
@@ -1672,7 +1678,7 @@
     ],
     "primary_risk_driver": "Agent-driven",
     "secondary_risk_drivers": [],
-    "rationale_text": "Hormonal/endocrine therapy (LHRH agonists, anti-androgens, aromatase inhibitors, tamoxifen) concurrent with RT is standard practice for prostate, breast and gynaecological cancers. Direct interaction risk is generally low at most sites. Additive effects on cardiovascular risk (LHRH agonists), sexual/fertility toxicity and minor marrow effects in large pelvic fields may occur. For brain RT, spinal, or other palliative sites, hormonal therapy poses minimal direct interaction risk \u2014 document concurrent use and apply standard clinical checks.",
+    "rationale_text": "Hormonal/endocrine therapy (LHRH agonists, anti-androgens, aromatase inhibitors, tamoxifen) concurrent with RT is standard practice for prostate, breast and gynaecological cancers. Direct interaction risk is generally low at most sites. Additive effects on cardiovascular risk (LHRH agonists), sexual/fertility toxicity and minor marrow effects in large pelvic fields may occur. For brain RT, spinal, or other palliative sites, hormonal therapy poses minimal direct interaction risk — document concurrent use and apply standard clinical checks.",
     "evidence_link_ids": [],
     "supporting_evidence_ids": [],
     "evidence_level": "High",
@@ -1863,7 +1869,7 @@
       "Agent-driven",
       "Site-driven"
     ],
-    "rationale_text": "Agents associated with diarrhoea or colitis (ICI-related immune colitis; CDK4/6 inhibitor-associated diarrhoea; PARP inhibitor GI toxicity; cytotoxic diarrhoea) combined with pelvic or abdominal RT may produce severe additive GI toxicity. Closely monitor bowel symptoms; anti-diarrhoeal prophylaxis and dietary modification may be required.",
+    "rationale_text": "Agents associated with diarrhoea or colitis (ICI-related immune colitis; CDK4/6 inhibitor-associated diarrhoea; cytotoxic and ADC-related diarrhoea) combined with pelvic or abdominal RT may produce severe additive GI toxicity. Closely monitor bowel symptoms; anti-diarrhoeal prophylaxis and dietary modification may be required.",
     "evidence_link_ids": [],
     "supporting_evidence_ids": [],
     "evidence_level": "Moderate",

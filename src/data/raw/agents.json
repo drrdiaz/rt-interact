@@ -747,7 +747,8 @@
     "therapy_class": "Alkylating agent",
     "parent_class_ids": [
       "CLS-001",
-      "CLS-008"
+      "CLS-008",
+      "CLS-009"
     ],
     "subclass": "Bendamustine",
     "oncology_use_category": "Conventional chemotherapy",
@@ -792,7 +793,8 @@
     "therapy_class": "Alkylating agent",
     "parent_class_ids": [
       "CLS-001",
-      "CLS-008"
+      "CLS-008",
+      "CLS-009"
     ],
     "subclass": "Alkyl sulfonate",
     "oncology_use_category": "Conventional chemotherapy",
@@ -837,7 +839,8 @@
     "therapy_class": "Alkylating agent",
     "parent_class_ids": [
       "CLS-001",
-      "CLS-008"
+      "CLS-008",
+      "CLS-009"
     ],
     "subclass": "Nitrosourea",
     "oncology_use_category": "Conventional chemotherapy",
@@ -883,7 +886,8 @@
     "therapy_class": "Alkylating agent",
     "parent_class_ids": [
       "CLS-001",
-      "CLS-008"
+      "CLS-008",
+      "CLS-009"
     ],
     "subclass": "Nitrogen mustard",
     "oncology_use_category": "Conventional chemotherapy",
@@ -927,7 +931,8 @@
     "therapy_class": "Alkylating agent",
     "parent_class_ids": [
       "CLS-001",
-      "CLS-008"
+      "CLS-008",
+      "CLS-009"
     ],
     "subclass": "Nitrogen mustard",
     "oncology_use_category": "Conventional chemotherapy",
@@ -975,7 +980,8 @@
     "therapy_class": "Alkylating agent",
     "parent_class_ids": [
       "CLS-001",
-      "CLS-008"
+      "CLS-008",
+      "CLS-009"
     ],
     "subclass": "Nitrogen mustard",
     "oncology_use_category": "Conventional chemotherapy",
@@ -1022,7 +1028,8 @@
     "therapy_class": "Alkylating agent",
     "parent_class_ids": [
       "CLS-001",
-      "CLS-008"
+      "CLS-008",
+      "CLS-009"
     ],
     "subclass": "Nitrosourea",
     "oncology_use_category": "Conventional chemotherapy",
@@ -1068,7 +1075,8 @@
     "therapy_class": "Alkylating agent",
     "parent_class_ids": [
       "CLS-001",
-      "CLS-008"
+      "CLS-008",
+      "CLS-009"
     ],
     "subclass": "Nitrogen mustard",
     "oncology_use_category": "Conventional chemotherapy",
@@ -1112,7 +1120,8 @@
     "therapy_class": "Alkylating agent",
     "parent_class_ids": [
       "CLS-001",
-      "CLS-008"
+      "CLS-008",
+      "CLS-009"
     ],
     "subclass": "Ethyleneimine",
     "oncology_use_category": "Conventional chemotherapy",
@@ -1154,7 +1163,10 @@
     "type": "agent",
     "canonical_name": "dacarbazine",
     "therapy_class": "Alkylating-like agent",
-    "parent_class_ids": [],
+    "parent_class_ids": [
+      "CLS-001",
+      "CLS-009"
+    ],
     "subclass": "Triazene",
     "oncology_use_category": "Conventional chemotherapy",
     "route": "IV",
@@ -1197,7 +1209,10 @@
     "type": "agent",
     "canonical_name": "temozolomide",
     "therapy_class": "Alkylating-like agent",
-    "parent_class_ids": [],
+    "parent_class_ids": [
+      "CLS-001",
+      "CLS-009"
+    ],
     "subclass": "Imidazotetrazine",
     "oncology_use_category": "Conventional chemotherapy",
     "route": "Oral/IV",
@@ -1586,7 +1601,8 @@
     "therapy_class": "Anthracycline",
     "parent_class_ids": [
       "CLS-001",
-      "CLS-008"
+      "CLS-008",
+      "CLS-009"
     ],
     "subclass": "Cytotoxic antibiotic",
     "oncology_use_category": "Haematology chemotherapy",
@@ -1634,7 +1650,8 @@
     "therapy_class": "Anthracycline",
     "parent_class_ids": [
       "CLS-001",
-      "CLS-008"
+      "CLS-008",
+      "CLS-009"
     ],
     "subclass": "Cytotoxic antibiotic",
     "oncology_use_category": "Chemotherapy agent",
@@ -1684,7 +1701,8 @@
     "therapy_class": "Anthracycline",
     "parent_class_ids": [
       "CLS-001",
-      "CLS-008"
+      "CLS-008",
+      "CLS-009"
     ],
     "subclass": "Cytotoxic antibiotic",
     "oncology_use_category": "Chemotherapy agent",
@@ -1734,7 +1752,8 @@
     "therapy_class": "Anthracycline",
     "parent_class_ids": [
       "CLS-001",
-      "CLS-008"
+      "CLS-008",
+      "CLS-009"
     ],
     "subclass": "Cytotoxic antibiotic",
     "oncology_use_category": "Haematology chemotherapy",
@@ -1782,7 +1801,8 @@
     "therapy_class": "Anthracycline",
     "parent_class_ids": [
       "CLS-001",
-      "CLS-008"
+      "CLS-008",
+      "CLS-009"
     ],
     "subclass": "Liposomal anthracycline",
     "oncology_use_category": "Chemotherapy agent",
@@ -4478,7 +4498,8 @@
     "therapy_class": "Cytotoxic antibiotic",
     "parent_class_ids": [
       "CLS-001",
-      "CLS-008"
+      "CLS-008",
+      "CLS-009"
     ],
     "subclass": "Glycopeptide antibiotic",
     "oncology_use_category": "High-risk pulmonary overlap",
@@ -4522,7 +4543,8 @@
     "therapy_class": "Cytotoxic antibiotic",
     "parent_class_ids": [
       "CLS-001",
-      "CLS-008"
+      "CLS-008",
+      "CLS-009"
     ],
     "subclass": "Actinomycin",
     "oncology_use_category": "Chemotherapy agent",
@@ -4570,7 +4592,8 @@
     "therapy_class": "Cytotoxic antibiotic",
     "parent_class_ids": [
       "CLS-001",
-      "CLS-008"
+      "CLS-008",
+      "CLS-009"
     ],
     "subclass": "Bioreductive alkylating agent",
     "oncology_use_category": "Chemoradiation agent",
@@ -7718,7 +7741,9 @@
     "type": "agent",
     "canonical_name": "hydroxycarbamide",
     "therapy_class": "Other antineoplastic",
-    "parent_class_ids": [],
+    "parent_class_ids": [
+      "CLS-009"
+    ],
     "subclass": "Ribonucleotide reductase inhibitor",
     "oncology_use_category": "Cytoreductive therapy",
     "route": "Oral",
@@ -9433,7 +9458,8 @@
     "therapy_class": "Taxane",
     "parent_class_ids": [
       "CLS-001",
-      "CLS-008"
+      "CLS-008",
+      "CLS-009"
     ],
     "subclass": "Microtubule inhibitor",
     "oncology_use_category": "Chemotherapy agent",
@@ -9482,7 +9508,8 @@
     "therapy_class": "Taxane",
     "parent_class_ids": [
       "CLS-001",
-      "CLS-008"
+      "CLS-008",
+      "CLS-009"
     ],
     "subclass": "Albumin-bound paclitaxel",
     "oncology_use_category": "Chemotherapy agent",
@@ -9531,7 +9558,8 @@
     "therapy_class": "Taxane",
     "parent_class_ids": [
       "CLS-001",
-      "CLS-008"
+      "CLS-008",
+      "CLS-009"
     ],
     "subclass": "Microtubule inhibitor",
     "oncology_use_category": "Chemotherapy/chemoradiation agent",
@@ -9580,7 +9608,8 @@
     "therapy_class": "Topoisomerase inhibitor",
     "parent_class_ids": [
       "CLS-001",
-      "CLS-008"
+      "CLS-008",
+      "CLS-009"
     ],
     "subclass": "Topo II inhibitor",
     "oncology_use_category": "Chemotherapy/chemoradiation agent",
@@ -9627,7 +9656,8 @@
     "therapy_class": "Topoisomerase inhibitor",
     "parent_class_ids": [
       "CLS-001",
-      "CLS-008"
+      "CLS-008",
+      "CLS-009"
     ],
     "subclass": "Topo I inhibitor",
     "oncology_use_category": "Chemotherapy agent",
@@ -9674,7 +9704,8 @@
     "therapy_class": "Topoisomerase inhibitor",
     "parent_class_ids": [
       "CLS-001",
-      "CLS-008"
+      "CLS-008",
+      "CLS-009"
     ],
     "subclass": "Topo I inhibitor",
     "oncology_use_category": "Chemotherapy agent",
@@ -10249,7 +10280,8 @@
     "therapy_class": "Vinca alkaloid",
     "parent_class_ids": [
       "CLS-001",
-      "CLS-008"
+      "CLS-008",
+      "CLS-009"
     ],
     "subclass": "Microtubule inhibitor",
     "oncology_use_category": "Chemotherapy agent",
@@ -10293,7 +10325,8 @@
     "therapy_class": "Vinca alkaloid",
     "parent_class_ids": [
       "CLS-001",
-      "CLS-008"
+      "CLS-008",
+      "CLS-009"
     ],
     "subclass": "Microtubule inhibitor",
     "oncology_use_category": "Chemotherapy agent",
@@ -10339,7 +10372,8 @@
     "therapy_class": "Vinca alkaloid",
     "parent_class_ids": [
       "CLS-001",
-      "CLS-008"
+      "CLS-008",
+      "CLS-009"
     ],
     "subclass": "Microtubule inhibitor",
     "oncology_use_category": "Chemotherapy agent",

@@ -29,6 +29,7 @@ import rawAgentsAmended from './raw/agents-amended.json'
 import rawHighRiskWatchlist from './raw/high-risk-watchlist.json'
 import rawAustralianMaster from './raw/australian-medicine-master.json'
 import rawRTInteractionLogic from './raw/rt-interaction-logic.json'
+import rawAppOutputResolved from './raw/app-output-resolved.json'
 // ── Typed accessors ──────────────────────────────────────────────────────────
 
 export function getAgents(): Agent[] {
@@ -178,4 +179,10 @@ export function getAustralianMedicinesMaster() {
 
 export function getRTInteractionLogic() {
   return rawRTInteractionLogic as any[]
+}
+
+// ── v22 flat interaction database (App_Output_Resolved) ──────────────────────
+
+export function getAppOutputResolved() {
+  return rawAppOutputResolved as unknown[]
 }
