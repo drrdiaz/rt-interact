@@ -362,23 +362,25 @@ export function AlertCard({
 
 
 
-        {/* 6. References */}
-        <div className="mt-4 border-t border-black/10 pt-3">
-          {hasEvidenceLink ? (
-            <button
-              type="button"
-              onClick={() => setEvidenceOpen(true)}
-              className="text-xs font-semibold text-teal-700 hover:text-teal-900
-                         hover:underline focus:outline-none focus:ring-2
-                         focus:ring-teal-400 rounded"
-              data-testid="view-evidence-link"
-            >
-              View evidence / Reference →
-            </button>
-          ) : output.citationText ? (
-            <CitationList raw={output.citationText} />
-          ) : null}
-        </div>
+        {/* 6. References — only rendered when there is content */}
+        {(hasEvidenceLink || output.citationText) && (
+          <div className="mt-4 border-t border-black/10 pt-3">
+            {hasEvidenceLink ? (
+              <button
+                type="button"
+                onClick={() => setEvidenceOpen(true)}
+                className="text-xs font-semibold text-teal-700 hover:text-teal-900
+                           hover:underline focus:outline-none focus:ring-2
+                           focus:ring-teal-400 rounded"
+                data-testid="view-evidence-link"
+              >
+                View evidence / Reference →
+              </button>
+            ) : (
+              <CitationList raw={output.citationText!} />
+            )}
+          </div>
+        )}
 
         {/* Secondary risk drivers — expandable */}
         {hasSecondary && (
