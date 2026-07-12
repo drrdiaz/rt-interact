@@ -421,36 +421,6 @@ export function AlertCard({
           </div>
         )}
 
-        {/* Secondary risk drivers — expandable */}
-        {hasSecondary && (
-          <div className="mt-3 border-t border-black/10 pt-3">
-            <button
-              type="button"
-              onClick={() => setSecondaryExpanded((v) => !v)}
-              className="flex w-full items-center justify-between text-xs font-semibold
-                         text-slate-600 hover:text-slate-800 focus:outline-none
-                         focus:ring-2 focus:ring-teal-400 rounded"
-              aria-expanded={secondaryExpanded}
-              aria-controls="secondary-risk-panel"
-            >
-              <span>Secondary risk drivers ({output.secondaryRiskDrivers.length})</span>
-              <ChevronIcon open={secondaryExpanded} />
-            </button>
-            {secondaryExpanded && (
-              <ul
-                id="secondary-risk-panel"
-                className="mt-2 flex flex-col gap-1"
-                data-testid="secondary-risk-drivers"
-              >
-                {output.secondaryRiskDrivers.map((d) => (
-                  <li key={d} className="text-xs text-slate-600">
-                    · {d}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        )}
 
         {/* Per-agent results — expandable when multi-agent */}
         {multiAgent && (
