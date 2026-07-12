@@ -109,7 +109,7 @@ function ChevronIcon({ open }: { open: boolean }) {
 
 // ─── Citation renderer ────────────────────────────────────────────────────────
 
-/** Extracts a PubMed/PMC link from a citation fragment if present. */
+/** Extracts a PubMed/PMC/DOI link from a citation fragment if present. */
 function extractLink(fragment: string): { href: string; label: string } | null {
   // PMID XXXXXXX or PMID:XXXXXXX
   const pmidMatch = fragment.match(/PMID[:\s]+?(\d{6,9})/i)
@@ -125,14 +125,36 @@ function extractLink(fragment: string): { href: string; label: string } | null {
       href: `https://www.ncbi.nlm.nih.gov/pmc/articles/PMC${pmcMatch[1]}/`,
       label: `PMC${pmcMatch[1]}`,
     }
+  // DOI 10.xxxx/xxxx
+  const doiMatch = fragment.match(/\bDOI\s+(10\.\S+)/i)
+  if (doiMatch)
+    return {
+      href: `https://doi.org/${doiMatch[1]}`,
+      label: `↗ View`,
+    }
   return null
 }
 
-function CitationList({ raw }: { raw: string }) {
-  const refs = raw
+/** Parse citation string — handles both legacy semicolon-separated and
+ *  EVID-backfilled pipe-separated formats. */
+function parseCitations(raw: string): string[] {
+  // Backfilled format: "Preamble | References: EVID-0001: ...; Title; DOI xx | EVID-0002: ..."
+  if (raw.includes('| References:')) {
+    const refsSection = raw.split('| References:')[1] ?? ''
+    return refsSection
+      .split('|')
+      .map((s) => s.trim())
+      .filter((s) => s && !s.startsWith('(no external'))
+  }
+  // Legacy format: semicolon-separated
+  return raw
     .split(';')
     .map((s) => s.trim())
     .filter(Boolean)
+}
+
+function CitationList({ raw }: { raw: string }) {
+  const refs = parseCitations(raw)
 
   return (
     <div data-testid="citation-list">
