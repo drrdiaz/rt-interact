@@ -198,7 +198,6 @@ export function AlertCard({
   engineInput,
 }: AlertCardProps): React.ReactElement {
   const [evidenceOpen, setEvidenceOpen] = useState(false)
-  const [secondaryExpanded, setSecondaryExpanded] = useState(false)
   const [referencesExpanded, setReferencesExpanded] = useState(false)
   const [perAgentExpanded, setPerAgentExpanded] = useState(false)
 
@@ -280,7 +279,6 @@ export function AlertCard({
   const output = engineOutput
   const config = LEVEL_CONFIG[output.alertLevel]
   const multiAgent = output.perAgentResults.length > 1
-  const hasSecondary = output.secondaryRiskDrivers.length > 0
   const hasEvidenceLink =
     output.evidenceLinkIds.length > 0 || output.supportingEvidenceIds.length > 0
 
