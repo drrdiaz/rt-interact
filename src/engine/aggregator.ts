@@ -182,6 +182,9 @@ function buildToxicityStatement(
   fallbackUsed: boolean,
   fallbackReason: string | null,
 ): string {
+  // A fallback may still carry a clinically meaningful safety statement.
+  // Prefer it over the internal reason that caused the fallback.
+  if (fallbackUsed && rationaleText) return rationaleText
   if (fallbackUsed && fallbackReason) return fallbackReason
 
   if (alertLevel === 'No specific alert') {

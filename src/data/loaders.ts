@@ -84,8 +84,14 @@ export function getSubsitesForSite(rtSite: string): RTSite[] {
 
 /** Builds a flat list of agent suggestions (agents + aliases) for autocomplete */
 export function buildAgentSuggestions(): AgentSuggestion[] {
-  const agents = getAgents().filter((a) => a.status === 'active')
-  const aliases = getAliases().filter((a) => a.status === 'active')
+  // Only canonical agents are selectable. Classes remain usable for rule
+  // matching, but must not appear as duplicate "drugs" in clinician search.
+  const agents = getAgents().filter((a) => a.status === 'active' && a.type === 'agent')
+  const aliases = getAliases().filter(
+    (a) =>
+      a.status === 'active' &&
+      ['brand', 'common', 'abbreviation', 'generic'].includes(a.alias_type),
+  )
 
   // Map agent_id → agent for alias lookup
   const agentMap = new Map<string, Agent>(agents.map((a) => [a.agent_id, a]))
@@ -131,7 +137,16 @@ export function filterAgentSuggestions(
     (s) => !s.searchKey.startsWith(q) && s.searchKey.includes(q),
   )
 
-  return [...prefix, ...substring].slice(0, maxResults)
+  // A brand alias and the canonical name can both match the same query. Show
+  // one result per agent so the user cannot select the same drug twice.
+  const seenAgentIds = new Set<string>()
+  return [...prefix, ...substring]
+    .filter((suggestion) => {
+      if (seenAgentIds.has(suggestion.agent.agent_id)) return false
+      seenAgentIds.add(suggestion.agent.agent_id)
+      return true
+    })
+    .slice(0, maxResults)
 }
 
 /** Look up a domain label by ID */

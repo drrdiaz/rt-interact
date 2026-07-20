@@ -36,39 +36,53 @@ const RISK_PRIORITY: Record<string, number> = {
   'insufficient evidence, seek specialist review': 1,
 }
 
-// ─── Site key mapping: prototype RTS IDs → Excel site keys ───────────────────
+// ─── Site key mapping: active and legacy RTS IDs → flat-feed site keys ───────
 
 export const SITE_ID_TO_KEY: Record<string, string> = {
-  RTS001: 'pelvis',        // Prostate only
-  RTS002: 'pelvis',        // Prostate + pelvic nodes
-  RTS003: 'oesophagus',    // Oesophagus cervical/upper
-  RTS004: 'oesophagus',    // Oesophagus mid-thoracic
-  RTS005: 'oesophagus',    // Oesophagus lower/GOJ
-  RTS006: 'lung',          // Lung peripheral
-  RTS007: 'lung',          // Lung central
-  RTS008: 'lung',          // Lung ultracentral
-  RTS009: 'lung',          // Lung apical/Pancoast
-  RTS010: 'breast',        // Breast whole
-  RTS011: 'breast',        // Breast chest wall
-  RTS012: 'breast',        // Breast + regional nodes
-  RTS013: 'head_neck',     // H&N oral cavity/oropharynx
-  RTS014: 'head_neck',     // H&N larynx/hypopharynx
-  RTS015: 'head_neck',     // H&N nasopharynx/skull base
-  RTS016: 'pelvis',        // Pelvis rectal
-  RTS017: 'pelvis',        // Pelvis anal
-  RTS018: 'pelvis',        // Pelvis gynaecological
-  RTS019: 'pelvis',        // Pelvis para-aortic nodes
-  RTS020: 'brain',         // Brain WBRT
-  RTS021: 'brain',         // Brain SRS/focal
-  RTS022: 'spine',         // Spine cervical
-  RTS023: 'spine',         // Spine thoracic
-  RTS024: 'spine',         // Spine lumbar/sacral
-  RTS025: 'upper_abdomen', // Upper abdomen liver
-  RTS026: 'upper_abdomen', // Upper abdomen pancreas
-  RTS027: 'upper_abdomen', // Upper abdomen adrenal
-  RTS028: 'skin',          // Skin/superficial
-  RTS029: 'bone',          // Bone (non-spine)
-  RTS030: 'nonspecific',   // Other/Custom
+  RTS101: 'pelvis',        // Pelvis male
+  RTS102: 'pelvis',        // Pelvis female
+  RTS103: 'oesophagus',    // Oesophagus cervical/upper
+  RTS104: 'oesophagus',    // Oesophagus mid-thoracic
+  RTS105: 'oesophagus',    // Oesophagus lower/GOJ
+  RTS106: 'lung',          // Lung
+  RTS107: 'breast',        // Breast/chest wall
+  RTS108: 'breast',        // Breast/chest wall + regional nodes
+  RTS109: 'head_neck',     // Head and neck
+  RTS110: 'brain',         // Brain
+  RTS111: 'spine',         // Spine
+  RTS112: 'upper_abdomen', // Upper abdomen
+  RTS113: 'skin',          // Skin/superficial
+  RTS114: 'bone',          // Bone (non-spine)
+  RTS001: 'pelvis',        // Legacy prostate only
+  RTS002: 'pelvis',        // Legacy prostate + pelvic nodes
+  RTS003: 'oesophagus',    // Legacy oesophagus cervical/upper
+  RTS004: 'oesophagus',    // Legacy oesophagus mid-thoracic
+  RTS005: 'oesophagus',    // Legacy oesophagus lower/GOJ
+  RTS006: 'lung',          // Legacy lung peripheral
+  RTS007: 'lung',          // Legacy lung central
+  RTS008: 'lung',          // Legacy lung ultracentral
+  RTS009: 'lung',          // Legacy lung apical/Pancoast
+  RTS010: 'breast',        // Legacy breast whole
+  RTS011: 'breast',        // Legacy breast chest wall
+  RTS012: 'breast',        // Legacy breast + regional nodes
+  RTS013: 'head_neck',     // Legacy H&N oral cavity/oropharynx
+  RTS014: 'head_neck',     // Legacy H&N larynx/hypopharynx
+  RTS015: 'head_neck',     // Legacy H&N nasopharynx/skull base
+  RTS016: 'pelvis',        // Legacy pelvis rectal
+  RTS017: 'pelvis',        // Legacy pelvis anal
+  RTS018: 'pelvis',        // Legacy pelvis gynaecological
+  RTS019: 'pelvis',        // Legacy pelvis para-aortic nodes
+  RTS020: 'brain',         // Legacy brain WBRT
+  RTS021: 'brain',         // Legacy brain SRS/focal
+  RTS022: 'spine',         // Legacy spine cervical
+  RTS023: 'spine',         // Legacy spine thoracic
+  RTS024: 'spine',         // Legacy spine lumbar/sacral
+  RTS025: 'upper_abdomen', // Legacy upper abdomen liver
+  RTS026: 'upper_abdomen', // Legacy upper abdomen pancreas
+  RTS027: 'upper_abdomen', // Legacy upper abdomen adrenal
+  RTS028: 'skin',          // Legacy skin/superficial
+  RTS029: 'bone',          // Legacy bone (non-spine)
+  RTS030: 'nonspecific',   // Legacy other/custom
 }
 
 // ─── Fractionation key mapping: FX IDs → Excel keys ─────────────────────────
@@ -203,6 +217,46 @@ function rowToPerAgentResult(
   canonicalName: string,
   row: AppOutputRow,
 ): PerAgentResult {
+  const citationText = getCitationText(row.citations)
+
+  // Legacy rows may label a scenario as direct evidence while carrying no
+  // traceable paper. Such a claim must not drive a site-specific conclusion.
+  if (isDirectEvidenceClaim(row.evidence_directness) && !hasVerifiableCitation(citationText)) {
+    const fallbackReason =
+      'The legacy record labels this scenario as direct evidence but has no verifiable supporting reference.'
+
+    return {
+      agentId,
+      canonicalName,
+      // Preserve a safety signal while withholding the unsupported
+      // site-specific conclusion carried by the legacy row.
+      alertLevel: 'Caution',
+      matchedRules: [],
+      controllingRule: null,
+      toxicityDomains: (row.toxicity_domains ?? '')
+        .split(';')
+        .map((domain) => domain.trim())
+        .filter(Boolean),
+      evidenceLinkIds: [],
+      evidenceLevel: 'No verified direct evidence loaded for this exact scenario',
+      uncertainty: 'The database has no validated, scoped citation for this scenario.',
+      primaryRiskDriver: 'Clinical safety concern with an evidence gap',
+      secondaryRiskDrivers: ['Clinical evidence review required before relying on this result'],
+      rationaleText:
+        row.interaction_warning?.trim() ||
+        'Potential acute toxicity with concomitant systemic therapy and RT',
+      fractionationWarning: removeObsoleteTimingInstruction(row.fractionation_warning),
+      siteRecommendation:
+        row.site_recommendation && row.site_recommendation !== 'None'
+          ? row.site_recommendation.trim()
+          : null,
+      citationText: null,
+      fallbackUsed: true,
+      fallbackReason,
+      agentUnrecognised: false,
+    }
+  }
+
   const riskLower = (row.risk_category ?? '').toLowerCase().trim()
   const alertLevel: AlertLevel =
     RISK_TO_ALERT[riskLower] ?? 'Uncertain / evidence limited'
@@ -231,12 +285,6 @@ function rowToPerAgentResult(
       ? row.site_recommendation.trim()
       : null
 
-  const citationText =
-    row.citations && row.citations.trim() &&
-    !'none n/a'.includes(row.citations.trim().toLowerCase())
-      ? row.citations.trim()
-      : null
-
   if (row.medonc_discussion === 'Yes' || row.medonc_discussion === 'Consider')
     secondaryRiskDrivers.push('Medical Oncology discussion recommended')
   if (row.senior_ro_review === 'Yes')
@@ -262,4 +310,34 @@ function rowToPerAgentResult(
     fallbackReason: null,
     agentUnrecognised: false,
   }
+}
+
+function getCitationText(citations: string): string | null {
+  const value = citations?.trim()
+  return value && !'none n/a'.includes(value.toLowerCase()) ? value : null
+}
+
+function isDirectEvidenceClaim(evidenceDirectness: string): boolean {
+  return (
+    evidenceDirectness === 'Direct RT-combination' ||
+    evidenceDirectness === 'Partially direct RT-combination'
+  )
+}
+
+function hasVerifiableCitation(citationText: string | null): boolean {
+  if (!citationText) return false
+
+  // Require a stable bibliographic anchor rather than labels such as
+  // "Extrapolated", "No trial", or an internal reference number.
+  return /\bPMID[:\s]*\d{6,9}\b|\b10\.\S+|\b[A-Z][a-z]+(?:\s+(?:et al\.?|&\s+[A-Z][a-z]+))?\s+\d{4}\b/.test(
+    citationText,
+  )
+}
+
+function removeObsoleteTimingInstruction(value: string): string | null {
+  if (!value || value === 'None') return null
+
+  return value
+    .replace(/;?\s*confirm timing with Medical Oncology\.?/i, '')
+    .trim() || null
 }

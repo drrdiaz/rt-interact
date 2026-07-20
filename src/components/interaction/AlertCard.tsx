@@ -107,6 +107,24 @@ function ChevronIcon({ open }: { open: boolean }) {
   )
 }
 
+const SABR_TOXICITY_CONTEXT: Record<string, string> = {
+  cardiac: 'central, ultracentral, or thoracic-spine SABR',
+  oesophageal: 'central, ultracentral, or thoracic-spine SABR',
+  pulmonary: 'lung SABR',
+  'pneumonitis signal': 'lung SABR',
+  'gi/diarrhoea & bowel-in-field': 'abdominal or pelvic SABR',
+  marrow: 'spine, bone, or large marrow-exposing SABR',
+  musculoskeletal: 'spine, bone, or chest-wall SABR',
+  neurologic: 'brain or spine SABR',
+  vascular: 'central thoracic or abdominal SABR near major vessels',
+  radiodermatitis: 'superficial SABR',
+}
+
+function formatToxicityLabel(label: string, fractionationId: string | null): string {
+  const context = SABR_TOXICITY_CONTEXT[label.toLowerCase()]
+  return fractionationId === 'FX004' && context ? `${label} (${context})` : label
+}
+
 // ─── Citation renderer ────────────────────────────────────────────────────────
 
 /** Extracts a PubMed/PMC/DOI link from a citation fragment if present. */
@@ -203,15 +221,13 @@ export function AlertCard({
 
   // ── Empty state — not enough to evaluate ────────────────────────────────────
   if (engineOutput.incomplete && engineOutput.missingFields.length === 0) {
-    // Also covers the case where basic fields (therapy/site/timing) are absent
+    // Also covers the case where basic fields are absent.
     const hasTherapies = engineInput.selectedTherapies.length > 0
     const hasSite = engineInput.rtSite !== null
-    const hasTiming = engineInput.timingId !== null
 
     const remaining: string[] = []
     if (!hasTherapies) remaining.push('systemic therapy')
     if (!hasSite) remaining.push('RT site')
-    if (!hasTiming) remaining.push('timing relationship')
 
     return (
       <div
@@ -281,26 +297,12 @@ export function AlertCard({
   const multiAgent = output.perAgentResults.length > 1
   const hasEvidenceLink =
     output.evidenceLinkIds.length > 0 || output.supportingEvidenceIds.length > 0
-
-  const isUnknownTiming = engineInput.timingId === 'TM006'
+  const hasEvidenceGapSafetyConcern = output.evidenceLevel.startsWith(
+    'No verified direct evidence',
+  )
 
   return (
     <>
-      {/* TM006 warning banner */}
-      {isUnknownTiming && (
-        <div
-          className="rounded-xl border border-amber-400 bg-amber-50 px-4 py-3 shadow-sm flex items-start gap-2"
-          role="note"
-          data-testid="unknown-timing-banner"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mt-0.5 shrink-0 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-          </svg>
-          <p className="text-xs font-medium text-amber-900">
-            Timing unknown — evaluated as concurrent (worst case). Confirm timing before clinical action.
-          </p>
-        </div>
-      )}
       <div
         className={`rounded-xl border-2 p-5 shadow-sm ${config.card}`}
         role="alert"
@@ -316,7 +318,9 @@ export function AlertCard({
                         tracking-wide ${config.badge} ${config.badgeText}`}
             data-testid="alert-level-badge"
           >
-            {config.label}
+            {hasEvidenceGapSafetyConcern
+              ? 'Potential acute-toxicity risk'
+              : config.label}
           </span>
         </div>
 
@@ -340,20 +344,25 @@ export function AlertCard({
 
         {/* 3. Toxicity domain chips — shown once only */}
         {output.toxicityDomainLabels.length > 0 && (
-          <div
-            className="mt-3 flex flex-wrap gap-1.5"
-            aria-label="Toxicity domains"
-            data-testid="toxicity-domain-chips"
-          >
-            {output.toxicityDomainLabels.map((label) => (
-              <span
-                key={label}
-                className="rounded-full bg-white/70 border border-slate-200
-                           px-2.5 py-0.5 text-xs text-slate-700 font-medium"
-              >
-                {label}
-              </span>
-            ))}
+          <div className="mt-3">
+            <span className="text-xs font-semibold text-slate-600 uppercase tracking-wide">
+              Potential acute toxicities
+            </span>
+            <div
+              className="mt-1.5 flex flex-wrap gap-1.5"
+              aria-label="Potential acute toxicities"
+              data-testid="toxicity-domain-chips"
+            >
+              {output.toxicityDomainLabels.map((label) => (
+                <span
+                  key={label}
+                  className="rounded-full bg-white/70 border border-slate-200
+                             px-2.5 py-0.5 text-xs text-slate-700 font-medium"
+                >
+                  {formatToxicityLabel(label, engineInput.fractionationId)}
+                </span>
+              ))}
+            </div>
           </div>
         )}
 
@@ -368,20 +377,6 @@ export function AlertCard({
             </p>
           </div>
         )}
-
-        {/* 5. Site recommendation (if present) */}
-        {output.siteRecommendation && (
-          <div className="mt-2 rounded-lg bg-white/50 border border-black/10 px-3 py-2">
-            <span className="text-xs font-semibold text-slate-500 uppercase tracking-wide">
-              Site recommendation
-            </span>
-            <p className="mt-0.5 text-xs text-slate-700" data-testid="site-recommendation">
-              {output.siteRecommendation}
-            </p>
-          </div>
-        )}
-
-
 
         {/* 6. References — collapsible, only rendered when there is content */}
         {(hasEvidenceLink || output.citationText) && (

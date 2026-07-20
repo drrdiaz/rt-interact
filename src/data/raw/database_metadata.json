@@ -8,7 +8,7 @@
   "tertiary_source": "Draft1 Prototype.docx (reference where Draft 2 is silent)",
   "agent_count": 222,
   "class_entry_count": 13,
-  "rt_site_count": 30,
+  "rt_site_count": 14,
   "toxicity_domain_count": 20,
   "fractionation_category_count": 10,
   "timing_definition_count": 6,
@@ -61,6 +61,7 @@
     "222 agents include 217 original rows plus 5 confirmed Australian-market additions (sotorasib, datopotamab deruxtecan, tarlatamab, zolbetuximab, trifluridine/tipiracil).",
     "73 agents reclassified from placeholder 'ALL CLEAR / low concern' to Uncertain / evidence limited per Change_Log entries CHG-0001 to CHG-0002 pattern.",
     "ARTG, PBS and eviQ fields are unverified first-pass inventory; excluded from app-facing JSON pending live ARTG/PBS/eviQ audit.",
-    "EVID-0017 is absent from Evidence_Library (gap between EVID-0016 and EVID-0018); noted as source data gap."
+    "EVID-0017 is absent from Evidence_Library (gap between EVID-0016 and EVID-0018); noted as source data gap.",
+    "UI site taxonomy consolidated to 14 clinician-facing selections while preserving legacy site aliases for compatibility during database repair."
   ]
 }

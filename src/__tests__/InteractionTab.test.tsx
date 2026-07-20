@@ -135,31 +135,16 @@ describe('Test 2 — selecting by brand name', () => {
   })
 })
 
-// ─── Test 3: Select a drug class ─────────────────────────────────────────────
+// ─── Test 3: Do not select a drug class ──────────────────────────────────────
 
-describe('Test 3 — selecting a drug class', () => {
-  it('adds a class chip and shows the class type indicator in suggestions', async () => {
+describe('Test 3 — drug classes are not selectable therapies', () => {
+  it('does not offer a class label as a selectable systemic therapy', async () => {
     const user = userEvent.setup()
     renderPage()
 
-    // CLS-004 is "Immune checkpoint inhibitors"
     await user.type(screen.getByLabelText(/systemic therapy/i), 'immune checkpoint')
-    const listbox = await screen.findByRole('listbox')
-
-    const options = within(listbox).getAllByRole('option')
-    const classOption = options.find(
-      (el) => el.textContent?.toLowerCase().includes('immune checkpoint'),
-    )
-    expect(classOption).toBeDefined()
-
-    // Class indicator visible in suggestion
-    expect(classOption?.textContent).toMatch(/class/i)
-
-    await user.click(classOption!)
-
-    // Chip appears
-    const chips = screen.getByLabelText('Selected therapies')
-    expect(chips.children.length).toBeGreaterThan(0)
+    expect(screen.queryByRole('listbox')).toBeNull()
+    expect(screen.queryByLabelText('Selected therapies')).toBeNull()
   })
 })
 

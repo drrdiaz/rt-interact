@@ -13,6 +13,63 @@ import {
   type AlertLevel,
 } from './types'
 
+const SITE_ID_EQUIVALENTS: Record<string, string[]> = {
+  RTS101: ['RTS101', 'RTS001', 'RTS002', 'RTS016', 'RTS017'],
+  RTS102: ['RTS102', 'RTS018', 'RTS019'],
+  RTS103: ['RTS103', 'RTS003'],
+  RTS104: ['RTS104', 'RTS004'],
+  RTS105: ['RTS105', 'RTS005'],
+  RTS106: ['RTS106', 'RTS006', 'RTS007', 'RTS008', 'RTS009'],
+  RTS107: ['RTS107', 'RTS010', 'RTS011'],
+  RTS108: ['RTS108', 'RTS012'],
+  RTS109: ['RTS109', 'RTS013', 'RTS014', 'RTS015'],
+  RTS110: ['RTS110', 'RTS020', 'RTS021'],
+  RTS111: ['RTS111', 'RTS022', 'RTS023', 'RTS024'],
+  RTS112: ['RTS112', 'RTS025', 'RTS026', 'RTS027'],
+  RTS113: ['RTS113', 'RTS028'],
+  RTS114: ['RTS114', 'RTS029'],
+  RTS001: ['RTS001', 'RTS101'],
+  RTS002: ['RTS002', 'RTS101'],
+  RTS003: ['RTS003', 'RTS103'],
+  RTS004: ['RTS004', 'RTS104'],
+  RTS005: ['RTS005', 'RTS105'],
+  RTS006: ['RTS006', 'RTS106'],
+  RTS007: ['RTS007', 'RTS106'],
+  RTS008: ['RTS008', 'RTS106'],
+  RTS009: ['RTS009', 'RTS106'],
+  RTS010: ['RTS010', 'RTS107'],
+  RTS011: ['RTS011', 'RTS107'],
+  RTS012: ['RTS012', 'RTS108'],
+  RTS013: ['RTS013', 'RTS109'],
+  RTS014: ['RTS014', 'RTS109'],
+  RTS015: ['RTS015', 'RTS109'],
+  RTS016: ['RTS016', 'RTS101'],
+  RTS017: ['RTS017', 'RTS101'],
+  RTS018: ['RTS018', 'RTS102'],
+  RTS019: ['RTS019', 'RTS102'],
+  RTS020: ['RTS020', 'RTS110'],
+  RTS021: ['RTS021', 'RTS110'],
+  RTS022: ['RTS022', 'RTS111'],
+  RTS023: ['RTS023', 'RTS111'],
+  RTS024: ['RTS024', 'RTS111'],
+  RTS025: ['RTS025', 'RTS112'],
+  RTS026: ['RTS026', 'RTS112'],
+  RTS027: ['RTS027', 'RTS112'],
+  RTS028: ['RTS028', 'RTS113'],
+  RTS029: ['RTS029', 'RTS114'],
+}
+
+function expandEquivalentSiteIds(siteIds: string[]): Set<string> {
+  const expanded = new Set<string>()
+  for (const siteId of siteIds) {
+    expanded.add(siteId)
+    for (const equivalent of SITE_ID_EQUIVALENTS[siteId] ?? []) {
+      expanded.add(equivalent)
+    }
+  }
+  return expanded
+}
+
 // ─── Condition matching ───────────────────────────────────────────────────────
 
 /**
@@ -39,7 +96,10 @@ export function conditionsMatch(
   // Site: null rule list = any site; null input = no match
   if (rule.conditions.rt_site_ids !== null) {
     if (!siteId) return false
-    if (!rule.conditions.rt_site_ids.includes(siteId)) return false
+    const selectedSiteIds = expandEquivalentSiteIds([siteId])
+    const ruleSiteIds = expandEquivalentSiteIds(rule.conditions.rt_site_ids)
+    const siteMatches = [...selectedSiteIds].some((candidate) => ruleSiteIds.has(candidate))
+    if (!siteMatches) return false
   }
 
   // Fractionation: null rule list = any fractionation; null input = no match
